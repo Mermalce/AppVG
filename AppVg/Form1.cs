@@ -279,31 +279,31 @@ namespace AppVg
 
                 //EXPORT
                 case 6:
-                    //try
-                    //{
-                    //    object readOnly = false;
-                    //    object visible = true;
-                    //    object save = false;
-                    //    object fileName = pathTempDocxP;
-                    //    object newTemplate = false;
-                    //    object docType = 0;
-                    //    object missing = Type.Missing;
+                    try
+                    {
+                        object readOnly = false;
+                        object visible = true;
+                        object save = false;
+                        object fileName = pathTempDocxP;
+                        object newTemplate = false;
+                        object docType = 0;
+                        object missing = Type.Missing;
 
-                    //    Microsoft.Office.Interop.Word._Document document;
-                    //    Microsoft.Office.Interop.Word._Application application = new Microsoft.Office.Interop.Word.Application() { Visible = false };
-                    //    document = application.Documents.Open(ref fileName, ref missing, ref readOnly, ref missing, ref missing, ref missing, ref missing,
-                    //         ref missing, ref missing, ref missing, ref missing, ref visible, ref missing, ref missing, ref missing, ref missing);
-                    //    document.ActiveWindow.Selection.WholeStory();
-                    //    document.ActiveWindow.Selection.Copy();
-                    //    IDataObject dataObject = Clipboard.GetDataObject();
-                    //    rtboxPropPrev.Rtf = dataObject.GetData(DataFormats.Rtf).ToString();
-                    //    application.Quit(ref missing, ref missing, ref missing);
+                        Microsoft.Office.Interop.Word._Document document;
+                        Microsoft.Office.Interop.Word._Application application = new Microsoft.Office.Interop.Word.Application() { Visible = false };
+                        document = application.Documents.Open(ref fileName, ref missing, ref readOnly, ref missing, ref missing, ref missing, ref missing,
+                             ref missing, ref missing, ref missing, ref missing, ref visible, ref missing, ref missing, ref missing, ref missing);
+                        document.ActiveWindow.Selection.WholeStory();
+                        document.ActiveWindow.Selection.Copy();
+                        IDataObject dataObject = Clipboard.GetDataObject();
+                        rtboxPropPrev.Rtf = dataObject.GetData(DataFormats.Rtf).ToString();
+                        application.Quit(ref missing, ref missing, ref missing);
 
-                    //}
-                    //catch (Exception exc)
-                    //{
-                    //    MessageBox.Show(exc.ToString());
-                    //}
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show(exc.ToString());
+                    }
 
                     break;
 
