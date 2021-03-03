@@ -87,6 +87,10 @@
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties42 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties43 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties44 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties45 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties46 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties47 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties48 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties49 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties50 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties51 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
@@ -137,10 +141,6 @@
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties90 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties91 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties92 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties45 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties46 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties47 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties48 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.pSideMenu = new System.Windows.Forms.Panel();
             this.btnCalc = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -162,6 +162,7 @@
             this.btnDadosProp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pages = new Bunifu.UI.WinForms.BunifuPages();
             this.pageHome = new System.Windows.Forms.TabPage();
+            this.logoHome = new System.Windows.Forms.PictureBox();
             this.pagesDadosProp = new System.Windows.Forms.TabPage();
             this.tboxTextoAbertura = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -204,6 +205,7 @@
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
             this.pagesDadosPiscina = new System.Windows.Forms.TabPage();
+            this.tboxMoradaInst = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.ddMoradaInst = new Bunifu.Framework.UI.BunifuDropdown();
             this.labelRaio = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel26 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -260,7 +262,6 @@
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuSeparator5 = new Bunifu.Framework.UI.BunifuSeparator();
             this.pagesExport = new System.Windows.Forms.TabPage();
-            this.rtboxPropPrev = new System.Windows.Forms.RichTextBox();
             this.pExportControls = new System.Windows.Forms.Panel();
             this.btnExportProp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -268,8 +269,7 @@
             this.bunifuSeparator6 = new Bunifu.Framework.UI.BunifuSeparator();
             this.elipseDGV = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.tboxMoradaInst = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.logoHome = new System.Windows.Forms.PictureBox();
+            this.rtboxPropPrev = new System.Windows.Forms.RichTextBox();
             this.pSideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -281,6 +281,7 @@
             this.pSubMenuProp.SuspendLayout();
             this.pages.SuspendLayout();
             this.pageHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoHome)).BeginInit();
             this.pagesDadosProp.SuspendLayout();
             this.pagesDadosCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCliente)).BeginInit();
@@ -302,7 +303,6 @@
             this.pagesExport.SuspendLayout();
             this.pExportControls.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoHome)).BeginInit();
             this.SuspendLayout();
             // 
             // pSideMenu
@@ -769,10 +769,10 @@
             this.pages.Location = new System.Drawing.Point(140, 32);
             this.pages.Multiline = true;
             this.pages.Name = "pages";
-            this.pages.Page = this.pageHome;
-            this.pages.PageIndex = 0;
-            this.pages.PageName = "pageHome";
-            this.pages.PageTitle = "Home";
+            this.pages.Page = this.pagesExport;
+            this.pages.PageIndex = 6;
+            this.pages.PageName = "pagesExport";
+            this.pages.PageTitle = "export";
             this.pages.SelectedIndex = 0;
             this.pages.Size = new System.Drawing.Size(863, 614);
             this.pages.TabIndex = 3;
@@ -806,6 +806,20 @@
             this.pageHome.TabIndex = 0;
             this.pageHome.Text = "Home";
             this.pageHome.UseVisualStyleBackColor = true;
+            // 
+            // logoHome
+            // 
+            this.logoHome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuTransition1.SetDecoration(this.logoHome, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.logoHome.Image = global::AppVg.Properties.Resources.logoVG;
+            this.logoHome.Location = new System.Drawing.Point(288, 203);
+            this.logoHome.Name = "logoHome";
+            this.logoHome.Size = new System.Drawing.Size(295, 231);
+            this.logoHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logoHome.TabIndex = 0;
+            this.logoHome.TabStop = false;
             // 
             // pagesDadosProp
             // 
@@ -2247,6 +2261,81 @@
             this.pagesDadosPiscina.TabIndex = 4;
             this.pagesDadosPiscina.Text = "dadosPiscina";
             this.pagesDadosPiscina.UseVisualStyleBackColor = true;
+            // 
+            // tboxMoradaInst
+            // 
+            this.tboxMoradaInst.AcceptsReturn = false;
+            this.tboxMoradaInst.AcceptsTab = false;
+            this.tboxMoradaInst.AnimationSpeed = 200;
+            this.tboxMoradaInst.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tboxMoradaInst.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tboxMoradaInst.BackColor = System.Drawing.Color.Transparent;
+            this.tboxMoradaInst.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tboxMoradaInst.BackgroundImage")));
+            this.tboxMoradaInst.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.tboxMoradaInst.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.tboxMoradaInst.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.tboxMoradaInst.BorderColorIdle = System.Drawing.Color.Silver;
+            this.tboxMoradaInst.BorderRadius = 1;
+            this.tboxMoradaInst.BorderThickness = 1;
+            this.tboxMoradaInst.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tboxMoradaInst.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTransition1.SetDecoration(this.tboxMoradaInst, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.tboxMoradaInst.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.tboxMoradaInst.DefaultText = "";
+            this.tboxMoradaInst.Enabled = false;
+            this.tboxMoradaInst.FillColor = System.Drawing.Color.White;
+            this.tboxMoradaInst.HideSelection = true;
+            this.tboxMoradaInst.IconLeft = null;
+            this.tboxMoradaInst.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tboxMoradaInst.IconPadding = 10;
+            this.tboxMoradaInst.IconRight = null;
+            this.tboxMoradaInst.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tboxMoradaInst.Lines = new string[0];
+            this.tboxMoradaInst.Location = new System.Drawing.Point(154, 471);
+            this.tboxMoradaInst.MaxLength = 32767;
+            this.tboxMoradaInst.MinimumSize = new System.Drawing.Size(100, 35);
+            this.tboxMoradaInst.Modified = false;
+            this.tboxMoradaInst.Multiline = false;
+            this.tboxMoradaInst.Name = "tboxMoradaInst";
+            stateProperties45.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties45.FillColor = System.Drawing.Color.Empty;
+            stateProperties45.ForeColor = System.Drawing.Color.Empty;
+            stateProperties45.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxMoradaInst.OnActiveState = stateProperties45;
+            stateProperties46.BorderColor = System.Drawing.Color.Empty;
+            stateProperties46.FillColor = System.Drawing.Color.White;
+            stateProperties46.ForeColor = System.Drawing.Color.Empty;
+            stateProperties46.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tboxMoradaInst.OnDisabledState = stateProperties46;
+            stateProperties47.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties47.FillColor = System.Drawing.Color.Empty;
+            stateProperties47.ForeColor = System.Drawing.Color.Empty;
+            stateProperties47.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxMoradaInst.OnHoverState = stateProperties47;
+            stateProperties48.BorderColor = System.Drawing.Color.Silver;
+            stateProperties48.FillColor = System.Drawing.Color.White;
+            stateProperties48.ForeColor = System.Drawing.Color.Empty;
+            stateProperties48.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxMoradaInst.OnIdleState = stateProperties48;
+            this.tboxMoradaInst.PasswordChar = '\0';
+            this.tboxMoradaInst.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tboxMoradaInst.PlaceholderText = "...";
+            this.tboxMoradaInst.ReadOnly = false;
+            this.tboxMoradaInst.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tboxMoradaInst.SelectedText = "";
+            this.tboxMoradaInst.SelectionLength = 0;
+            this.tboxMoradaInst.SelectionStart = 0;
+            this.tboxMoradaInst.ShortcutsEnabled = true;
+            this.tboxMoradaInst.Size = new System.Drawing.Size(437, 35);
+            this.tboxMoradaInst.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.tboxMoradaInst.TabIndex = 65;
+            this.tboxMoradaInst.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tboxMoradaInst.TextMarginBottom = 0;
+            this.tboxMoradaInst.TextMarginLeft = 5;
+            this.tboxMoradaInst.TextMarginTop = 0;
+            this.tboxMoradaInst.TextPlaceholder = "...";
+            this.tboxMoradaInst.UseSystemPasswordChar = false;
+            this.tboxMoradaInst.WordWrap = true;
             // 
             // ddMoradaInst
             // 
@@ -3878,17 +3967,6 @@
             this.pagesExport.Text = "export";
             this.pagesExport.UseVisualStyleBackColor = true;
             // 
-            // rtboxPropPrev
-            // 
-            this.bunifuTransition1.SetDecoration(this.rtboxPropPrev, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.rtboxPropPrev.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtboxPropPrev.Enabled = false;
-            this.rtboxPropPrev.Location = new System.Drawing.Point(0, 49);
-            this.rtboxPropPrev.Name = "rtboxPropPrev";
-            this.rtboxPropPrev.Size = new System.Drawing.Size(855, 473);
-            this.rtboxPropPrev.TabIndex = 6;
-            this.rtboxPropPrev.Text = "";
-            // 
             // pExportControls
             // 
             this.pExportControls.Controls.Add(this.btnExportProp);
@@ -3982,94 +4060,16 @@
             this.elipseForm.ElipseRadius = 25;
             this.elipseForm.TargetControl = this;
             // 
-            // tboxMoradaInst
+            // rtboxPropPrev
             // 
-            this.tboxMoradaInst.AcceptsReturn = false;
-            this.tboxMoradaInst.AcceptsTab = false;
-            this.tboxMoradaInst.AnimationSpeed = 200;
-            this.tboxMoradaInst.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.tboxMoradaInst.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.tboxMoradaInst.BackColor = System.Drawing.Color.Transparent;
-            this.tboxMoradaInst.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tboxMoradaInst.BackgroundImage")));
-            this.tboxMoradaInst.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.tboxMoradaInst.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.tboxMoradaInst.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.tboxMoradaInst.BorderColorIdle = System.Drawing.Color.Silver;
-            this.tboxMoradaInst.BorderRadius = 1;
-            this.tboxMoradaInst.BorderThickness = 1;
-            this.tboxMoradaInst.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.tboxMoradaInst.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTransition1.SetDecoration(this.tboxMoradaInst, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.tboxMoradaInst.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.tboxMoradaInst.DefaultText = "";
-            this.tboxMoradaInst.Enabled = false;
-            this.tboxMoradaInst.FillColor = System.Drawing.Color.White;
-            this.tboxMoradaInst.HideSelection = true;
-            this.tboxMoradaInst.IconLeft = null;
-            this.tboxMoradaInst.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.tboxMoradaInst.IconPadding = 10;
-            this.tboxMoradaInst.IconRight = null;
-            this.tboxMoradaInst.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.tboxMoradaInst.Lines = new string[0];
-            this.tboxMoradaInst.Location = new System.Drawing.Point(154, 471);
-            this.tboxMoradaInst.MaxLength = 32767;
-            this.tboxMoradaInst.MinimumSize = new System.Drawing.Size(100, 35);
-            this.tboxMoradaInst.Modified = false;
-            this.tboxMoradaInst.Multiline = false;
-            this.tboxMoradaInst.Name = "tboxMoradaInst";
-            stateProperties45.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties45.FillColor = System.Drawing.Color.Empty;
-            stateProperties45.ForeColor = System.Drawing.Color.Empty;
-            stateProperties45.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxMoradaInst.OnActiveState = stateProperties45;
-            stateProperties46.BorderColor = System.Drawing.Color.Empty;
-            stateProperties46.FillColor = System.Drawing.Color.White;
-            stateProperties46.ForeColor = System.Drawing.Color.Empty;
-            stateProperties46.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tboxMoradaInst.OnDisabledState = stateProperties46;
-            stateProperties47.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties47.FillColor = System.Drawing.Color.Empty;
-            stateProperties47.ForeColor = System.Drawing.Color.Empty;
-            stateProperties47.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxMoradaInst.OnHoverState = stateProperties47;
-            stateProperties48.BorderColor = System.Drawing.Color.Silver;
-            stateProperties48.FillColor = System.Drawing.Color.White;
-            stateProperties48.ForeColor = System.Drawing.Color.Empty;
-            stateProperties48.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxMoradaInst.OnIdleState = stateProperties48;
-            this.tboxMoradaInst.PasswordChar = '\0';
-            this.tboxMoradaInst.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tboxMoradaInst.PlaceholderText = "...";
-            this.tboxMoradaInst.ReadOnly = false;
-            this.tboxMoradaInst.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tboxMoradaInst.SelectedText = "";
-            this.tboxMoradaInst.SelectionLength = 0;
-            this.tboxMoradaInst.SelectionStart = 0;
-            this.tboxMoradaInst.ShortcutsEnabled = true;
-            this.tboxMoradaInst.Size = new System.Drawing.Size(437, 35);
-            this.tboxMoradaInst.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.tboxMoradaInst.TabIndex = 65;
-            this.tboxMoradaInst.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tboxMoradaInst.TextMarginBottom = 0;
-            this.tboxMoradaInst.TextMarginLeft = 5;
-            this.tboxMoradaInst.TextMarginTop = 0;
-            this.tboxMoradaInst.TextPlaceholder = "...";
-            this.tboxMoradaInst.UseSystemPasswordChar = false;
-            this.tboxMoradaInst.WordWrap = true;
-            // 
-            // logoHome
-            // 
-            this.logoHome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuTransition1.SetDecoration(this.logoHome, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.logoHome.Image = global::AppVg.Properties.Resources.logoVG;
-            this.logoHome.Location = new System.Drawing.Point(288, 203);
-            this.logoHome.Name = "logoHome";
-            this.logoHome.Size = new System.Drawing.Size(295, 231);
-            this.logoHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logoHome.TabIndex = 0;
-            this.logoHome.TabStop = false;
+            this.bunifuTransition1.SetDecoration(this.rtboxPropPrev, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.rtboxPropPrev.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtboxPropPrev.Enabled = false;
+            this.rtboxPropPrev.Location = new System.Drawing.Point(0, 49);
+            this.rtboxPropPrev.Name = "rtboxPropPrev";
+            this.rtboxPropPrev.Size = new System.Drawing.Size(855, 473);
+            this.rtboxPropPrev.TabIndex = 6;
+            this.rtboxPropPrev.Text = "";
             // 
             // Form1
             // 
@@ -4098,6 +4098,7 @@
             this.pSubMenuProp.ResumeLayout(false);
             this.pages.ResumeLayout(false);
             this.pageHome.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logoHome)).EndInit();
             this.pagesDadosProp.ResumeLayout(false);
             this.pagesDadosProp.PerformLayout();
             this.pagesDadosCliente.ResumeLayout(false);
@@ -4126,7 +4127,6 @@
             this.pExportControls.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoHome)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4244,7 +4244,6 @@
         private Bunifu.UI.WinForms.BunifuLabel labelRaio;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel13;
         private System.Windows.Forms.Panel pExportControls;
-        private System.Windows.Forms.RichTextBox rtboxPropPrev;
         private Bunifu.Framework.UI.BunifuFlatButton btnExportProp;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvProp;
@@ -4262,6 +4261,7 @@
         private Bunifu.Framework.UI.BunifuDropdown ddMoradaInst;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tboxMoradaInst;
         private System.Windows.Forms.PictureBox logoHome;
+        private System.Windows.Forms.RichTextBox rtboxPropPrev;
     }
 }
 

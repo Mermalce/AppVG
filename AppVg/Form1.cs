@@ -279,31 +279,14 @@ namespace AppVg
 
                 //EXPORT
                 case 6:
-                    //try
-                    //{
-                    //    object readOnly = false;
-                    //    object visible = true;
-                    //    object save = false;
-                    //    object fileName = pathTempDocxP;
-                    //    object newTemplate = false;
-                    //    object docType = 0;
-                    //    object missing = Type.Missing;
+                    string propPrev = "Número da Proposta: " + tboxNumProp.Text + "\n" +
+                         "Data: " + tboxData.Text + "\n" +
+                         "Texto de Abertura: " + tboxTextoAbertura.Text + "\n" +
+                         "Cliente: " + tboxNomeCliente.Text + "\n" +
+                         "Contacto: " + tboxContactoCliente.Text + "\n";
+                    //Teste
 
-                    //    Microsoft.Office.Interop.Word._Document document;
-                    //    Microsoft.Office.Interop.Word._Application application = new Microsoft.Office.Interop.Word.Application() { Visible = false };
-                    //    document = application.Documents.Open(ref fileName, ref missing, ref readOnly, ref missing, ref missing, ref missing, ref missing,
-                    //         ref missing, ref missing, ref missing, ref missing, ref visible, ref missing, ref missing, ref missing, ref missing);
-                    //    document.ActiveWindow.Selection.WholeStory();
-                    //    document.ActiveWindow.Selection.Copy();
-                    //    IDataObject dataObject = Clipboard.GetDataObject();
-                    //    rtboxPropPrev.Rtf = dataObject.GetData(DataFormats.Rtf).ToString();
-                    //    application.Quit(ref missing, ref missing, ref missing);
-
-                    //}
-                    //catch (Exception exc)
-                    //{
-                    //    MessageBox.Show(exc.ToString());
-                    //}
+                    rtboxPropPrev.Text = propPrev;
 
                     break;
 
