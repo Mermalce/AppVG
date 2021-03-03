@@ -559,17 +559,17 @@ namespace AppVg
         {
             DataGridViewRow r = dgvDB.CurrentRow;
 
-            int index = dgvProp.Rows.Add(r.Cells[1].Value, r.Cells[2].Value, r.Cells[3].Value, r.Cells[4].Value, r.Cells[5].Value, r.Cells[6].Value, r.Cells[7].Value, r.Cells[8].Value);
+            int index = dgvProp.Rows.Add(r.Cells[0].Value, r.Cells[1].Value, r.Cells[2].Value, r.Cells[3].Value, r.Cells[4].Value, r.Cells[5].Value, r.Cells[6].Value, r.Cells[7].Value);
 
             for (int row = 0; row < dgvProp.RowCount - 1; row++)
             {
-                if (dgvProp.Rows[row].Cells[1].Value == dgvProp.Rows[index].Cells[1].Value && row != index)
+                if (dgvProp.Rows[row].Cells[0].Value == dgvProp.Rows[index].Cells[0].Value && row != index)
                 {
                     DataGridViewRow rowDuplicate = dgvProp.Rows[index];
                     dgvProp.Rows.Remove(rowDuplicate);
-                    dgvProp[7, row].Value = Convert.ToInt32(dgvProp[7, row].Value) + 1;
+                    dgvProp[6, row].Value = Convert.ToInt32(dgvProp[6, row].Value) + 1;
 
-                    dgvProp[8, row].Value = Convert.ToInt32(dgvProp[7, row].Value) * Convert.ToInt32(dgvProp[6, row].Value);
+                    dgvProp[7, row].Value = Convert.ToInt32(dgvProp[6, row].Value) * Convert.ToInt32(dgvProp[5, row].Value);
                 }
             }
         }
@@ -808,10 +808,6 @@ namespace AppVg
         private void dgvProp_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
 
-            for (int row = 0; row < dgvProp.RowCount - 1; row++)
-            {
-                dgvProp[8, row].Value = Convert.ToInt32(dgvProp[7, row].Value) * Convert.ToInt32(dgvProp[6, row].Value);
-            }
         }
 
         private void fillDgv()
@@ -850,7 +846,6 @@ namespace AppVg
                 dgvDB.RowHeadersVisible = false;
                 dgvProp.RowHeadersVisible = false;
 
-                dgvDB.Columns["img"].Visible = false;
                 dgvDB.Columns["Marca"].Visible = false;
                 dgvDB.Columns["Obs"].Visible = false;
                 dgvDB.Columns["Quantidade"].Visible = false;
@@ -858,7 +853,6 @@ namespace AppVg
                 dgvDB.Columns["Preco"].Visible = false;
                 //dgvDB.Columns["f7"].Visible = false;
 
-                dgvProp.Columns["img"].Visible = false;
                 dgvProp.Columns["Marca"].Visible = false;
                 dgvProp.Columns["Obs"].Visible = false;
                 //dgvProp.Columns["f7"].Visible = false;

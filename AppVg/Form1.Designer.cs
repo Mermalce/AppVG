@@ -262,6 +262,7 @@
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuSeparator5 = new Bunifu.Framework.UI.BunifuSeparator();
             this.pagesExport = new System.Windows.Forms.TabPage();
+            this.rtboxPropPrev = new System.Windows.Forms.RichTextBox();
             this.pExportControls = new System.Windows.Forms.Panel();
             this.btnExportProp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -269,7 +270,6 @@
             this.bunifuSeparator6 = new Bunifu.Framework.UI.BunifuSeparator();
             this.elipseDGV = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.rtboxPropPrev = new System.Windows.Forms.RichTextBox();
             this.pSideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -769,10 +769,10 @@
             this.pages.Location = new System.Drawing.Point(140, 32);
             this.pages.Multiline = true;
             this.pages.Name = "pages";
-            this.pages.Page = this.pagesExport;
-            this.pages.PageIndex = 6;
-            this.pages.PageName = "pagesExport";
-            this.pages.PageTitle = "export";
+            this.pages.Page = this.pagesEquipamentos;
+            this.pages.PageIndex = 5;
+            this.pages.PageName = "pagesEquipamentos";
+            this.pages.PageTitle = "equipamentos";
             this.pages.SelectedIndex = 0;
             this.pages.Size = new System.Drawing.Size(863, 614);
             this.pages.TabIndex = 3;
@@ -3834,7 +3834,9 @@
             this.ddDgvFilter.DisabledColor = System.Drawing.Color.Gray;
             this.ddDgvFilter.ForeColor = System.Drawing.Color.White;
             this.ddDgvFilter.items = new string[] {
-        "DBTESTE"};
+        "Folha1",
+        "Folha2",
+        "Folha3"};
             this.ddDgvFilter.Location = new System.Drawing.Point(473, 18);
             this.ddDgvFilter.Name = "ddDgvFilter";
             this.ddDgvFilter.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
@@ -3967,6 +3969,17 @@
             this.pagesExport.Text = "export";
             this.pagesExport.UseVisualStyleBackColor = true;
             // 
+            // rtboxPropPrev
+            // 
+            this.bunifuTransition1.SetDecoration(this.rtboxPropPrev, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.rtboxPropPrev.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtboxPropPrev.Enabled = false;
+            this.rtboxPropPrev.Location = new System.Drawing.Point(0, 49);
+            this.rtboxPropPrev.Name = "rtboxPropPrev";
+            this.rtboxPropPrev.Size = new System.Drawing.Size(855, 473);
+            this.rtboxPropPrev.TabIndex = 6;
+            this.rtboxPropPrev.Text = "";
+            // 
             // pExportControls
             // 
             this.pExportControls.Controls.Add(this.btnExportProp);
@@ -4059,17 +4072,6 @@
             // 
             this.elipseForm.ElipseRadius = 25;
             this.elipseForm.TargetControl = this;
-            // 
-            // rtboxPropPrev
-            // 
-            this.bunifuTransition1.SetDecoration(this.rtboxPropPrev, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.rtboxPropPrev.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtboxPropPrev.Enabled = false;
-            this.rtboxPropPrev.Location = new System.Drawing.Point(0, 49);
-            this.rtboxPropPrev.Name = "rtboxPropPrev";
-            this.rtboxPropPrev.Size = new System.Drawing.Size(855, 473);
-            this.rtboxPropPrev.TabIndex = 6;
-            this.rtboxPropPrev.Text = "";
             // 
             // Form1
             // 
