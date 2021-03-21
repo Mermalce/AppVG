@@ -131,16 +131,20 @@
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties86 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties87 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties88 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties89 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties90 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties91 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties92 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties89 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties90 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties91 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties92 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties93 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties94 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties95 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties96 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.pSideMenu = new System.Windows.Forms.Panel();
             this.btnCalc = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -178,8 +182,8 @@
             this.tboxNumProp = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.tboxNomeProp = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.pagesDadosCliente = new System.Windows.Forms.TabPage();
-            this.tboxCoord = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.bunifuLabel14 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel34 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.tboxNif = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
             this.tboxMorada2Cliente = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.tboxMoradaCliente = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -205,6 +209,21 @@
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
             this.pagesDadosPiscina = new System.Windows.Forms.TabPage();
+            this.ddLigRed = new Bunifu.Framework.UI.BunifuDropdown();
+            this.bunifuLabel40 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.ddTComp = new Bunifu.Framework.UI.BunifuDropdown();
+            this.bunifuLabel39 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.ddCMaqui = new Bunifu.Framework.UI.BunifuDropdown();
+            this.bunifuLabel38 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel37 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.ddRevestimento = new Bunifu.Framework.UI.BunifuDropdown();
+            this.bunifuLabel36 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.ddEstrutura = new Bunifu.Framework.UI.BunifuDropdown();
+            this.bunifuLabel35 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.ddEscavacao = new Bunifu.Framework.UI.BunifuDropdown();
+            this.Escavação = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel14 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.tboxCoord = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.tboxMoradaInst = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.ddMoradaInst = new Bunifu.Framework.UI.BunifuDropdown();
             this.labelRaio = new Bunifu.UI.WinForms.BunifuLabel();
@@ -217,7 +236,7 @@
             this.bunifuLabel32 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel33 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel25 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuDropdown4 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.ddCirculação = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuLabel24 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuDropdown3 = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuLabel22 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -257,7 +276,6 @@
             this.tboxSearchDGV = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.ddDgvFilter = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnAddEquip = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuSeparator5 = new Bunifu.Framework.UI.BunifuSeparator();
@@ -270,6 +288,8 @@
             this.bunifuSeparator6 = new Bunifu.Framework.UI.BunifuSeparator();
             this.elipseDGV = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.bunifuLabel41 = new Bunifu.UI.WinForms.BunifuLabel();
             this.pSideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -769,10 +789,10 @@
             this.pages.Location = new System.Drawing.Point(140, 32);
             this.pages.Multiline = true;
             this.pages.Name = "pages";
-            this.pages.Page = this.pagesEquipamentos;
-            this.pages.PageIndex = 5;
-            this.pages.PageName = "pagesEquipamentos";
-            this.pages.PageTitle = "equipamentos";
+            this.pages.Page = this.pagesDadosPiscina;
+            this.pages.PageIndex = 4;
+            this.pages.PageName = "pagesDadosPiscina";
+            this.pages.PageTitle = "dadosPiscina";
             this.pages.SelectedIndex = 0;
             this.pages.Size = new System.Drawing.Size(863, 614);
             this.pages.TabIndex = 3;
@@ -1290,8 +1310,8 @@
             // 
             // pagesDadosCliente
             // 
-            this.pagesDadosCliente.Controls.Add(this.tboxCoord);
-            this.pagesDadosCliente.Controls.Add(this.bunifuLabel14);
+            this.pagesDadosCliente.Controls.Add(this.bunifuLabel34);
+            this.pagesDadosCliente.Controls.Add(this.tboxNif);
             this.pagesDadosCliente.Controls.Add(this.bunifuLabel10);
             this.pagesDadosCliente.Controls.Add(this.tboxMorada2Cliente);
             this.pagesDadosCliente.Controls.Add(this.tboxMoradaCliente);
@@ -1317,94 +1337,94 @@
             this.pagesDadosCliente.Text = "cliente";
             this.pagesDadosCliente.UseVisualStyleBackColor = true;
             // 
-            // tboxCoord
+            // bunifuLabel34
             // 
-            this.tboxCoord.AcceptsReturn = false;
-            this.tboxCoord.AcceptsTab = false;
-            this.tboxCoord.AnimationSpeed = 200;
-            this.tboxCoord.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.tboxCoord.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.tboxCoord.BackColor = System.Drawing.Color.Transparent;
-            this.tboxCoord.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tboxCoord.BackgroundImage")));
-            this.tboxCoord.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.tboxCoord.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.tboxCoord.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.tboxCoord.BorderColorIdle = System.Drawing.Color.Silver;
-            this.tboxCoord.BorderRadius = 1;
-            this.tboxCoord.BorderThickness = 1;
-            this.tboxCoord.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.tboxCoord.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTransition1.SetDecoration(this.tboxCoord, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.tboxCoord.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.tboxCoord.DefaultText = "";
-            this.tboxCoord.FillColor = System.Drawing.Color.White;
-            this.tboxCoord.HideSelection = true;
-            this.tboxCoord.IconLeft = null;
-            this.tboxCoord.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.tboxCoord.IconPadding = 10;
-            this.tboxCoord.IconRight = null;
-            this.tboxCoord.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.tboxCoord.Lines = new string[0];
-            this.tboxCoord.Location = new System.Drawing.Point(634, 260);
-            this.tboxCoord.MaxLength = 32767;
-            this.tboxCoord.MinimumSize = new System.Drawing.Size(100, 35);
-            this.tboxCoord.Modified = false;
-            this.tboxCoord.Multiline = false;
-            this.tboxCoord.Name = "tboxCoord";
+            this.bunifuLabel34.AutoEllipsis = false;
+            this.bunifuLabel34.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.bunifuLabel34, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuLabel34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.bunifuLabel34.Location = new System.Drawing.Point(146, 348);
+            this.bunifuLabel34.Name = "bunifuLabel34";
+            this.bunifuLabel34.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel34.Size = new System.Drawing.Size(30, 20);
+            this.bunifuLabel34.TabIndex = 36;
+            this.bunifuLabel34.Text = "NIF:";
+            this.bunifuLabel34.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel34.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // tboxNif
+            // 
+            this.tboxNif.AcceptsReturn = false;
+            this.tboxNif.AcceptsTab = false;
+            this.tboxNif.AnimationSpeed = 200;
+            this.tboxNif.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tboxNif.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tboxNif.BackColor = System.Drawing.Color.Transparent;
+            this.tboxNif.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tboxNif.BackgroundImage")));
+            this.tboxNif.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.tboxNif.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.tboxNif.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.tboxNif.BorderColorIdle = System.Drawing.Color.Silver;
+            this.tboxNif.BorderRadius = 1;
+            this.tboxNif.BorderThickness = 1;
+            this.tboxNif.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tboxNif.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTransition1.SetDecoration(this.tboxNif, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.tboxNif.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.tboxNif.DefaultText = "";
+            this.tboxNif.FillColor = System.Drawing.Color.White;
+            this.tboxNif.HideSelection = true;
+            this.tboxNif.IconLeft = null;
+            this.tboxNif.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tboxNif.IconPadding = 10;
+            this.tboxNif.IconRight = null;
+            this.tboxNif.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tboxNif.Lines = new string[0];
+            this.tboxNif.Location = new System.Drawing.Point(182, 342);
+            this.tboxNif.MaxLength = 32767;
+            this.tboxNif.MinimumSize = new System.Drawing.Size(100, 35);
+            this.tboxNif.Modified = false;
+            this.tboxNif.Multiline = false;
+            this.tboxNif.Name = "tboxNif";
             stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
             stateProperties13.FillColor = System.Drawing.Color.Empty;
             stateProperties13.ForeColor = System.Drawing.Color.Empty;
             stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxCoord.OnActiveState = stateProperties13;
+            this.tboxNif.OnActiveState = stateProperties13;
             stateProperties14.BorderColor = System.Drawing.Color.Empty;
             stateProperties14.FillColor = System.Drawing.Color.White;
             stateProperties14.ForeColor = System.Drawing.Color.Empty;
             stateProperties14.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tboxCoord.OnDisabledState = stateProperties14;
+            this.tboxNif.OnDisabledState = stateProperties14;
             stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties15.FillColor = System.Drawing.Color.Empty;
             stateProperties15.ForeColor = System.Drawing.Color.Empty;
             stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxCoord.OnHoverState = stateProperties15;
+            this.tboxNif.OnHoverState = stateProperties15;
             stateProperties16.BorderColor = System.Drawing.Color.Silver;
             stateProperties16.FillColor = System.Drawing.Color.White;
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxCoord.OnIdleState = stateProperties16;
-            this.tboxCoord.PasswordChar = '\0';
-            this.tboxCoord.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tboxCoord.PlaceholderText = "...";
-            this.tboxCoord.ReadOnly = false;
-            this.tboxCoord.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tboxCoord.SelectedText = "";
-            this.tboxCoord.SelectionLength = 0;
-            this.tboxCoord.SelectionStart = 0;
-            this.tboxCoord.ShortcutsEnabled = true;
-            this.tboxCoord.Size = new System.Drawing.Size(213, 35);
-            this.tboxCoord.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.tboxCoord.TabIndex = 36;
-            this.tboxCoord.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tboxCoord.TextMarginBottom = 0;
-            this.tboxCoord.TextMarginLeft = 5;
-            this.tboxCoord.TextMarginTop = 0;
-            this.tboxCoord.TextPlaceholder = "...";
-            this.tboxCoord.UseSystemPasswordChar = false;
-            this.tboxCoord.WordWrap = true;
-            // 
-            // bunifuLabel14
-            // 
-            this.bunifuLabel14.AutoEllipsis = false;
-            this.bunifuLabel14.CursorType = null;
-            this.bunifuTransition1.SetDecoration(this.bunifuLabel14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuLabel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.bunifuLabel14.Location = new System.Drawing.Point(575, 268);
-            this.bunifuLabel14.Name = "bunifuLabel14";
-            this.bunifuLabel14.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel14.Size = new System.Drawing.Size(53, 20);
-            this.bunifuLabel14.TabIndex = 35;
-            this.bunifuLabel14.Text = "Coord.:";
-            this.bunifuLabel14.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel14.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.tboxNif.OnIdleState = stateProperties16;
+            this.tboxNif.PasswordChar = '\0';
+            this.tboxNif.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tboxNif.PlaceholderText = "...";
+            this.tboxNif.ReadOnly = false;
+            this.tboxNif.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tboxNif.SelectedText = "";
+            this.tboxNif.SelectionLength = 0;
+            this.tboxNif.SelectionStart = 0;
+            this.tboxNif.ShortcutsEnabled = true;
+            this.tboxNif.Size = new System.Drawing.Size(387, 35);
+            this.tboxNif.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.tboxNif.TabIndex = 35;
+            this.tboxNif.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tboxNif.TextMarginBottom = 0;
+            this.tboxNif.TextMarginLeft = 5;
+            this.tboxNif.TextMarginTop = 0;
+            this.tboxNif.TextPlaceholder = "...";
+            this.tboxNif.UseSystemPasswordChar = false;
+            this.tboxNif.WordWrap = true;
             // 
             // bunifuLabel10
             // 
@@ -2214,6 +2234,22 @@
             // 
             // pagesDadosPiscina
             // 
+            this.pagesDadosPiscina.AutoScroll = true;
+            this.pagesDadosPiscina.Controls.Add(this.ddLigRed);
+            this.pagesDadosPiscina.Controls.Add(this.bunifuLabel40);
+            this.pagesDadosPiscina.Controls.Add(this.ddTComp);
+            this.pagesDadosPiscina.Controls.Add(this.bunifuLabel39);
+            this.pagesDadosPiscina.Controls.Add(this.ddCMaqui);
+            this.pagesDadosPiscina.Controls.Add(this.bunifuLabel38);
+            this.pagesDadosPiscina.Controls.Add(this.bunifuLabel37);
+            this.pagesDadosPiscina.Controls.Add(this.ddRevestimento);
+            this.pagesDadosPiscina.Controls.Add(this.bunifuLabel36);
+            this.pagesDadosPiscina.Controls.Add(this.ddEstrutura);
+            this.pagesDadosPiscina.Controls.Add(this.bunifuLabel35);
+            this.pagesDadosPiscina.Controls.Add(this.ddEscavacao);
+            this.pagesDadosPiscina.Controls.Add(this.Escavação);
+            this.pagesDadosPiscina.Controls.Add(this.bunifuLabel14);
+            this.pagesDadosPiscina.Controls.Add(this.tboxCoord);
             this.pagesDadosPiscina.Controls.Add(this.tboxMoradaInst);
             this.pagesDadosPiscina.Controls.Add(this.ddMoradaInst);
             this.pagesDadosPiscina.Controls.Add(this.labelRaio);
@@ -2226,7 +2262,7 @@
             this.pagesDadosPiscina.Controls.Add(this.bunifuLabel32);
             this.pagesDadosPiscina.Controls.Add(this.bunifuLabel33);
             this.pagesDadosPiscina.Controls.Add(this.bunifuLabel25);
-            this.pagesDadosPiscina.Controls.Add(this.bunifuDropdown4);
+            this.pagesDadosPiscina.Controls.Add(this.ddCirculação);
             this.pagesDadosPiscina.Controls.Add(this.bunifuLabel24);
             this.pagesDadosPiscina.Controls.Add(this.bunifuDropdown3);
             this.pagesDadosPiscina.Controls.Add(this.bunifuLabel22);
@@ -2261,6 +2297,314 @@
             this.pagesDadosPiscina.TabIndex = 4;
             this.pagesDadosPiscina.Text = "dadosPiscina";
             this.pagesDadosPiscina.UseVisualStyleBackColor = true;
+            // 
+            // ddLigRed
+            // 
+            this.ddLigRed.BackColor = System.Drawing.Color.Transparent;
+            this.ddLigRed.BorderRadius = 3;
+            this.bunifuTransition1.SetDecoration(this.ddLigRed, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.ddLigRed.DisabledColor = System.Drawing.Color.Gray;
+            this.ddLigRed.ForeColor = System.Drawing.Color.White;
+            this.ddLigRed.items = new string[] {
+        "A cargo do CLIENTE",
+        "A cargo da VG",
+        "Não está previsto"};
+            this.ddLigRed.Location = new System.Drawing.Point(520, 635);
+            this.ddLigRed.Name = "ddLigRed";
+            this.ddLigRed.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
+            this.ddLigRed.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
+            this.ddLigRed.selectedIndex = 0;
+            this.ddLigRed.Size = new System.Drawing.Size(256, 35);
+            this.ddLigRed.TabIndex = 79;
+            // 
+            // bunifuLabel40
+            // 
+            this.bunifuLabel40.AutoEllipsis = false;
+            this.bunifuLabel40.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.bunifuLabel40, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuLabel40.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.bunifuLabel40.Location = new System.Drawing.Point(445, 642);
+            this.bunifuLabel40.Name = "bunifuLabel40";
+            this.bunifuLabel40.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel40.Size = new System.Drawing.Size(69, 20);
+            this.bunifuLabel40.TabIndex = 80;
+            this.bunifuLabel40.Text = "Lig. Rede:";
+            this.bunifuLabel40.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel40.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // ddTComp
+            // 
+            this.ddTComp.BackColor = System.Drawing.Color.Transparent;
+            this.ddTComp.BorderRadius = 3;
+            this.bunifuTransition1.SetDecoration(this.ddTComp, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.ddTComp.DisabledColor = System.Drawing.Color.Gray;
+            this.ddTComp.ForeColor = System.Drawing.Color.White;
+            this.ddTComp.items = new string[] {
+        "A cargo do CLIENTE",
+        "A cargo da VG",
+        "Não está previsto"};
+            this.ddTComp.Location = new System.Drawing.Point(154, 635);
+            this.ddTComp.Name = "ddTComp";
+            this.ddTComp.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
+            this.ddTComp.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
+            this.ddTComp.selectedIndex = 0;
+            this.ddTComp.Size = new System.Drawing.Size(256, 35);
+            this.ddTComp.TabIndex = 77;
+            // 
+            // bunifuLabel39
+            // 
+            this.bunifuLabel39.AutoEllipsis = false;
+            this.bunifuLabel39.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.bunifuLabel39, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuLabel39.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.bunifuLabel39.Location = new System.Drawing.Point(26, 642);
+            this.bunifuLabel39.Name = "bunifuLabel39";
+            this.bunifuLabel39.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel39.Size = new System.Drawing.Size(122, 20);
+            this.bunifuLabel39.TabIndex = 78;
+            this.bunifuLabel39.Text = "T. Compensação:";
+            this.bunifuLabel39.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel39.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // ddCMaqui
+            // 
+            this.ddCMaqui.BackColor = System.Drawing.Color.Transparent;
+            this.ddCMaqui.BorderRadius = 3;
+            this.bunifuTransition1.SetDecoration(this.ddCMaqui, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.ddCMaqui.DisabledColor = System.Drawing.Color.Gray;
+            this.ddCMaqui.ForeColor = System.Drawing.Color.White;
+            this.ddCMaqui.items = new string[] {
+        "A cargo do CLIENTE",
+        "A cargo da VG",
+        "Não está previsto"};
+            this.ddCMaqui.Location = new System.Drawing.Point(520, 594);
+            this.ddCMaqui.Name = "ddCMaqui";
+            this.ddCMaqui.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
+            this.ddCMaqui.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
+            this.ddCMaqui.selectedIndex = 0;
+            this.ddCMaqui.Size = new System.Drawing.Size(256, 35);
+            this.ddCMaqui.TabIndex = 75;
+            // 
+            // bunifuLabel38
+            // 
+            this.bunifuLabel38.AutoEllipsis = false;
+            this.bunifuLabel38.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.bunifuLabel38, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuLabel38.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.bunifuLabel38.Location = new System.Drawing.Point(424, 602);
+            this.bunifuLabel38.Name = "bunifuLabel38";
+            this.bunifuLabel38.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel38.Size = new System.Drawing.Size(90, 20);
+            this.bunifuLabel38.TabIndex = 76;
+            this.bunifuLabel38.Text = "C. Máquinas:";
+            this.bunifuLabel38.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel38.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel37
+            // 
+            this.bunifuLabel37.AutoEllipsis = false;
+            this.bunifuLabel37.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.bunifuLabel37, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuLabel37.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.bunifuLabel37.Location = new System.Drawing.Point(828, 689);
+            this.bunifuLabel37.Name = "bunifuLabel37";
+            this.bunifuLabel37.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel37.Size = new System.Drawing.Size(7, 20);
+            this.bunifuLabel37.TabIndex = 74;
+            this.bunifuLabel37.Text = ".";
+            this.bunifuLabel37.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.bunifuLabel37.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // ddRevestimento
+            // 
+            this.ddRevestimento.BackColor = System.Drawing.Color.Transparent;
+            this.ddRevestimento.BorderRadius = 3;
+            this.bunifuTransition1.SetDecoration(this.ddRevestimento, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.ddRevestimento.DisabledColor = System.Drawing.Color.Gray;
+            this.ddRevestimento.ForeColor = System.Drawing.Color.White;
+            this.ddRevestimento.items = new string[] {
+        "A cargo do CLIENTE",
+        "A cargo da VG",
+        "Não está previsto"};
+            this.ddRevestimento.Location = new System.Drawing.Point(155, 594);
+            this.ddRevestimento.Name = "ddRevestimento";
+            this.ddRevestimento.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
+            this.ddRevestimento.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
+            this.ddRevestimento.selectedIndex = 0;
+            this.ddRevestimento.Size = new System.Drawing.Size(256, 35);
+            this.ddRevestimento.TabIndex = 72;
+            // 
+            // bunifuLabel36
+            // 
+            this.bunifuLabel36.AutoEllipsis = false;
+            this.bunifuLabel36.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.bunifuLabel36, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuLabel36.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.bunifuLabel36.Location = new System.Drawing.Point(51, 602);
+            this.bunifuLabel36.Name = "bunifuLabel36";
+            this.bunifuLabel36.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel36.Size = new System.Drawing.Size(98, 20);
+            this.bunifuLabel36.TabIndex = 73;
+            this.bunifuLabel36.Text = "Revestimento:";
+            this.bunifuLabel36.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel36.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // ddEstrutura
+            // 
+            this.ddEstrutura.BackColor = System.Drawing.Color.Transparent;
+            this.ddEstrutura.BorderRadius = 3;
+            this.bunifuTransition1.SetDecoration(this.ddEstrutura, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.ddEstrutura.DisabledColor = System.Drawing.Color.Gray;
+            this.ddEstrutura.ForeColor = System.Drawing.Color.White;
+            this.ddEstrutura.items = new string[] {
+        "A cargo do CLIENTE",
+        "A cargo da VG",
+        "Não está previsto"};
+            this.ddEstrutura.Location = new System.Drawing.Point(520, 553);
+            this.ddEstrutura.Name = "ddEstrutura";
+            this.ddEstrutura.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
+            this.ddEstrutura.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
+            this.ddEstrutura.selectedIndex = 0;
+            this.ddEstrutura.Size = new System.Drawing.Size(256, 35);
+            this.ddEstrutura.TabIndex = 70;
+            // 
+            // bunifuLabel35
+            // 
+            this.bunifuLabel35.AutoEllipsis = false;
+            this.bunifuLabel35.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.bunifuLabel35, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuLabel35.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.bunifuLabel35.Location = new System.Drawing.Point(447, 565);
+            this.bunifuLabel35.Name = "bunifuLabel35";
+            this.bunifuLabel35.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel35.Size = new System.Drawing.Size(67, 20);
+            this.bunifuLabel35.TabIndex = 71;
+            this.bunifuLabel35.Text = "Estrutura:";
+            this.bunifuLabel35.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel35.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // ddEscavacao
+            // 
+            this.ddEscavacao.BackColor = System.Drawing.Color.Transparent;
+            this.ddEscavacao.BorderRadius = 3;
+            this.bunifuTransition1.SetDecoration(this.ddEscavacao, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.ddEscavacao.DisabledColor = System.Drawing.Color.Gray;
+            this.ddEscavacao.ForeColor = System.Drawing.Color.White;
+            this.ddEscavacao.items = new string[] {
+        "A cargo do CLIENTE",
+        "A cargo da VG",
+        "Não está previsto"};
+            this.ddEscavacao.Location = new System.Drawing.Point(155, 553);
+            this.ddEscavacao.Name = "ddEscavacao";
+            this.ddEscavacao.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
+            this.ddEscavacao.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
+            this.ddEscavacao.selectedIndex = 0;
+            this.ddEscavacao.Size = new System.Drawing.Size(256, 35);
+            this.ddEscavacao.TabIndex = 68;
+            // 
+            // Escavação
+            // 
+            this.Escavação.AutoEllipsis = false;
+            this.Escavação.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.Escavação, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Escavação.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.Escavação.Location = new System.Drawing.Point(68, 565);
+            this.Escavação.Name = "Escavação";
+            this.Escavação.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Escavação.Size = new System.Drawing.Size(81, 20);
+            this.Escavação.TabIndex = 69;
+            this.Escavação.Text = "Escavação:";
+            this.Escavação.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.Escavação.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel14
+            // 
+            this.bunifuLabel14.AutoEllipsis = false;
+            this.bunifuLabel14.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.bunifuLabel14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuLabel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.bunifuLabel14.Location = new System.Drawing.Point(96, 520);
+            this.bunifuLabel14.Name = "bunifuLabel14";
+            this.bunifuLabel14.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel14.Size = new System.Drawing.Size(53, 20);
+            this.bunifuLabel14.TabIndex = 67;
+            this.bunifuLabel14.Text = "Coord.:";
+            this.bunifuLabel14.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel14.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // tboxCoord
+            // 
+            this.tboxCoord.AcceptsReturn = false;
+            this.tboxCoord.AcceptsTab = false;
+            this.tboxCoord.AnimationSpeed = 200;
+            this.tboxCoord.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tboxCoord.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tboxCoord.BackColor = System.Drawing.Color.Transparent;
+            this.tboxCoord.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tboxCoord.BackgroundImage")));
+            this.tboxCoord.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.tboxCoord.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.tboxCoord.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.tboxCoord.BorderColorIdle = System.Drawing.Color.Silver;
+            this.tboxCoord.BorderRadius = 1;
+            this.tboxCoord.BorderThickness = 1;
+            this.tboxCoord.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tboxCoord.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTransition1.SetDecoration(this.tboxCoord, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.tboxCoord.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.tboxCoord.DefaultText = "";
+            this.tboxCoord.FillColor = System.Drawing.Color.White;
+            this.tboxCoord.HideSelection = true;
+            this.tboxCoord.IconLeft = null;
+            this.tboxCoord.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tboxCoord.IconPadding = 10;
+            this.tboxCoord.IconRight = null;
+            this.tboxCoord.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tboxCoord.Lines = new string[0];
+            this.tboxCoord.Location = new System.Drawing.Point(155, 512);
+            this.tboxCoord.MaxLength = 32767;
+            this.tboxCoord.MinimumSize = new System.Drawing.Size(100, 35);
+            this.tboxCoord.Modified = false;
+            this.tboxCoord.Multiline = false;
+            this.tboxCoord.Name = "tboxCoord";
+            stateProperties45.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties45.FillColor = System.Drawing.Color.Empty;
+            stateProperties45.ForeColor = System.Drawing.Color.Empty;
+            stateProperties45.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxCoord.OnActiveState = stateProperties45;
+            stateProperties46.BorderColor = System.Drawing.Color.Empty;
+            stateProperties46.FillColor = System.Drawing.Color.White;
+            stateProperties46.ForeColor = System.Drawing.Color.Empty;
+            stateProperties46.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tboxCoord.OnDisabledState = stateProperties46;
+            stateProperties47.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties47.FillColor = System.Drawing.Color.Empty;
+            stateProperties47.ForeColor = System.Drawing.Color.Empty;
+            stateProperties47.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxCoord.OnHoverState = stateProperties47;
+            stateProperties48.BorderColor = System.Drawing.Color.Silver;
+            stateProperties48.FillColor = System.Drawing.Color.White;
+            stateProperties48.ForeColor = System.Drawing.Color.Empty;
+            stateProperties48.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxCoord.OnIdleState = stateProperties48;
+            this.tboxCoord.PasswordChar = '\0';
+            this.tboxCoord.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tboxCoord.PlaceholderText = "...";
+            this.tboxCoord.ReadOnly = false;
+            this.tboxCoord.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tboxCoord.SelectedText = "";
+            this.tboxCoord.SelectionLength = 0;
+            this.tboxCoord.SelectionStart = 0;
+            this.tboxCoord.ShortcutsEnabled = true;
+            this.tboxCoord.Size = new System.Drawing.Size(256, 35);
+            this.tboxCoord.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.tboxCoord.TabIndex = 66;
+            this.tboxCoord.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tboxCoord.TextMarginBottom = 0;
+            this.tboxCoord.TextMarginLeft = 5;
+            this.tboxCoord.TextMarginTop = 0;
+            this.tboxCoord.TextPlaceholder = "...";
+            this.tboxCoord.UseSystemPasswordChar = false;
+            this.tboxCoord.WordWrap = true;
             // 
             // tboxMoradaInst
             // 
@@ -2297,26 +2641,26 @@
             this.tboxMoradaInst.Modified = false;
             this.tboxMoradaInst.Multiline = false;
             this.tboxMoradaInst.Name = "tboxMoradaInst";
-            stateProperties45.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties45.FillColor = System.Drawing.Color.Empty;
-            stateProperties45.ForeColor = System.Drawing.Color.Empty;
-            stateProperties45.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxMoradaInst.OnActiveState = stateProperties45;
-            stateProperties46.BorderColor = System.Drawing.Color.Empty;
-            stateProperties46.FillColor = System.Drawing.Color.White;
-            stateProperties46.ForeColor = System.Drawing.Color.Empty;
-            stateProperties46.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tboxMoradaInst.OnDisabledState = stateProperties46;
-            stateProperties47.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties47.FillColor = System.Drawing.Color.Empty;
-            stateProperties47.ForeColor = System.Drawing.Color.Empty;
-            stateProperties47.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxMoradaInst.OnHoverState = stateProperties47;
-            stateProperties48.BorderColor = System.Drawing.Color.Silver;
-            stateProperties48.FillColor = System.Drawing.Color.White;
-            stateProperties48.ForeColor = System.Drawing.Color.Empty;
-            stateProperties48.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxMoradaInst.OnIdleState = stateProperties48;
+            stateProperties49.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties49.FillColor = System.Drawing.Color.Empty;
+            stateProperties49.ForeColor = System.Drawing.Color.Empty;
+            stateProperties49.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxMoradaInst.OnActiveState = stateProperties49;
+            stateProperties50.BorderColor = System.Drawing.Color.Empty;
+            stateProperties50.FillColor = System.Drawing.Color.White;
+            stateProperties50.ForeColor = System.Drawing.Color.Empty;
+            stateProperties50.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tboxMoradaInst.OnDisabledState = stateProperties50;
+            stateProperties51.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties51.FillColor = System.Drawing.Color.Empty;
+            stateProperties51.ForeColor = System.Drawing.Color.Empty;
+            stateProperties51.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxMoradaInst.OnHoverState = stateProperties51;
+            stateProperties52.BorderColor = System.Drawing.Color.Silver;
+            stateProperties52.FillColor = System.Drawing.Color.White;
+            stateProperties52.ForeColor = System.Drawing.Color.Empty;
+            stateProperties52.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxMoradaInst.OnIdleState = stateProperties52;
             this.tboxMoradaInst.PasswordChar = '\0';
             this.tboxMoradaInst.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tboxMoradaInst.PlaceholderText = "...";
@@ -2506,24 +2850,24 @@
             this.bunifuLabel25.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel25.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuDropdown4
+            // ddCirculação
             // 
-            this.bunifuDropdown4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown4.BorderRadius = 3;
-            this.bunifuTransition1.SetDecoration(this.bunifuDropdown4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuDropdown4.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown4.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown4.items = new string[] {
-        "Tipo de filtração 1",
-        "Tipo de filtração 2",
-        "Tipo de filtração 3"};
-            this.bunifuDropdown4.Location = new System.Drawing.Point(154, 389);
-            this.bunifuDropdown4.Name = "bunifuDropdown4";
-            this.bunifuDropdown4.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
-            this.bunifuDropdown4.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
-            this.bunifuDropdown4.selectedIndex = -1;
-            this.bunifuDropdown4.Size = new System.Drawing.Size(174, 35);
-            this.bunifuDropdown4.TabIndex = 47;
+            this.ddCirculação.BackColor = System.Drawing.Color.Transparent;
+            this.ddCirculação.BorderRadius = 3;
+            this.bunifuTransition1.SetDecoration(this.ddCirculação, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.ddCirculação.DisabledColor = System.Drawing.Color.Gray;
+            this.ddCirculação.ForeColor = System.Drawing.Color.White;
+            this.ddCirculação.items = new string[] {
+        "Tipo de circulação 1",
+        "Tipo de circulação 2",
+        "Tipo de circulação 3"};
+            this.ddCirculação.Location = new System.Drawing.Point(154, 389);
+            this.ddCirculação.Name = "ddCirculação";
+            this.ddCirculação.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
+            this.ddCirculação.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
+            this.ddCirculação.selectedIndex = -1;
+            this.ddCirculação.Size = new System.Drawing.Size(174, 35);
+            this.ddCirculação.TabIndex = 47;
             // 
             // bunifuLabel24
             // 
@@ -2531,12 +2875,12 @@
             this.bunifuLabel24.CursorType = null;
             this.bunifuTransition1.SetDecoration(this.bunifuLabel24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuLabel24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.bunifuLabel24.Location = new System.Drawing.Point(84, 397);
+            this.bunifuLabel24.Location = new System.Drawing.Point(71, 396);
             this.bunifuLabel24.Name = "bunifuLabel24";
             this.bunifuLabel24.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel24.Size = new System.Drawing.Size(64, 20);
+            this.bunifuLabel24.Size = new System.Drawing.Size(78, 20);
             this.bunifuLabel24.TabIndex = 48;
-            this.bunifuLabel24.Text = "Filtração:";
+            this.bunifuLabel24.Text = "Circulação:";
             this.bunifuLabel24.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel24.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -2775,6 +3119,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.bunifuLabel41);
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.bunifuLabel13);
             this.panel3.Controls.Add(this.ddFormato);
             this.panel3.Controls.Add(this.bunifuCustomLabel5);
@@ -2783,7 +3129,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(855, 98);
+            this.panel3.Size = new System.Drawing.Size(838, 98);
             this.panel3.TabIndex = 2;
             // 
             // bunifuLabel13
@@ -2811,7 +3157,7 @@
             this.ddFormato.items = new string[] {
         "Rectangular",
         "Circular",
-        "Outro"};
+        "Forma Livre"};
             this.ddFormato.Location = new System.Drawing.Point(155, 50);
             this.ddFormato.Name = "ddFormato";
             this.ddFormato.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
@@ -2881,26 +3227,26 @@
             this.tboxPerim.Modified = false;
             this.tboxPerim.Multiline = false;
             this.tboxPerim.Name = "tboxPerim";
-            stateProperties49.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties49.FillColor = System.Drawing.Color.Empty;
-            stateProperties49.ForeColor = System.Drawing.Color.Empty;
-            stateProperties49.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxPerim.OnActiveState = stateProperties49;
-            stateProperties50.BorderColor = System.Drawing.Color.Empty;
-            stateProperties50.FillColor = System.Drawing.Color.White;
-            stateProperties50.ForeColor = System.Drawing.Color.Empty;
-            stateProperties50.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tboxPerim.OnDisabledState = stateProperties50;
-            stateProperties51.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties51.FillColor = System.Drawing.Color.Empty;
-            stateProperties51.ForeColor = System.Drawing.Color.Empty;
-            stateProperties51.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxPerim.OnHoverState = stateProperties51;
-            stateProperties52.BorderColor = System.Drawing.Color.Silver;
-            stateProperties52.FillColor = System.Drawing.Color.White;
-            stateProperties52.ForeColor = System.Drawing.Color.Empty;
-            stateProperties52.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxPerim.OnIdleState = stateProperties52;
+            stateProperties53.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties53.FillColor = System.Drawing.Color.Empty;
+            stateProperties53.ForeColor = System.Drawing.Color.Empty;
+            stateProperties53.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxPerim.OnActiveState = stateProperties53;
+            stateProperties54.BorderColor = System.Drawing.Color.Empty;
+            stateProperties54.FillColor = System.Drawing.Color.White;
+            stateProperties54.ForeColor = System.Drawing.Color.Empty;
+            stateProperties54.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tboxPerim.OnDisabledState = stateProperties54;
+            stateProperties55.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties55.FillColor = System.Drawing.Color.Empty;
+            stateProperties55.ForeColor = System.Drawing.Color.Empty;
+            stateProperties55.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxPerim.OnHoverState = stateProperties55;
+            stateProperties56.BorderColor = System.Drawing.Color.Silver;
+            stateProperties56.FillColor = System.Drawing.Color.White;
+            stateProperties56.ForeColor = System.Drawing.Color.Empty;
+            stateProperties56.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxPerim.OnIdleState = stateProperties56;
             this.tboxPerim.PasswordChar = '\0';
             this.tboxPerim.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tboxPerim.PlaceholderText = "...";
@@ -2958,26 +3304,26 @@
             this.tboxArea.Modified = false;
             this.tboxArea.Multiline = false;
             this.tboxArea.Name = "tboxArea";
-            stateProperties53.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties53.FillColor = System.Drawing.Color.Empty;
-            stateProperties53.ForeColor = System.Drawing.Color.Empty;
-            stateProperties53.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxArea.OnActiveState = stateProperties53;
-            stateProperties54.BorderColor = System.Drawing.Color.Empty;
-            stateProperties54.FillColor = System.Drawing.Color.White;
-            stateProperties54.ForeColor = System.Drawing.Color.Empty;
-            stateProperties54.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tboxArea.OnDisabledState = stateProperties54;
-            stateProperties55.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties55.FillColor = System.Drawing.Color.Empty;
-            stateProperties55.ForeColor = System.Drawing.Color.Empty;
-            stateProperties55.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxArea.OnHoverState = stateProperties55;
-            stateProperties56.BorderColor = System.Drawing.Color.Silver;
-            stateProperties56.FillColor = System.Drawing.Color.White;
-            stateProperties56.ForeColor = System.Drawing.Color.Empty;
-            stateProperties56.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxArea.OnIdleState = stateProperties56;
+            stateProperties57.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties57.FillColor = System.Drawing.Color.Empty;
+            stateProperties57.ForeColor = System.Drawing.Color.Empty;
+            stateProperties57.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxArea.OnActiveState = stateProperties57;
+            stateProperties58.BorderColor = System.Drawing.Color.Empty;
+            stateProperties58.FillColor = System.Drawing.Color.White;
+            stateProperties58.ForeColor = System.Drawing.Color.Empty;
+            stateProperties58.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tboxArea.OnDisabledState = stateProperties58;
+            stateProperties59.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties59.FillColor = System.Drawing.Color.Empty;
+            stateProperties59.ForeColor = System.Drawing.Color.Empty;
+            stateProperties59.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxArea.OnHoverState = stateProperties59;
+            stateProperties60.BorderColor = System.Drawing.Color.Silver;
+            stateProperties60.FillColor = System.Drawing.Color.White;
+            stateProperties60.ForeColor = System.Drawing.Color.Empty;
+            stateProperties60.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxArea.OnIdleState = stateProperties60;
             this.tboxArea.PasswordChar = '\0';
             this.tboxArea.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tboxArea.PlaceholderText = "...";
@@ -3035,26 +3381,26 @@
             this.tboxVol.Modified = false;
             this.tboxVol.Multiline = false;
             this.tboxVol.Name = "tboxVol";
-            stateProperties57.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties57.FillColor = System.Drawing.Color.Empty;
-            stateProperties57.ForeColor = System.Drawing.Color.Empty;
-            stateProperties57.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxVol.OnActiveState = stateProperties57;
-            stateProperties58.BorderColor = System.Drawing.Color.Empty;
-            stateProperties58.FillColor = System.Drawing.Color.White;
-            stateProperties58.ForeColor = System.Drawing.Color.Empty;
-            stateProperties58.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tboxVol.OnDisabledState = stateProperties58;
-            stateProperties59.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties59.FillColor = System.Drawing.Color.Empty;
-            stateProperties59.ForeColor = System.Drawing.Color.Empty;
-            stateProperties59.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxVol.OnHoverState = stateProperties59;
-            stateProperties60.BorderColor = System.Drawing.Color.Silver;
-            stateProperties60.FillColor = System.Drawing.Color.White;
-            stateProperties60.ForeColor = System.Drawing.Color.Empty;
-            stateProperties60.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxVol.OnIdleState = stateProperties60;
+            stateProperties61.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties61.FillColor = System.Drawing.Color.Empty;
+            stateProperties61.ForeColor = System.Drawing.Color.Empty;
+            stateProperties61.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxVol.OnActiveState = stateProperties61;
+            stateProperties62.BorderColor = System.Drawing.Color.Empty;
+            stateProperties62.FillColor = System.Drawing.Color.White;
+            stateProperties62.ForeColor = System.Drawing.Color.Empty;
+            stateProperties62.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tboxVol.OnDisabledState = stateProperties62;
+            stateProperties63.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties63.FillColor = System.Drawing.Color.Empty;
+            stateProperties63.ForeColor = System.Drawing.Color.Empty;
+            stateProperties63.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxVol.OnHoverState = stateProperties63;
+            stateProperties64.BorderColor = System.Drawing.Color.Silver;
+            stateProperties64.FillColor = System.Drawing.Color.White;
+            stateProperties64.ForeColor = System.Drawing.Color.Empty;
+            stateProperties64.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxVol.OnIdleState = stateProperties64;
             this.tboxVol.PasswordChar = '\0';
             this.tboxVol.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tboxVol.PlaceholderText = "...";
@@ -3112,26 +3458,26 @@
             this.tboxSuperf.Modified = false;
             this.tboxSuperf.Multiline = false;
             this.tboxSuperf.Name = "tboxSuperf";
-            stateProperties61.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties61.FillColor = System.Drawing.Color.Empty;
-            stateProperties61.ForeColor = System.Drawing.Color.Empty;
-            stateProperties61.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxSuperf.OnActiveState = stateProperties61;
-            stateProperties62.BorderColor = System.Drawing.Color.Empty;
-            stateProperties62.FillColor = System.Drawing.Color.White;
-            stateProperties62.ForeColor = System.Drawing.Color.Empty;
-            stateProperties62.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tboxSuperf.OnDisabledState = stateProperties62;
-            stateProperties63.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties63.FillColor = System.Drawing.Color.Empty;
-            stateProperties63.ForeColor = System.Drawing.Color.Empty;
-            stateProperties63.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxSuperf.OnHoverState = stateProperties63;
-            stateProperties64.BorderColor = System.Drawing.Color.Silver;
-            stateProperties64.FillColor = System.Drawing.Color.White;
-            stateProperties64.ForeColor = System.Drawing.Color.Empty;
-            stateProperties64.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxSuperf.OnIdleState = stateProperties64;
+            stateProperties65.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties65.FillColor = System.Drawing.Color.Empty;
+            stateProperties65.ForeColor = System.Drawing.Color.Empty;
+            stateProperties65.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxSuperf.OnActiveState = stateProperties65;
+            stateProperties66.BorderColor = System.Drawing.Color.Empty;
+            stateProperties66.FillColor = System.Drawing.Color.White;
+            stateProperties66.ForeColor = System.Drawing.Color.Empty;
+            stateProperties66.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tboxSuperf.OnDisabledState = stateProperties66;
+            stateProperties67.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties67.FillColor = System.Drawing.Color.Empty;
+            stateProperties67.ForeColor = System.Drawing.Color.Empty;
+            stateProperties67.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxSuperf.OnHoverState = stateProperties67;
+            stateProperties68.BorderColor = System.Drawing.Color.Silver;
+            stateProperties68.FillColor = System.Drawing.Color.White;
+            stateProperties68.ForeColor = System.Drawing.Color.Empty;
+            stateProperties68.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxSuperf.OnIdleState = stateProperties68;
             this.tboxSuperf.PasswordChar = '\0';
             this.tboxSuperf.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tboxSuperf.PlaceholderText = "...";
@@ -3188,26 +3534,26 @@
             this.tboxEscadas.Modified = false;
             this.tboxEscadas.Multiline = false;
             this.tboxEscadas.Name = "tboxEscadas";
-            stateProperties65.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties65.FillColor = System.Drawing.Color.Empty;
-            stateProperties65.ForeColor = System.Drawing.Color.Empty;
-            stateProperties65.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxEscadas.OnActiveState = stateProperties65;
-            stateProperties66.BorderColor = System.Drawing.Color.Empty;
-            stateProperties66.FillColor = System.Drawing.Color.White;
-            stateProperties66.ForeColor = System.Drawing.Color.Empty;
-            stateProperties66.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tboxEscadas.OnDisabledState = stateProperties66;
-            stateProperties67.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties67.FillColor = System.Drawing.Color.Empty;
-            stateProperties67.ForeColor = System.Drawing.Color.Empty;
-            stateProperties67.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxEscadas.OnHoverState = stateProperties67;
-            stateProperties68.BorderColor = System.Drawing.Color.Silver;
-            stateProperties68.FillColor = System.Drawing.Color.White;
-            stateProperties68.ForeColor = System.Drawing.Color.Empty;
-            stateProperties68.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxEscadas.OnIdleState = stateProperties68;
+            stateProperties69.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties69.FillColor = System.Drawing.Color.Empty;
+            stateProperties69.ForeColor = System.Drawing.Color.Empty;
+            stateProperties69.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxEscadas.OnActiveState = stateProperties69;
+            stateProperties70.BorderColor = System.Drawing.Color.Empty;
+            stateProperties70.FillColor = System.Drawing.Color.White;
+            stateProperties70.ForeColor = System.Drawing.Color.Empty;
+            stateProperties70.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tboxEscadas.OnDisabledState = stateProperties70;
+            stateProperties71.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties71.FillColor = System.Drawing.Color.Empty;
+            stateProperties71.ForeColor = System.Drawing.Color.Empty;
+            stateProperties71.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxEscadas.OnHoverState = stateProperties71;
+            stateProperties72.BorderColor = System.Drawing.Color.Silver;
+            stateProperties72.FillColor = System.Drawing.Color.White;
+            stateProperties72.ForeColor = System.Drawing.Color.Empty;
+            stateProperties72.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxEscadas.OnIdleState = stateProperties72;
             this.tboxEscadas.PasswordChar = '\0';
             this.tboxEscadas.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tboxEscadas.PlaceholderText = "...";
@@ -3265,26 +3611,26 @@
             this.tboxProfMed.Modified = false;
             this.tboxProfMed.Multiline = false;
             this.tboxProfMed.Name = "tboxProfMed";
-            stateProperties69.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties69.FillColor = System.Drawing.Color.Empty;
-            stateProperties69.ForeColor = System.Drawing.Color.Empty;
-            stateProperties69.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxProfMed.OnActiveState = stateProperties69;
-            stateProperties70.BorderColor = System.Drawing.Color.Empty;
-            stateProperties70.FillColor = System.Drawing.Color.White;
-            stateProperties70.ForeColor = System.Drawing.Color.Empty;
-            stateProperties70.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tboxProfMed.OnDisabledState = stateProperties70;
-            stateProperties71.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties71.FillColor = System.Drawing.Color.Empty;
-            stateProperties71.ForeColor = System.Drawing.Color.Empty;
-            stateProperties71.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxProfMed.OnHoverState = stateProperties71;
-            stateProperties72.BorderColor = System.Drawing.Color.Silver;
-            stateProperties72.FillColor = System.Drawing.Color.White;
-            stateProperties72.ForeColor = System.Drawing.Color.Empty;
-            stateProperties72.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxProfMed.OnIdleState = stateProperties72;
+            stateProperties73.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties73.FillColor = System.Drawing.Color.Empty;
+            stateProperties73.ForeColor = System.Drawing.Color.Empty;
+            stateProperties73.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxProfMed.OnActiveState = stateProperties73;
+            stateProperties74.BorderColor = System.Drawing.Color.Empty;
+            stateProperties74.FillColor = System.Drawing.Color.White;
+            stateProperties74.ForeColor = System.Drawing.Color.Empty;
+            stateProperties74.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tboxProfMed.OnDisabledState = stateProperties74;
+            stateProperties75.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties75.FillColor = System.Drawing.Color.Empty;
+            stateProperties75.ForeColor = System.Drawing.Color.Empty;
+            stateProperties75.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxProfMed.OnHoverState = stateProperties75;
+            stateProperties76.BorderColor = System.Drawing.Color.Silver;
+            stateProperties76.FillColor = System.Drawing.Color.White;
+            stateProperties76.ForeColor = System.Drawing.Color.Empty;
+            stateProperties76.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxProfMed.OnIdleState = stateProperties76;
             this.tboxProfMed.PasswordChar = '\0';
             this.tboxProfMed.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tboxProfMed.PlaceholderText = "...";
@@ -3342,26 +3688,26 @@
             this.tboxProfMax.Modified = false;
             this.tboxProfMax.Multiline = false;
             this.tboxProfMax.Name = "tboxProfMax";
-            stateProperties73.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties73.FillColor = System.Drawing.Color.Empty;
-            stateProperties73.ForeColor = System.Drawing.Color.Empty;
-            stateProperties73.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxProfMax.OnActiveState = stateProperties73;
-            stateProperties74.BorderColor = System.Drawing.Color.Empty;
-            stateProperties74.FillColor = System.Drawing.Color.White;
-            stateProperties74.ForeColor = System.Drawing.Color.Empty;
-            stateProperties74.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tboxProfMax.OnDisabledState = stateProperties74;
-            stateProperties75.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties75.FillColor = System.Drawing.Color.Empty;
-            stateProperties75.ForeColor = System.Drawing.Color.Empty;
-            stateProperties75.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxProfMax.OnHoverState = stateProperties75;
-            stateProperties76.BorderColor = System.Drawing.Color.Silver;
-            stateProperties76.FillColor = System.Drawing.Color.White;
-            stateProperties76.ForeColor = System.Drawing.Color.Empty;
-            stateProperties76.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxProfMax.OnIdleState = stateProperties76;
+            stateProperties77.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties77.FillColor = System.Drawing.Color.Empty;
+            stateProperties77.ForeColor = System.Drawing.Color.Empty;
+            stateProperties77.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxProfMax.OnActiveState = stateProperties77;
+            stateProperties78.BorderColor = System.Drawing.Color.Empty;
+            stateProperties78.FillColor = System.Drawing.Color.White;
+            stateProperties78.ForeColor = System.Drawing.Color.Empty;
+            stateProperties78.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tboxProfMax.OnDisabledState = stateProperties78;
+            stateProperties79.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties79.FillColor = System.Drawing.Color.Empty;
+            stateProperties79.ForeColor = System.Drawing.Color.Empty;
+            stateProperties79.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxProfMax.OnHoverState = stateProperties79;
+            stateProperties80.BorderColor = System.Drawing.Color.Silver;
+            stateProperties80.FillColor = System.Drawing.Color.White;
+            stateProperties80.ForeColor = System.Drawing.Color.Empty;
+            stateProperties80.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxProfMax.OnIdleState = stateProperties80;
             this.tboxProfMax.PasswordChar = '\0';
             this.tboxProfMax.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tboxProfMax.PlaceholderText = "...";
@@ -3420,26 +3766,26 @@
             this.tboxProfMin.Modified = false;
             this.tboxProfMin.Multiline = false;
             this.tboxProfMin.Name = "tboxProfMin";
-            stateProperties77.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties77.FillColor = System.Drawing.Color.Empty;
-            stateProperties77.ForeColor = System.Drawing.Color.Empty;
-            stateProperties77.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxProfMin.OnActiveState = stateProperties77;
-            stateProperties78.BorderColor = System.Drawing.Color.Empty;
-            stateProperties78.FillColor = System.Drawing.Color.White;
-            stateProperties78.ForeColor = System.Drawing.Color.Empty;
-            stateProperties78.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tboxProfMin.OnDisabledState = stateProperties78;
-            stateProperties79.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties79.FillColor = System.Drawing.Color.Empty;
-            stateProperties79.ForeColor = System.Drawing.Color.Empty;
-            stateProperties79.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxProfMin.OnHoverState = stateProperties79;
-            stateProperties80.BorderColor = System.Drawing.Color.Silver;
-            stateProperties80.FillColor = System.Drawing.Color.White;
-            stateProperties80.ForeColor = System.Drawing.Color.Empty;
-            stateProperties80.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxProfMin.OnIdleState = stateProperties80;
+            stateProperties81.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties81.FillColor = System.Drawing.Color.Empty;
+            stateProperties81.ForeColor = System.Drawing.Color.Empty;
+            stateProperties81.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxProfMin.OnActiveState = stateProperties81;
+            stateProperties82.BorderColor = System.Drawing.Color.Empty;
+            stateProperties82.FillColor = System.Drawing.Color.White;
+            stateProperties82.ForeColor = System.Drawing.Color.Empty;
+            stateProperties82.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tboxProfMin.OnDisabledState = stateProperties82;
+            stateProperties83.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties83.FillColor = System.Drawing.Color.Empty;
+            stateProperties83.ForeColor = System.Drawing.Color.Empty;
+            stateProperties83.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxProfMin.OnHoverState = stateProperties83;
+            stateProperties84.BorderColor = System.Drawing.Color.Silver;
+            stateProperties84.FillColor = System.Drawing.Color.White;
+            stateProperties84.ForeColor = System.Drawing.Color.Empty;
+            stateProperties84.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxProfMin.OnIdleState = stateProperties84;
             this.tboxProfMin.PasswordChar = '\0';
             this.tboxProfMin.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tboxProfMin.PlaceholderText = "...";
@@ -3498,26 +3844,26 @@
             this.tboxLarg.Modified = false;
             this.tboxLarg.Multiline = false;
             this.tboxLarg.Name = "tboxLarg";
-            stateProperties81.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties81.FillColor = System.Drawing.Color.Empty;
-            stateProperties81.ForeColor = System.Drawing.Color.Empty;
-            stateProperties81.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxLarg.OnActiveState = stateProperties81;
-            stateProperties82.BorderColor = System.Drawing.Color.Empty;
-            stateProperties82.FillColor = System.Drawing.Color.White;
-            stateProperties82.ForeColor = System.Drawing.Color.Empty;
-            stateProperties82.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tboxLarg.OnDisabledState = stateProperties82;
-            stateProperties83.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties83.FillColor = System.Drawing.Color.Empty;
-            stateProperties83.ForeColor = System.Drawing.Color.Empty;
-            stateProperties83.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxLarg.OnHoverState = stateProperties83;
-            stateProperties84.BorderColor = System.Drawing.Color.Silver;
-            stateProperties84.FillColor = System.Drawing.Color.White;
-            stateProperties84.ForeColor = System.Drawing.Color.Empty;
-            stateProperties84.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxLarg.OnIdleState = stateProperties84;
+            stateProperties85.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties85.FillColor = System.Drawing.Color.Empty;
+            stateProperties85.ForeColor = System.Drawing.Color.Empty;
+            stateProperties85.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxLarg.OnActiveState = stateProperties85;
+            stateProperties86.BorderColor = System.Drawing.Color.Empty;
+            stateProperties86.FillColor = System.Drawing.Color.White;
+            stateProperties86.ForeColor = System.Drawing.Color.Empty;
+            stateProperties86.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tboxLarg.OnDisabledState = stateProperties86;
+            stateProperties87.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties87.FillColor = System.Drawing.Color.Empty;
+            stateProperties87.ForeColor = System.Drawing.Color.Empty;
+            stateProperties87.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxLarg.OnHoverState = stateProperties87;
+            stateProperties88.BorderColor = System.Drawing.Color.Silver;
+            stateProperties88.FillColor = System.Drawing.Color.White;
+            stateProperties88.ForeColor = System.Drawing.Color.Empty;
+            stateProperties88.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxLarg.OnIdleState = stateProperties88;
             this.tboxLarg.PasswordChar = '\0';
             this.tboxLarg.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tboxLarg.PlaceholderText = "...";
@@ -3576,26 +3922,26 @@
             this.tboxComp.Modified = false;
             this.tboxComp.Multiline = false;
             this.tboxComp.Name = "tboxComp";
-            stateProperties85.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties85.FillColor = System.Drawing.Color.Empty;
-            stateProperties85.ForeColor = System.Drawing.Color.Empty;
-            stateProperties85.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxComp.OnActiveState = stateProperties85;
-            stateProperties86.BorderColor = System.Drawing.Color.Empty;
-            stateProperties86.FillColor = System.Drawing.Color.White;
-            stateProperties86.ForeColor = System.Drawing.Color.Empty;
-            stateProperties86.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tboxComp.OnDisabledState = stateProperties86;
-            stateProperties87.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties87.FillColor = System.Drawing.Color.Empty;
-            stateProperties87.ForeColor = System.Drawing.Color.Empty;
-            stateProperties87.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxComp.OnHoverState = stateProperties87;
-            stateProperties88.BorderColor = System.Drawing.Color.Silver;
-            stateProperties88.FillColor = System.Drawing.Color.White;
-            stateProperties88.ForeColor = System.Drawing.Color.Empty;
-            stateProperties88.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxComp.OnIdleState = stateProperties88;
+            stateProperties89.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties89.FillColor = System.Drawing.Color.Empty;
+            stateProperties89.ForeColor = System.Drawing.Color.Empty;
+            stateProperties89.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxComp.OnActiveState = stateProperties89;
+            stateProperties90.BorderColor = System.Drawing.Color.Empty;
+            stateProperties90.FillColor = System.Drawing.Color.White;
+            stateProperties90.ForeColor = System.Drawing.Color.Empty;
+            stateProperties90.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tboxComp.OnDisabledState = stateProperties90;
+            stateProperties91.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties91.FillColor = System.Drawing.Color.Empty;
+            stateProperties91.ForeColor = System.Drawing.Color.Empty;
+            stateProperties91.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxComp.OnHoverState = stateProperties91;
+            stateProperties92.BorderColor = System.Drawing.Color.Silver;
+            stateProperties92.FillColor = System.Drawing.Color.White;
+            stateProperties92.ForeColor = System.Drawing.Color.Empty;
+            stateProperties92.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxComp.OnIdleState = stateProperties92;
             this.tboxComp.PasswordChar = '\0';
             this.tboxComp.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tboxComp.PlaceholderText = "...";
@@ -3741,7 +4087,6 @@
             this.panel6.Controls.Add(this.tboxSearchDGV);
             this.panel6.Controls.Add(this.ddDgvFilter);
             this.panel6.Controls.Add(this.bunifuFlatButton3);
-            this.panel6.Controls.Add(this.btnAddEquip);
             this.bunifuTransition1.SetDecoration(this.panel6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(0, 519);
@@ -3784,26 +4129,26 @@
             this.tboxSearchDGV.Modified = false;
             this.tboxSearchDGV.Multiline = false;
             this.tboxSearchDGV.Name = "tboxSearchDGV";
-            stateProperties89.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties89.FillColor = System.Drawing.Color.Empty;
-            stateProperties89.ForeColor = System.Drawing.Color.Empty;
-            stateProperties89.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxSearchDGV.OnActiveState = stateProperties89;
-            stateProperties90.BorderColor = System.Drawing.Color.Empty;
-            stateProperties90.FillColor = System.Drawing.Color.White;
-            stateProperties90.ForeColor = System.Drawing.Color.Empty;
-            stateProperties90.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tboxSearchDGV.OnDisabledState = stateProperties90;
-            stateProperties91.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties91.FillColor = System.Drawing.Color.Empty;
-            stateProperties91.ForeColor = System.Drawing.Color.Empty;
-            stateProperties91.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxSearchDGV.OnHoverState = stateProperties91;
-            stateProperties92.BorderColor = System.Drawing.Color.Silver;
-            stateProperties92.FillColor = System.Drawing.Color.White;
-            stateProperties92.ForeColor = System.Drawing.Color.Empty;
-            stateProperties92.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tboxSearchDGV.OnIdleState = stateProperties92;
+            stateProperties93.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties93.FillColor = System.Drawing.Color.Empty;
+            stateProperties93.ForeColor = System.Drawing.Color.Empty;
+            stateProperties93.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxSearchDGV.OnActiveState = stateProperties93;
+            stateProperties94.BorderColor = System.Drawing.Color.Empty;
+            stateProperties94.FillColor = System.Drawing.Color.White;
+            stateProperties94.ForeColor = System.Drawing.Color.Empty;
+            stateProperties94.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tboxSearchDGV.OnDisabledState = stateProperties94;
+            stateProperties95.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties95.FillColor = System.Drawing.Color.Empty;
+            stateProperties95.ForeColor = System.Drawing.Color.Empty;
+            stateProperties95.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxSearchDGV.OnHoverState = stateProperties95;
+            stateProperties96.BorderColor = System.Drawing.Color.Silver;
+            stateProperties96.FillColor = System.Drawing.Color.White;
+            stateProperties96.ForeColor = System.Drawing.Color.Empty;
+            stateProperties96.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tboxSearchDGV.OnIdleState = stateProperties96;
             this.tboxSearchDGV.PasswordChar = '\0';
             this.tboxSearchDGV.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tboxSearchDGV.PlaceholderText = "...";
@@ -3834,10 +4179,16 @@
             this.ddDgvFilter.DisabledColor = System.Drawing.Color.Gray;
             this.ddDgvFilter.ForeColor = System.Drawing.Color.White;
             this.ddDgvFilter.items = new string[] {
-        "Folha1",
-        "Folha2",
-        "Folha3"};
-            this.ddDgvFilter.Location = new System.Drawing.Point(473, 18);
+        "Encastrar",
+        "Iluminação",
+        "Filtros",
+        "Bombas",
+        "Tratamento",
+        "Material Exterior",
+        "Canalização",
+        "Quadros Elétricos",
+        "Material Limpeza"};
+            this.ddDgvFilter.Location = new System.Drawing.Point(654, 18);
             this.ddDgvFilter.Name = "ddDgvFilter";
             this.ddDgvFilter.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
             this.ddDgvFilter.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
@@ -3882,44 +4233,6 @@
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton3.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
-            // 
-            // btnAddEquip
-            // 
-            this.btnAddEquip.Active = false;
-            this.btnAddEquip.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
-            this.btnAddEquip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddEquip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
-            this.btnAddEquip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddEquip.BorderRadius = 0;
-            this.btnAddEquip.ButtonText = "Adicionar";
-            this.btnAddEquip.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.btnAddEquip, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.btnAddEquip.DisabledColor = System.Drawing.Color.Gray;
-            this.btnAddEquip.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAddEquip.Iconimage = global::AppVg.Properties.Resources.add_list_52px;
-            this.btnAddEquip.Iconimage_right = null;
-            this.btnAddEquip.Iconimage_right_Selected = null;
-            this.btnAddEquip.Iconimage_Selected = null;
-            this.btnAddEquip.IconMarginLeft = 0;
-            this.btnAddEquip.IconMarginRight = 0;
-            this.btnAddEquip.IconRightVisible = false;
-            this.btnAddEquip.IconRightZoom = 0D;
-            this.btnAddEquip.IconVisible = false;
-            this.btnAddEquip.IconZoom = 45D;
-            this.btnAddEquip.IsTab = false;
-            this.btnAddEquip.Location = new System.Drawing.Point(677, 18);
-            this.btnAddEquip.Name = "btnAddEquip";
-            this.btnAddEquip.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
-            this.btnAddEquip.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
-            this.btnAddEquip.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnAddEquip.selected = false;
-            this.btnAddEquip.Size = new System.Drawing.Size(170, 35);
-            this.btnAddEquip.TabIndex = 1;
-            this.btnAddEquip.Text = "Adicionar";
-            this.btnAddEquip.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEquip.Textcolor = System.Drawing.Color.White;
-            this.btnAddEquip.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEquip.Click += new System.EventHandler(this.btnAddEquip_Click);
             // 
             // panel4
             // 
@@ -4073,6 +4386,31 @@
             this.elipseForm.ElipseRadius = 25;
             this.elipseForm.TargetControl = this;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.label1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.label1.Location = new System.Drawing.Point(782, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.TabIndex = 65;
+            this.label1.Text = "TESTE";
+            // 
+            // bunifuLabel41
+            // 
+            this.bunifuLabel41.AutoEllipsis = false;
+            this.bunifuLabel41.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.bunifuLabel41, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuLabel41.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.bunifuLabel41.Location = new System.Drawing.Point(711, 44);
+            this.bunifuLabel41.Name = "bunifuLabel41";
+            this.bunifuLabel41.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel41.Size = new System.Drawing.Size(65, 20);
+            this.bunifuLabel41.TabIndex = 81;
+            this.bunifuLabel41.Text = "TESTE B";
+            this.bunifuLabel41.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel41.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4212,7 +4550,7 @@
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tboxProfMed;
         private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel21;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown4;
+        private Bunifu.Framework.UI.BunifuDropdown ddCirculação;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel24;
         private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown3;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel22;
@@ -4254,16 +4592,32 @@
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tboxSearchDGV;
         private Bunifu.Framework.UI.BunifuDropdown ddDgvFilter;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
-        private Bunifu.Framework.UI.BunifuFlatButton btnAddEquip;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tboxMorada2Cliente;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tboxMoradaCliente;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tboxCoord;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel14;
         private Bunifu.Framework.UI.BunifuDropdown ddMoradaInst;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tboxMoradaInst;
         private System.Windows.Forms.PictureBox logoHome;
         private System.Windows.Forms.RichTextBox rtboxPropPrev;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel14;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tboxCoord;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel34;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tboxNif;
+        private Bunifu.Framework.UI.BunifuDropdown ddEstrutura;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel35;
+        private Bunifu.Framework.UI.BunifuDropdown ddEscavacao;
+        private Bunifu.UI.WinForms.BunifuLabel Escavação;
+        private Bunifu.Framework.UI.BunifuDropdown ddRevestimento;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel36;
+        private Bunifu.Framework.UI.BunifuDropdown ddLigRed;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel40;
+        private Bunifu.Framework.UI.BunifuDropdown ddTComp;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel39;
+        private Bunifu.Framework.UI.BunifuDropdown ddCMaqui;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel38;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel37;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel41;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -35,20 +35,6 @@ namespace AppVg
             pSubMenuProp.Width = 167;
             pSubMenuProp.Visible = false;
 
-            var pathTempFolder = Path.Combine(System.AppContext.BaseDirectory, "TempFilesApp");
-            var pathTempDocx = pathTempFolder + "\\tempProp.docx";
-            pathTempDocxP = pathTempDocx;
-
-            if (!Directory.Exists(pathTempFolder))
-            {
-                Directory.CreateDirectory(pathTempFolder);
-            }
-
-            if (!File.Exists(pathTempDocx))
-            {
-                File.Create(pathTempDocx);
-            }
-
         }
 
 
@@ -262,8 +248,7 @@ namespace AppVg
                 //PISCINA
                 case 4:
 
-                    ddMoradaInst.AddItem(tboxMoradaCliente.Text);
-                    ddMoradaInst.AddItem(tboxMorada2Cliente.Text);
+
                     tboxMoradaInst.Enabled = false;
 
 
@@ -353,9 +338,10 @@ namespace AppVg
         #region Cliente
         private void dgvClientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string morada = dgvClientes.CurrentRow.Cells[9].Value.ToString() + ", " +
-                dgvClientes.CurrentRow.Cells[3].Value.ToString() + ", " +
+            string morada = dgvClientes.CurrentRow.Cells[3].Value.ToString() + ", " +
+                dgvClientes.CurrentRow.Cells[9].Value.ToString() + ", " +
                 dgvClientes.CurrentRow.Cells[8].Value.ToString();
+
             tboxNomeCliente.Text = dgvClientes.CurrentRow.Cells[1].Value.ToString();
             tboxNumCliente.Text = dgvClientes.CurrentRow.Cells[0].Value.ToString();
             tboxContactoCliente.Text = dgvClientes.CurrentRow.Cells[4].Value.ToString();
@@ -364,6 +350,11 @@ namespace AppVg
             tboxMorada2Cliente.Text = dgvClientes.CurrentRow.Cells[6].Value.ToString();
             tboxCoord.Text = dgvClientes.CurrentRow.Cells[12].Value.ToString();
             pages.PageIndex = 2;
+
+            ddMoradaInst.Clear();
+
+            ddMoradaInst.AddItem(tboxMoradaCliente.Text);
+            ddMoradaInst.AddItem(tboxMorada2Cliente.Text);
         }
 
         private string imgClientePath = "";
@@ -503,7 +494,7 @@ namespace AppVg
 
         private void tboxSearchDGV_TextChanged(object sender, EventArgs e)
         {
-            (dgvDB.DataSource as DataTable).DefaultView.RowFilter = string.Format("Equipamento LIKE '%{0}%'", tboxSearchDGV.Text);
+            (dgvDB.DataSource as DataTable).DefaultView.RowFilter = string.Format("Nome LIKE '%{0}%'", tboxSearchDGV.Text);
         }
 
         private void ddDgvFilter_onItemSelected(object sender, EventArgs e)
@@ -557,21 +548,29 @@ namespace AppVg
 
         private void addEquipamento()
         {
-            DataGridViewRow r = dgvDB.CurrentRow;
-
-            int index = dgvProp.Rows.Add(r.Cells[0].Value, r.Cells[1].Value, r.Cells[2].Value, r.Cells[3].Value, r.Cells[4].Value, r.Cells[5].Value, r.Cells[6].Value, r.Cells[7].Value);
-
-            for (int row = 0; row < dgvProp.RowCount - 1; row++)
+            try
             {
-                if (dgvProp.Rows[row].Cells[0].Value == dgvProp.Rows[index].Cells[0].Value && row != index)
-                {
-                    DataGridViewRow rowDuplicate = dgvProp.Rows[index];
-                    dgvProp.Rows.Remove(rowDuplicate);
-                    dgvProp[6, row].Value = Convert.ToInt32(dgvProp[6, row].Value) + 1;
+                DataGridViewRow r = dgvDB.CurrentRow;
 
-                    dgvProp[7, row].Value = Convert.ToInt32(dgvProp[6, row].Value) * Convert.ToInt32(dgvProp[5, row].Value);
+                int index = dgvProp.Rows.Add(r.Cells[0].Value, r.Cells[1].Value, r.Cells[2].Value, r.Cells[3].Value, r.Cells[4].Value, r.Cells[5].Value, r.Cells[6].Value, r.Cells[7].Value);
+
+                for (int row = 0; row < dgvProp.RowCount - 1; row++)
+                {
+                    if (dgvProp.Rows[row].Cells[0].Value == dgvProp.Rows[index].Cells[0].Value && row != index)
+                    {
+                        DataGridViewRow rowDuplicate = dgvProp.Rows[index];
+                        dgvProp.Rows.Remove(rowDuplicate);
+                        dgvProp[6, row].Value = Convert.ToInt32(dgvProp[6, row].Value) + 1;
+
+                        dgvProp[7, row].Value = Convert.ToDouble(dgvProp[6, row].Value) * Convert.ToDouble(dgvProp[5, row].Value);
+                    }
                 }
             }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.ToString());
+            }
+            
         }
 
         #endregion
@@ -579,209 +578,271 @@ namespace AppVg
         #region EXPORTAR
         private void btnExportProp_Click(object sender, EventArgs e)
         {
-            //Preview 
-            string filePath = "";
-            using (SaveFileDialog sfd = new SaveFileDialog())
+            try
             {
-                sfd.InitialDirectory = @"C:\";
-                sfd.RestoreDirectory = true;
-                sfd.FileName = tboxNomeProp.Text;
-                sfd.Filter = "docx files (*.docx)|*.docx";
-                sfd.DefaultExt = "docx";
-
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                    filePath = sfd.FileName;
-
-                }
-            }
-
-            if (filePath != "")
-            {
-                string fileName = filePath;
-                var doc = DocX.Create(fileName);
-                //var imgLogoScale = System.Drawing.Image.FromFile("E:\\Projects\\AppVg\\Resources\\images\\logoVG.png");
-
-                var path = Path.GetTempPath();
-                Properties.Resources.logoVGscaled.Save(path + "\\logoVGscaled.png");
-
-                //LOGO VG
-                Xceed.Document.NET.Image img = doc.AddImage(path + "\\logoVGscaled.png");
-                Picture pLogo = img.CreatePicture();
-                Paragraph parLogo = doc.InsertParagraph("");
-                parLogo.Alignment = Alignment.center;
-                parLogo.AppendPicture(pLogo);
-
-                doc.InsertParagraph();
-                doc.InsertParagraph();
-                doc.InsertParagraph();
-                doc.InsertParagraph();
-
-                //NUM PROPOSTA
-                doc.InsertParagraph("Proposta VG - " + tboxNumProp.Text);
-
-                doc.InsertParagraph();
-
-                //DATA PROPOSTA
-                doc.InsertParagraph("Data: " + tboxData.Text);
-
-                doc.InsertParagraph();
-                doc.InsertParagraph();
                 
-                //IMG CLIENTE
-                if (imgClientePath != "")
+                //Preview 
+                string filePath = "";
+                using (SaveFileDialog sfd = new SaveFileDialog())
                 {
-                    Xceed.Document.NET.Image imgCliente = doc.AddImage(imgClientePath);
-                    Picture pCliente = imgCliente.CreatePicture();
-                    Paragraph par = doc.InsertParagraph("Cliente: ");
-                    par.AppendPicture(pCliente);
-                    doc.InsertParagraph();
-                }
+                    sfd.InitialDirectory = @"C:\";
+                    sfd.RestoreDirectory = true;
+                    sfd.FileName = tboxNomeProp.Text;
+                    sfd.Filter = "docx files (*.docx)|*.docx";
+                    sfd.DefaultExt = "docx";
 
-                //DADOS CLIENTE
-                doc.InsertParagraph("Nome: " + tboxNomeCliente.Text);
-                doc.InsertParagraph();
-                doc.InsertParagraph("Tlm: " + tboxContactoCliente.Text);
-                doc.InsertParagraph();
-                doc.InsertParagraph("E-mail: " + tboxMailCliente.Text);
-                doc.InsertParagraph();
-                doc.InsertParagraph("Morada: " + tboxMoradaCliente.Text);
-                doc.InsertParagraph();
-                doc.InsertParagraph(tboxTextoAbertura.Text);
-
-                doc.InsertSectionPageBreak();
-
-                //DADOS PISCINA
-                doc.InsertParagraph("A proposta, está baseada nos elementos fornecidos à VITORGEST, e têm as seguintes características:");
-                doc.InsertParagraph();
-                doc.InsertParagraph();
-
-                Table t = doc.AddTable(2, 6);
-                t.Alignment = Alignment.center;
-                t.Design = TableDesign.MediumGrid3Accent5;
-
-                t.Rows[0].Cells[0].Paragraphs.First().Append("Forma");
-                t.Rows[0].Cells[1].Paragraphs.First().Append("Dimensões");
-                t.Rows[0].Cells[2].Paragraphs.First().Append("Área");
-                t.Rows[0].Cells[3].Paragraphs.First().Append("Prof. Max.");
-                t.Rows[0].Cells[4].Paragraphs.First().Append("Prof. Min.");
-                t.Rows[0].Cells[5].Paragraphs.First().Append("Volume");
-
-                t.Rows[1].Cells[0].Paragraphs.First().Append(ddFormato.selectedValue);
-                t.Rows[1].Cells[1].Paragraphs.First().Append(tboxComp.Text + " x " + tboxLarg.Text);
-                t.Rows[1].Cells[2].Paragraphs.First().Append(tboxArea.Text + "m^2");
-                t.Rows[1].Cells[3].Paragraphs.First().Append(tboxProfMax.Text + "m");
-                t.Rows[1].Cells[4].Paragraphs.First().Append(tboxProfMin.Text + "m");
-                t.Rows[1].Cells[5].Paragraphs.First().Append(tboxVol.Text + "m^3");
-
-                doc.InsertTable(t);
-
-                doc.InsertParagraph();
-                doc.InsertParagraph("Localização da Obra: " + ddMoradaInst.selectedValue);
-                doc.InsertParagraph();
-
-                doc.InsertSectionPageBreak();
-
-                //EQUIPAMENTO
-                doc.InsertParagraph();
-                doc.InsertParagraph("Fornecimento de Equipamento e Instalação");
-                doc.InsertParagraph();
-
-                Table tEquipamento = doc.AddTable(dgvProp.Rows.Count, 3);
-                tEquipamento.Alignment = Alignment.center;
-                tEquipamento.Design = TableDesign.MediumGrid3Accent5;
-
-                for (int i = 0; i < dgvProp.Rows.Count; i++)
-                {
-                    for (int j = 1; j < 3; j++)
+                    if (sfd.ShowDialog() == DialogResult.OK)
                     {
-                        tEquipamento.Rows[i].Cells[j].Paragraphs.First().Append(dgvProp[j, i].Value.ToString());
+                        filePath = sfd.FileName;
+
                     }
                 }
 
-                doc.InsertTable(tEquipamento);
-
-                //VALORES
-                doc.InsertParagraph();
-                doc.InsertParagraph("I- Valores");
-                doc.InsertParagraph("Transporte incluído.");
-                doc.InsertParagraph();
-
-                Table tValores = doc.AddTable(4, 2);
-                tValores.Alignment = Alignment.center;
-                tValores.Design = TableDesign.MediumGrid3Accent5;
-
-                tValores.Rows[0].Cells[0].Paragraphs.First().Append("Equipamento");
-                tValores.Rows[1].Cells[0].Paragraphs.First().Append("Revestimento");
-                tValores.Rows[2].Cells[0].Paragraphs.First().Append("Tratamento de Água");
-                tValores.Rows[3].Cells[0].Paragraphs.First().Append("Total");
-
-                int valorEquipamento= 0;
-                int valorRevestimento = 0;
-                int valorTratamento= 0;
-                for (int i = 0; i < dgvProp.Rows.Count; i++)
+                if (filePath != "")
                 {
-                    valorEquipamento += Convert.ToInt32(dgvProp[7, i].Value.ToString());
+                    string fileName = filePath;
+                    var doc = DocX.Create(fileName);
+                    //var imgLogoScale = System.Drawing.Image.FromFile("E:\\Projects\\AppVg\\Resources\\images\\logoVG.png");
+
+                    var path = Path.GetTempPath();
+                    Properties.Resources.logoVGscaled.Save(path + "\\logoVGscaled.png");
+
+                    doc.DifferentOddAndEvenPages = false;
+                    doc.DifferentFirstPage = false;
+
+                    //HEADER
+                    doc.AddHeaders();
+                    doc.Headers.Odd.InsertParagraph("Proposta VG-" + tboxNumProp.Text).Alignment = Alignment.right;
+                    doc.Headers.Even.InsertParagraph("Proposta VG-" + tboxNumProp.Text).Alignment = Alignment.right;
+                    doc.Headers.First.InsertParagraph("Proposta VG-" + tboxNumProp.Text).Alignment = Alignment.right;
+
+                    //FOOTER
+                    doc.AddFooters();
+                    doc.Footers.Odd.InsertParagraph("Rua dos Aventureiros Lote 19ª – Parque das Nações – 1990-024 Lisboa\nTel. 218 940 990 - Telm. 935 809 381 - Fax. 218 940 992 - Email: info@vitorgest.pt").Alignment = Alignment.center;
+                    doc.Footers.Even.InsertParagraph("Rua dos Aventureiros Lote 19ª – Parque das Nações – 1990-024 Lisboa\nTel. 218 940 990 - Telm. 935 809 381 - Fax. 218 940 992 - Email: info@vitorgest.pt").Alignment = Alignment.center;
+                    doc.Footers.First.InsertParagraph("Rua dos Aventureiros Lote 19ª – Parque das Nações – 1990-024 Lisboa\nTel. 218 940 990 - Telm. 935 809 381 - Fax. 218 940 992 - Email: info@vitorgest.pt").Alignment = Alignment.center;
+
+                    //LOGO VG
+                    Xceed.Document.NET.Image img = doc.AddImage(path + "\\logoVGscaled.png");
+                    Picture pLogo = img.CreatePicture();
+                    Paragraph parLogo = doc.InsertParagraph("");
+                    parLogo.Alignment = Alignment.center;
+                    parLogo.AppendPicture(pLogo);
+
+                    doc.InsertParagraph();
+                    doc.InsertParagraph();
+                    doc.InsertParagraph();
+                    doc.InsertParagraph();
+
+                    //NUM PROPOSTA
+                    doc.InsertParagraph("Proposta VG - " + tboxNumProp.Text).Bold().FontSize(12);
+
+                    //DATA PROPOSTA
+                    doc.InsertParagraph("Data: " + tboxData.Text).Alignment = Alignment.right;
+
+                    doc.InsertParagraph();
+                    doc.InsertParagraph();
+                
+                    //IMG CLIENTE
+                    if (imgClientePath != "")
+                    {
+                        var imgCliente = doc.AddImage(imgClientePath);
+                        Picture pCliente = imgCliente.CreatePicture(100, 100);
+                        Paragraph par = doc.InsertParagraph("Cliente: ");
+                        par.AppendPicture(pCliente);
+                        doc.InsertParagraph();
+                    }
+
+                    //DADOS CLIENTE
+                    //doc.InsertParagraph("Cliente: " + tboxNomeCliente.Text);
+                    doc.InsertParagraph("Cliente: ").Bold().Append(tboxNomeCliente.Text);
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("TLM: ").Bold().Append(tboxContactoCliente.Text);
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("EMAIL: ").Bold().Append(tboxMailCliente.Text);
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("MORADA: ").Bold().Append(tboxMoradaCliente.Text);
+                    doc.InsertParagraph();
+                    doc.InsertParagraph();
+                    doc.InsertParagraph(tboxTextoAbertura.Text);
+
+                    doc.InsertSectionPageBreak();
+
+                    //DADOS PISCINA
+                    doc.InsertParagraph("A proposta, está baseada nos elementos fornecidos à VITORGEST, e têm as seguintes características:");
+                    doc.InsertParagraph();
+                    doc.InsertParagraph();
+
+                    Table t = doc.AddTable(2, 8);
+                    t.Alignment = Alignment.center;
+                    t.Design = TableDesign.LightListAccent1;
+
+                    t.Rows[0].Cells[0].Paragraphs.First().Append("Designação");
+                    t.Rows[0].Cells[1].Paragraphs.First().Append("Número");
+                    t.Rows[0].Cells[2].Paragraphs.First().Append("Área");
+                    t.Rows[0].Cells[3].Paragraphs.First().Append("Forma");
+                    t.Rows[0].Cells[4].Paragraphs.First().Append("Prof. Máx.");
+                    t.Rows[0].Cells[5].Paragraphs.First().Append("Prof. Min.");
+                    t.Rows[0].Cells[6].Paragraphs.First().Append("Volume");
+                    t.Rows[0].Cells[7].Paragraphs.First().Append("Tipo de Circulação");
+
+                    t.Rows[1].Cells[0].Paragraphs.First().Append("Piscina\n" + tboxComp.Text + "x" + tboxLarg.Text);
+                    t.Rows[1].Cells[1].Paragraphs.First().Append("1");
+                    t.Rows[1].Cells[2].Paragraphs.First().Append(tboxArea.Text + "m^2");
+                    t.Rows[1].Cells[3].Paragraphs.First().Append(ddFormato.selectedValue);
+                    t.Rows[1].Cells[4].Paragraphs.First().Append(tboxProfMax.Text + "m");
+                    t.Rows[1].Cells[5].Paragraphs.First().Append(tboxProfMin.Text + "m");
+                    t.Rows[1].Cells[6].Paragraphs.First().Append(tboxVol.Text + "m^3");
+                    t.Rows[1].Cells[7].Paragraphs.First().Append(ddCirculação.selectedValue); ;
+
+                    doc.InsertTable(t);
+
+                    doc.InsertParagraph();
+                    if (ddMoradaInst.selectedValue == "Outro")
+                    {
+                        doc.InsertParagraph("Localização da Obra: ").Bold().Append(tboxMoradaInst.Text);
+                    }
+                    else
+                    {
+                        doc.InsertParagraph("Localização da Obra: ").Bold().Append(ddMoradaInst.selectedValue);
+                    }
+                    doc.InsertParagraph();
+
+                    doc.InsertParagraph("Escavação: ").Bold().Append(ddEscavacao.selectedValue);
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("Estrutura: ").Bold().Append(ddEstrutura.selectedValue);
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("Revestimento: ").Bold().Append(ddRevestimento.selectedValue);
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("Equipamento de Filtração: ").Bold().Append("Será fornecido e instalado todo o equipamento previsto nesta proposta de acordo com as normas em vigor.");
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("Equipamento Suplementar: ").Bold().Append("Ver proposta em anexo.");
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("Ligações á rede: ").Bold().Append(ddLigRed.selectedValue);
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("Casa das Máquinas: ").Bold().Append(ddCMaqui.selectedValue);
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("Tanque de Compensação: ").Bold().Append(ddTComp.selectedValue);
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("Acabamento final: ").Bold().Append("Enchimento da piscina (água a cargo do Cliente). Colocação dos equipamentos em funcionamento. Testes e ensaios. Entrega da piscina pronta a utilizar.");
+
+                    doc.InsertSectionPageBreak();
+
+                    //EQUIPAMENTO
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("Fornecimento de Equipamento e Instalação");
+                    doc.InsertParagraph();
+
+                    if (dgvProp.Rows.Count > 0)
+                    {
+                        Table tEquipamento = doc.AddTable(dgvProp.Rows.Count, 3);
+                        tEquipamento.Alignment = Alignment.center;
+                        tEquipamento.Design = TableDesign.LightListAccent1;
+
+                        for (int i = 0; i < dgvProp.Rows.Count; i++)
+                        {
+                            for (int j = 0; j < 3; j++)
+                            {
+                                if(j == 0)
+                                {
+                                    //tEquipamento.Rows[i].Cells[j].Paragraphs.First().Append(dgvProp[j, i].Value.ToString());
+                                }
+                                else
+                                {
+                                    tEquipamento.Rows[i].Cells[j].Paragraphs.First().Append(dgvProp[j, i].Value.ToString());
+                                }
+                            }
+                        }
+
+                        doc.InsertTable(tEquipamento);
+                    }
+                    
+                    //VALORES
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("I- Valores");
+                    doc.InsertParagraph("Transporte incluído.");
+                    doc.InsertParagraph();
+
+                    Table tValores = doc.AddTable(4, 2);
+                    tValores.Alignment = Alignment.center;
+                    tValores.Design = TableDesign.MediumGrid3Accent5;
+
+                    tValores.Rows[0].Cells[0].Paragraphs.First().Append("Equipamento");
+                    tValores.Rows[1].Cells[0].Paragraphs.First().Append("Revestimento");
+                    tValores.Rows[2].Cells[0].Paragraphs.First().Append("Tratamento de Água");
+                    tValores.Rows[3].Cells[0].Paragraphs.First().Append("Total");
+
+                    double valorEquipamento= 0;
+                    double valorRevestimento = 0;
+                    double valorTratamento= 0;
+                    for (int i = 0; i < dgvProp.Rows.Count; i++)
+                    {
+                        valorEquipamento += Convert.ToDouble(dgvProp[7, i].Value.ToString());
+                    }
+
+                    double valorTotal = valorEquipamento + valorRevestimento + valorTratamento;
+
+                    tValores.Rows[0].Cells[1].Paragraphs.First().Append(valorEquipamento.ToString());
+                    tValores.Rows[1].Cells[1].Paragraphs.First().Append(valorRevestimento.ToString());
+                    tValores.Rows[2].Cells[1].Paragraphs.First().Append(valorTratamento.ToString());
+                    tValores.Rows[3].Cells[1].Paragraphs.First().Append(valorTotal.ToString());
+                    doc.InsertTable(tValores);
+                    doc.InsertParagraph("A este valor acresce a taxa de IVA em vigor.");
+
+                    //CONDICÕES
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("II- Condições");
+                    doc.InsertParagraph("30% Com adjudicação");
+                    doc.InsertParagraph("30% Com a entrega do equipamento");
+                    doc.InsertParagraph("30% Na conclusão da instalação/revestimento");
+                    doc.InsertParagraph("10% No Final");
+                    doc.InsertParagraph();
+                
+                    //GARANTIAS
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("III- Garantias*");
+
+                    Table tGarantia = doc.AddTable(5, 2);
+                    tGarantia.Alignment = Alignment.center;
+                    tGarantia.Design = TableDesign.MediumGrid3Accent5;
+
+                    tGarantia.Rows[0].Cells[0].Paragraphs.First().Append("Filtros e Bombas");
+                    tGarantia.Rows[1].Cells[0].Paragraphs.First().Append("Equipamento de limpeza robot");
+                    tGarantia.Rows[2].Cells[0].Paragraphs.First().Append("Tratamento de água");
+                    tGarantia.Rows[3].Cells[0].Paragraphs.First().Append("Quadros Elétricos e Equipamentos");
+                    tGarantia.Rows[4].Cells[0].Paragraphs.First().Append("Revestimento em Tela Armada (estanquicidade)");
+
+                    tGarantia.Rows[0].Cells[1].Paragraphs.First().Append("3 Anos");
+                    tGarantia.Rows[1].Cells[1].Paragraphs.First().Append("3 Anos");
+                    tGarantia.Rows[2].Cells[1].Paragraphs.First().Append("3 Anos");
+                    tGarantia.Rows[3].Cells[1].Paragraphs.First().Append("2 Anos");
+                    tGarantia.Rows[4].Cells[1].Paragraphs.First().Append("10 Anos");
+
+                    doc.InsertTable(tGarantia);
+                    doc.InsertParagraph("*(Conforme norma dos fabricantes)");
+                    doc.InsertParagraph();
+
+                    //VALIDADE
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("IV- Validade");
+                    doc.InsertParagraph("Esta proposta é válida por 60 dias");
+                    doc.InsertParagraph();
+
+                    //ADJUDICAÇÃO
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("V- Adjudicação");
+                    doc.InsertParagraph("Esta proposta é válida por 60 dias");
+
+                    doc.Save();
+
+                    MessageBox.Show("Proposta criada com sucesso!");
                 }
 
-                int valorTotal = valorEquipamento + valorRevestimento + valorTratamento;
-
-                tValores.Rows[0].Cells[1].Paragraphs.First().Append(valorEquipamento.ToString());
-                tValores.Rows[1].Cells[1].Paragraphs.First().Append(valorRevestimento.ToString());
-                tValores.Rows[2].Cells[1].Paragraphs.First().Append(valorTratamento.ToString());
-                tValores.Rows[3].Cells[1].Paragraphs.First().Append(valorTotal.ToString());
-                doc.InsertTable(tValores);
-                doc.InsertParagraph("A este valor acresce a taxa de IVA em vigor.");
-
-                //CONDICÕES
-                doc.InsertParagraph();
-                doc.InsertParagraph("II- Condições");
-                doc.InsertParagraph("30% Com adjudicação");
-                doc.InsertParagraph("30% Com a entrega do equipamento");
-                doc.InsertParagraph("30% Na conclusão da instalação/revestimento");
-                doc.InsertParagraph("10% No Final");
-                doc.InsertParagraph();
-                
-                //GARANTIAS
-                doc.InsertParagraph();
-                doc.InsertParagraph("III- Garantias*");
-
-                Table tGarantia = doc.AddTable(5, 2);
-                tGarantia.Alignment = Alignment.center;
-                tGarantia.Design = TableDesign.MediumGrid3Accent5;
-
-                tGarantia.Rows[0].Cells[0].Paragraphs.First().Append("Filtros e Bombas");
-                tGarantia.Rows[1].Cells[0].Paragraphs.First().Append("Equipamento de limpeza robot");
-                tGarantia.Rows[2].Cells[0].Paragraphs.First().Append("Tratamento de água");
-                tGarantia.Rows[3].Cells[0].Paragraphs.First().Append("Quadros Elétricos e Equipamentos");
-                tGarantia.Rows[4].Cells[0].Paragraphs.First().Append("Revestimento em Tela Armada (estanquicidade)");
-
-                tGarantia.Rows[0].Cells[1].Paragraphs.First().Append("3 Anos");
-                tGarantia.Rows[1].Cells[1].Paragraphs.First().Append("3 Anos");
-                tGarantia.Rows[2].Cells[1].Paragraphs.First().Append("3 Anos");
-                tGarantia.Rows[3].Cells[1].Paragraphs.First().Append("2 Anos");
-                tGarantia.Rows[4].Cells[1].Paragraphs.First().Append("10 Anos");
-
-                doc.InsertTable(tGarantia);
-                doc.InsertParagraph("*(Conforme norma dos fabricantes)");
-                doc.InsertParagraph();
-
-                //VALIDADE
-                doc.InsertParagraph();
-                doc.InsertParagraph("IV- Validade");
-                doc.InsertParagraph("Esta proposta é válida por 60 dias");
-                doc.InsertParagraph();
-
-                //ADJUDICAÇÃO
-                doc.InsertParagraph();
-                doc.InsertParagraph("V- Adjudicação");
-                doc.InsertParagraph("Esta proposta é válida por 60 dias");
-
-                doc.Save();
-
-                MessageBox.Show("Proposta criada com sucesso!");
+                }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.ToString());
             }
-
 
         }
 
@@ -949,25 +1010,16 @@ namespace AppVg
                     labelRaio.Visible = false;
                     labelComp.Visible = true;
 
-                    tboxComp.Enabled = false;
-                    tboxLarg.Enabled = false;
-                    tboxProfMax.Enabled = false;
-                    tboxProfMin.Enabled = false;
+                    tboxComp.Enabled = true;
+                    tboxLarg.Enabled = true;
+                    tboxProfMax.Enabled = true;
+                    tboxProfMin.Enabled = true;
 
                     break;
             }
 
            
         }
-
-
-
-
-
-
-
-
-
 
         #endregion
 
