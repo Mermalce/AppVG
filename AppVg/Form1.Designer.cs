@@ -288,7 +288,6 @@
             this.bunifuSeparator6 = new Bunifu.Framework.UI.BunifuSeparator();
             this.elipseDGV = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btnExportPdf = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pSideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -4144,7 +4143,6 @@
             // 
             // pExportControls
             // 
-            this.pExportControls.Controls.Add(this.btnExportPdf);
             this.pExportControls.Controls.Add(this.btnExportProp);
             this.bunifuTransition1.SetDecoration(this.pExportControls, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pExportControls.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -4161,7 +4159,7 @@
             this.btnExportProp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
             this.btnExportProp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExportProp.BorderRadius = 0;
-            this.btnExportProp.ButtonText = "Exportar WORD";
+            this.btnExportProp.ButtonText = "Exportar";
             this.btnExportProp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransition1.SetDecoration(this.btnExportProp, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.btnExportProp.DisabledColor = System.Drawing.Color.Gray;
@@ -4185,7 +4183,7 @@
             this.btnExportProp.selected = false;
             this.btnExportProp.Size = new System.Drawing.Size(170, 48);
             this.btnExportProp.TabIndex = 0;
-            this.btnExportProp.Text = "Exportar WORD";
+            this.btnExportProp.Text = "Exportar";
             this.btnExportProp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExportProp.Textcolor = System.Drawing.Color.White;
             this.btnExportProp.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4235,44 +4233,6 @@
             // 
             this.elipseForm.ElipseRadius = 25;
             this.elipseForm.TargetControl = this;
-            // 
-            // btnExportPdf
-            // 
-            this.btnExportPdf.Active = false;
-            this.btnExportPdf.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
-            this.btnExportPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExportPdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
-            this.btnExportPdf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExportPdf.BorderRadius = 0;
-            this.btnExportPdf.ButtonText = "Exportar PDF";
-            this.btnExportPdf.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.btnExportPdf, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.btnExportPdf.DisabledColor = System.Drawing.Color.Gray;
-            this.btnExportPdf.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnExportPdf.Iconimage = global::AppVg.Properties.Resources.print_26px;
-            this.btnExportPdf.Iconimage_right = null;
-            this.btnExportPdf.Iconimage_right_Selected = null;
-            this.btnExportPdf.Iconimage_Selected = null;
-            this.btnExportPdf.IconMarginLeft = 0;
-            this.btnExportPdf.IconMarginRight = 0;
-            this.btnExportPdf.IconRightVisible = false;
-            this.btnExportPdf.IconRightZoom = 0D;
-            this.btnExportPdf.IconVisible = false;
-            this.btnExportPdf.IconZoom = 45D;
-            this.btnExportPdf.IsTab = false;
-            this.btnExportPdf.Location = new System.Drawing.Point(483, 6);
-            this.btnExportPdf.Name = "btnExportPdf";
-            this.btnExportPdf.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
-            this.btnExportPdf.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
-            this.btnExportPdf.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnExportPdf.selected = false;
-            this.btnExportPdf.Size = new System.Drawing.Size(170, 48);
-            this.btnExportPdf.TabIndex = 1;
-            this.btnExportPdf.Text = "Exportar PDF";
-            this.btnExportPdf.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExportPdf.Textcolor = System.Drawing.Color.White;
-            this.btnExportPdf.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExportPdf.Click += new System.EventHandler(this.btnExportPdf_Click);
             // 
             // Form1
             // 
@@ -4479,7 +4439,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel41;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel40;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel47;
-        private Bunifu.Framework.UI.BunifuFlatButton btnExportPdf;
     }
 }
 

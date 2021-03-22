@@ -13,6 +13,7 @@ using System.Data.OleDb;
 using System.Threading;
 using Xceed.Words.NET;
 using Xceed.Document.NET;
+using ConvertApiDotNet;
 
 namespace AppVg
 {
@@ -574,6 +575,8 @@ namespace AppVg
         #endregion
 
         #region EXPORTAR
+
+        string filePathPdf = "";
         private void btnExportProp_Click(object sender, EventArgs e)
         {
             try
@@ -592,7 +595,7 @@ namespace AppVg
                     if (sfd.ShowDialog() == DialogResult.OK)
                     {
                         filePath = sfd.FileName;
-
+                        filePathPdf = filePath;
                     }
                 }
 
@@ -892,12 +895,6 @@ namespace AppVg
             {
                 MessageBox.Show(error.ToString());
             }
-
-        }
-
-        //Exportar PDF
-        private void btnExportPdf_Click(object sender, EventArgs e)
-        {
 
         }
 
