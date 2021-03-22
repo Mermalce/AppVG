@@ -27,8 +27,6 @@ namespace AppVg
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        private string pathTempDocxP;
-
         public Form1()
         {
             InitializeComponent();
@@ -552,7 +550,7 @@ namespace AppVg
             {
                 DataGridViewRow r = dgvDB.CurrentRow;
 
-                int index = dgvProp.Rows.Add(r.Cells[0].Value, r.Cells[1].Value, r.Cells[2].Value, r.Cells[3].Value, r.Cells[4].Value, r.Cells[5].Value, r.Cells[6].Value, r.Cells[7].Value);
+                int index = dgvProp.Rows.Add(r.Cells[0].Value, r.Cells[1].Value, r.Cells[2].Value, r.Cells[3].Value, r.Cells[4].Value, r.Cells[5].Value, r.Cells[6].Value, r.Cells[7].Value, r.Cells[8].Value);
 
                 for (int row = 0; row < dgvProp.RowCount - 1; row++)
                 {
@@ -581,7 +579,7 @@ namespace AppVg
             try
             {
                 
-                //Preview 
+                //Prop file path
                 string filePath = "";
                 using (SaveFileDialog sfd = new SaveFileDialog())
                 {
@@ -607,20 +605,28 @@ namespace AppVg
                     var path = Path.GetTempPath();
                     Properties.Resources.logoVGscaled.Save(path + "\\logoVGscaled.png");
 
+
+
                     doc.DifferentOddAndEvenPages = false;
                     doc.DifferentFirstPage = false;
+                    doc.AddHeaders();
+                    doc.AddFooters();
 
                     //HEADER
-                    doc.AddHeaders();
-                    doc.Headers.Odd.InsertParagraph("Proposta VG-" + tboxNumProp.Text).Alignment = Alignment.right;
-                    doc.Headers.Even.InsertParagraph("Proposta VG-" + tboxNumProp.Text).Alignment = Alignment.right;
-                    doc.Headers.First.InsertParagraph("Proposta VG-" + tboxNumProp.Text).Alignment = Alignment.right;
+
+                    Table tHeader = doc.AddTable(1, 2);
+                    tHeader.Alignment = Alignment.center;
+                    tHeader.Design = TableDesign.Custom;
+
+                    tHeader.Rows[0].Cells[0].Paragraphs.First().Append("Original").Bold().Alignment = Alignment.left;
+                    tHeader.Rows[0].Cells[1].Paragraphs.First().Append("Proposta VG-" + tboxNumProp.Text).Alignment = Alignment.right;
+                    tHeader.SetColumnWidth(0, 250);
+                    tHeader.SetColumnWidth(1, 250);
+
+                    doc.Headers.Odd.InsertTable(tHeader);
 
                     //FOOTER
-                    doc.AddFooters();
                     doc.Footers.Odd.InsertParagraph("Rua dos Aventureiros Lote 19ª – Parque das Nações – 1990-024 Lisboa\nTel. 218 940 990 - Telm. 935 809 381 - Fax. 218 940 992 - Email: info@vitorgest.pt").Alignment = Alignment.center;
-                    doc.Footers.Even.InsertParagraph("Rua dos Aventureiros Lote 19ª – Parque das Nações – 1990-024 Lisboa\nTel. 218 940 990 - Telm. 935 809 381 - Fax. 218 940 992 - Email: info@vitorgest.pt").Alignment = Alignment.center;
-                    doc.Footers.First.InsertParagraph("Rua dos Aventureiros Lote 19ª – Parque das Nações – 1990-024 Lisboa\nTel. 218 940 990 - Telm. 935 809 381 - Fax. 218 940 992 - Email: info@vitorgest.pt").Alignment = Alignment.center;
 
                     //LOGO VG
                     Xceed.Document.NET.Image img = doc.AddImage(path + "\\logoVGscaled.png");
@@ -634,11 +640,18 @@ namespace AppVg
                     doc.InsertParagraph();
                     doc.InsertParagraph();
 
-                    //NUM PROPOSTA
-                    doc.InsertParagraph("Proposta VG - " + tboxNumProp.Text).Bold().FontSize(12);
+                    //NUM PROP E DATA
 
-                    //DATA PROPOSTA
-                    doc.InsertParagraph("Data: " + tboxData.Text).Alignment = Alignment.right;
+                    Table tNumData = doc.AddTable(1, 2);
+                    tNumData.Alignment = Alignment.center;
+                    tNumData.Design = TableDesign.Custom;
+
+                    tNumData.Rows[0].Cells[0].Paragraphs.First().Append("Proposta VG - " + tboxNumProp.Text).Bold().FontSize(12).Alignment = Alignment.left;
+                    tNumData.Rows[0].Cells[1].Paragraphs.First().Append("Data: " + tboxData.Text).Alignment = Alignment.right;
+                    tNumData.SetColumnWidth(0, 250);
+                    tNumData.SetColumnWidth(1, 250);
+
+                    doc.InsertTable(tNumData);
 
                     doc.InsertParagraph();
                     doc.InsertParagraph();
@@ -648,7 +661,7 @@ namespace AppVg
                     {
                         var imgCliente = doc.AddImage(imgClientePath);
                         Picture pCliente = imgCliente.CreatePicture(100, 100);
-                        Paragraph par = doc.InsertParagraph("Cliente: ");
+                        Paragraph par = doc.InsertParagraph();
                         par.AppendPicture(pCliente);
                         doc.InsertParagraph();
                     }
@@ -666,7 +679,7 @@ namespace AppVg
                     doc.InsertParagraph();
                     doc.InsertParagraph(tboxTextoAbertura.Text);
 
-                    doc.InsertSectionPageBreak();
+                    doc.InsertParagraph().InsertPageBreakAfterSelf();
 
                     //DADOS PISCINA
                     doc.InsertParagraph("A proposta, está baseada nos elementos fornecidos à VITORGEST, e têm as seguintes características:");
@@ -688,75 +701,105 @@ namespace AppVg
 
                     t.Rows[1].Cells[0].Paragraphs.First().Append("Piscina\n" + tboxComp.Text + "x" + tboxLarg.Text);
                     t.Rows[1].Cells[1].Paragraphs.First().Append("1");
-                    t.Rows[1].Cells[2].Paragraphs.First().Append(tboxArea.Text + "m^2");
-                    t.Rows[1].Cells[3].Paragraphs.First().Append(ddFormato.selectedValue);
+                    t.Rows[1].Cells[2].Paragraphs.First().Append(tboxSuperf.Text + "m^2");
+                    if (ddFormato.selectedIndex == -1)
+                    {
+                        t.Rows[1].Cells[3].Paragraphs.First().Append("Não definido");
+                    }
+                    else
+                    {
+                        t.Rows[1].Cells[3].Paragraphs.First().Append(ddFormato.selectedValue);
+                    }
                     t.Rows[1].Cells[4].Paragraphs.First().Append(tboxProfMax.Text + "m");
                     t.Rows[1].Cells[5].Paragraphs.First().Append(tboxProfMin.Text + "m");
                     t.Rows[1].Cells[6].Paragraphs.First().Append(tboxVol.Text + "m^3");
-                    t.Rows[1].Cells[7].Paragraphs.First().Append(ddCirculação.selectedValue); ;
+
+                    if (ddCirculação.selectedIndex == -1)
+                    {
+                        t.Rows[1].Cells[7].Paragraphs.First().Append("Não definido");
+                    }
+                    else
+                    {
+                        t.Rows[1].Cells[7].Paragraphs.First().Append(ddFormato.selectedValue);
+                    }
 
                     doc.InsertTable(t);
 
                     doc.InsertParagraph();
-                    if (ddMoradaInst.selectedValue == "Outro")
+                    if(ddMoradaInst.selectedIndex == -1)
                     {
-                        doc.InsertParagraph("Localização da Obra: ").Bold().Append(tboxMoradaInst.Text);
+                        doc.InsertParagraph("Localização da Obra: ").Append("Não definido").FontSize(12);
+                    }
+                    else if (ddMoradaInst.selectedValue == "Outra")
+                    {
+                        doc.InsertParagraph("Localização da Obra: ").Append(tboxMoradaInst.Text).FontSize(12);
                     }
                     else
                     {
-                        doc.InsertParagraph("Localização da Obra: ").Bold().Append(ddMoradaInst.selectedValue);
+                        doc.InsertParagraph("Localização da Obra: ").Append(ddMoradaInst.selectedValue).FontSize(12);
                     }
                     doc.InsertParagraph();
 
-                    doc.InsertParagraph("Escavação: ").Bold().Append(ddEscavacao.selectedValue);
+                    doc.InsertParagraph("Escavação: ").Append(ddEscavacao.selectedValue).FontSize(12);
                     doc.InsertParagraph();
-                    doc.InsertParagraph("Estrutura: ").Bold().Append(ddEstrutura.selectedValue);
+                    doc.InsertParagraph("Estrutura: ").Append(ddEstrutura.selectedValue).FontSize(12);
                     doc.InsertParagraph();
-                    doc.InsertParagraph("Revestimento: ").Bold().Append(ddRevestimento.selectedValue);
+                    doc.InsertParagraph("Revestimento: ").Append(ddRevestimento.selectedValue).FontSize(12);
                     doc.InsertParagraph();
-                    doc.InsertParagraph("Equipamento de Filtração: ").Bold().Append("Será fornecido e instalado todo o equipamento previsto nesta proposta de acordo com as normas em vigor.");
+                    doc.InsertParagraph("Equipamento de Filtração: ").Append("Será fornecido e instalado todo o equipamento previsto nesta proposta de acordo com as normas em vigor.").FontSize(12);
                     doc.InsertParagraph();
-                    doc.InsertParagraph("Equipamento Suplementar: ").Bold().Append("Ver proposta em anexo.");
+                    doc.InsertParagraph("Equipamento Suplementar: ").Append("Ver proposta em anexo.").FontSize(12);
                     doc.InsertParagraph();
-                    doc.InsertParagraph("Ligações á rede: ").Bold().Append(ddLigRed.selectedValue);
+                    doc.InsertParagraph("Ligações á rede: ").Append(ddLigRed.selectedValue).FontSize(12);
                     doc.InsertParagraph();
-                    doc.InsertParagraph("Casa das Máquinas: ").Bold().Append(ddCMaqui.selectedValue);
+                    doc.InsertParagraph("Casa das Máquinas: ").Append(ddCMaqui.selectedValue).FontSize(12);
                     doc.InsertParagraph();
-                    doc.InsertParagraph("Tanque de Compensação: ").Bold().Append(ddTComp.selectedValue);
+                    doc.InsertParagraph("Tanque de Compensação: ").Append(ddTComp.selectedValue).FontSize(12);
                     doc.InsertParagraph();
-                    doc.InsertParagraph("Acabamento final: ").Bold().Append("Enchimento da piscina (água a cargo do Cliente). Colocação dos equipamentos em funcionamento. Testes e ensaios. Entrega da piscina pronta a utilizar.");
+                    doc.InsertParagraph("Acabamento final: ").Append("Enchimento da piscina (água a cargo do Cliente). Colocação dos equipamentos em funcionamento. Testes e ensaios. Entrega da piscina pronta a utilizar.").FontSize(12);
 
-                    doc.InsertSectionPageBreak();
+                    doc.InsertParagraph().InsertPageBreakAfterSelf();
 
                     //EQUIPAMENTO
                     doc.InsertParagraph();
-                    doc.InsertParagraph("Fornecimento de Equipamento e Instalação");
+                    doc.InsertParagraph("Fornecimento de Equipamento e Instalação").Bold();
                     doc.InsertParagraph();
 
-                    if (dgvProp.Rows.Count > 0)
-                    {
-                        Table tEquipamento = doc.AddTable(dgvProp.Rows.Count, 3);
-                        tEquipamento.Alignment = Alignment.center;
-                        tEquipamento.Design = TableDesign.LightListAccent1;
+                    //TABELAS
 
-                        for (int i = 0; i < dgvProp.Rows.Count; i++)
+                    string imgDBpath = Path.Combine(System.AppContext.BaseDirectory, "imgDB");
+
+                    for (int i = 0; i < dgvProp.Rows.Count; i++)
+                    {
+                        Table tEqui = doc.AddTable(1, 2);
+                        tEqui.Design = TableDesign.Custom;
+                        tEqui.Alignment = Alignment.center;
+
+                        doc.InsertParagraph(dgvProp[1, i].Value.ToString()).Bold().Alignment = Alignment.center;
+
+                        Xceed.Document.NET.Image equiImg = doc.AddImage(imgDBpath + "\\" + dgvProp[8, i].Value.ToString() + ".png");
+                        Picture pEqui = equiImg.CreatePicture();
+                        tEqui.Rows[0].Cells[0].Paragraphs.First().AppendPicture(pEqui).Alignment = Alignment.right;
+
+                        string[] equiDesc = dgvProp[2, i].Value.ToString().Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
+
+                        var bulletedList = doc.AddList(equiDesc[0], 0, ListItemType.Bulleted);
+                        for (int j = 1; j < equiDesc.Length; j++)
                         {
-                            for (int j = 0; j < 3; j++)
-                            {
-                                if(j == 0)
-                                {
-                                    //tEquipamento.Rows[i].Cells[j].Paragraphs.First().Append(dgvProp[j, i].Value.ToString());
-                                }
-                                else
-                                {
-                                    tEquipamento.Rows[i].Cells[j].Paragraphs.First().Append(dgvProp[j, i].Value.ToString());
-                                }
-                            }
+                            doc.AddListItem(bulletedList, equiDesc[j]);
                         }
 
-                        doc.InsertTable(tEquipamento);
+                        tEqui.Rows[0].Cells[1].Paragraphs.First().InsertListAfterSelf(bulletedList);
+
+                        tEqui.SetColumnWidth(0, 150);
+                        tEqui.SetColumnWidth(1, 250);
+                        doc.InsertTable(tEqui);
+
+                        doc.InsertParagraph();
+                        doc.InsertParagraph();
+                        doc.InsertParagraph();
                     }
-                    
+
                     //VALORES
                     doc.InsertParagraph();
                     doc.InsertParagraph("I- Valores");
@@ -802,23 +845,18 @@ namespace AppVg
                     doc.InsertParagraph();
                     doc.InsertParagraph("III- Garantias*");
 
-                    Table tGarantia = doc.AddTable(5, 2);
-                    tGarantia.Alignment = Alignment.center;
-                    tGarantia.Design = TableDesign.MediumGrid3Accent5;
+                    string garantia1 = "Filtros e Bombas..................................................................";
+                    string garantia2 = "Equipamento de limpeza robot...........................................";
+                    string garantia3 = "Tratamento de água............................................................";
+                    string garantia4 = "Quadros Elétricos e Equipamentos.....................................";
+                    string garantia5 = "Revestimento em Tela Armada (estanquicidade).............";
 
-                    tGarantia.Rows[0].Cells[0].Paragraphs.First().Append("Filtros e Bombas");
-                    tGarantia.Rows[1].Cells[0].Paragraphs.First().Append("Equipamento de limpeza robot");
-                    tGarantia.Rows[2].Cells[0].Paragraphs.First().Append("Tratamento de água");
-                    tGarantia.Rows[3].Cells[0].Paragraphs.First().Append("Quadros Elétricos e Equipamentos");
-                    tGarantia.Rows[4].Cells[0].Paragraphs.First().Append("Revestimento em Tela Armada (estanquicidade)");
+                    doc.InsertParagraph(garantia1).Append("3 Anos").Bold();
+                    doc.InsertParagraph(garantia2).Append("3 Anos").Bold();
+                    doc.InsertParagraph(garantia3).Append("2 Anos").Bold();
+                    doc.InsertParagraph(garantia4).Append("2 Anos").Bold();
+                    doc.InsertParagraph(garantia5).Append("10 Anos").Bold();
 
-                    tGarantia.Rows[0].Cells[1].Paragraphs.First().Append("3 Anos");
-                    tGarantia.Rows[1].Cells[1].Paragraphs.First().Append("3 Anos");
-                    tGarantia.Rows[2].Cells[1].Paragraphs.First().Append("3 Anos");
-                    tGarantia.Rows[3].Cells[1].Paragraphs.First().Append("2 Anos");
-                    tGarantia.Rows[4].Cells[1].Paragraphs.First().Append("10 Anos");
-
-                    doc.InsertTable(tGarantia);
                     doc.InsertParagraph("*(Conforme norma dos fabricantes)");
                     doc.InsertParagraph();
 
@@ -831,7 +869,18 @@ namespace AppVg
                     //ADJUDICAÇÃO
                     doc.InsertParagraph();
                     doc.InsertParagraph("V- Adjudicação");
-                    doc.InsertParagraph("Esta proposta é válida por 60 dias");
+                    doc.InsertParagraph("VITORGEST, Lda.");
+                    doc.InsertParagraph();
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("_____________________________");
+                    doc.InsertParagraph();
+                    doc.InsertParagraph();
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("Cliente");
+                    doc.InsertParagraph();
+                    doc.InsertParagraph();
+                    doc.InsertParagraph("_____________________________");
+                    doc.InsertParagraph("(concordo com as condições desta proposta)");
 
                     doc.Save();
 
@@ -843,6 +892,12 @@ namespace AppVg
             {
                 MessageBox.Show(error.ToString());
             }
+
+        }
+
+        //Exportar PDF
+        private void btnExportPdf_Click(object sender, EventArgs e)
+        {
 
         }
 
@@ -912,12 +967,11 @@ namespace AppVg
                 dgvDB.Columns["Quantidade"].Visible = false;
                 dgvDB.Columns["Total"].Visible = false;
                 dgvDB.Columns["Preco"].Visible = false;
-                //dgvDB.Columns["f7"].Visible = false;
+                dgvDB.Columns[8].Visible = false;
 
                 dgvProp.Columns["Marca"].Visible = false;
                 dgvProp.Columns["Obs"].Visible = false;
-                //dgvProp.Columns["f7"].Visible = false;
-
+                dgvProp.Columns[8].Visible = false;
 
             }
         }
@@ -939,90 +993,101 @@ namespace AppVg
         private void changeValues()
         {
 
-            switch (ddFormato.selectedIndex)
+            try
             {
-                //Rectangulo
-                case 0:
-                    labelRaio.Visible = false;
-                    labelComp.Visible = true; 
+                switch (ddFormato.selectedIndex)
+                {
+                    //Rectangulo
+                    case 0:
+                        labelRaio.Visible = false;
+                        labelComp.Visible = true;
 
-                    tboxComp.Enabled = true;
-                    tboxLarg.Enabled = true;
-                    tboxProfMax.Enabled = true;
-                    tboxProfMin.Enabled = true;
-                    if (!String.IsNullOrEmpty(tboxComp.Text) && !String.IsNullOrEmpty(tboxLarg.Text) && !String.IsNullOrEmpty(tboxProfMin.Text) && !String.IsNullOrEmpty(tboxProfMax.Text))
-                    {
-                        double comprimento = Double.Parse(tboxComp.Text);
-                        double largura = Double.Parse(tboxLarg.Text);
-
-
-                        double profMin = Double.Parse(tboxProfMin.Text);
-                        double profMax = Double.Parse(tboxProfMax.Text);
-                        double profMed = (profMin + profMax) / 2;
-
-                        double superficie = comprimento * largura;
-
-                        double volume = comprimento * largura * profMed;
-
-                        double area = ((comprimento * profMed * 2) + (largura * profMed * 2) + superficie) * 1.1;
-
-                        double perimetro = (comprimento + largura) * 2;
-
-                        tboxSuperf.Text = superficie.ToString();
-                        tboxVol.Text = volume.ToString();
-                        tboxProfMed.Text = profMed.ToString();
-                        tboxArea.Text = area.ToString();
-                        tboxPerim.Text = perimetro.ToString();
-
-                    }
-                    break;
-
-                //circulo
-                case 1:
-                    labelRaio.Visible = true;
-                    labelComp.Visible = false;
-
-                    tboxComp.Enabled = true;
-                    tboxLarg.Enabled = false;
-                    tboxProfMax.Enabled = true;
-                    tboxProfMin.Enabled = true;
-
-                    double profMinC = Double.Parse(tboxProfMin.Text);
-                    double profMaxC = Double.Parse(tboxProfMax.Text);
-                    double profMedC = (profMinC + profMaxC) / 2;
-                    double raio = Double.Parse(tboxComp.Text);
-                    double areaC = Math.PI * (raio * raio);
-                    double volC = areaC * profMedC;
-                    double perimetroC = 2 * Math.PI * raio;
-                    double areaCtotal = (2 * Math.PI * raio * (profMedC + raio)) * 1.1;
-
-                    tboxProfMed.Text = Math.Round(profMedC, 2).ToString();
-                    tboxSuperf.Text = Math.Round(areaC, 2).ToString();
-                    tboxVol.Text = Math.Round(volC, 2).ToString();
-                    tboxPerim.Text = Math.Round(perimetroC, 2).ToString();
-                    tboxArea.Text = Math.Round(areaCtotal, 2).ToString();
+                        tboxComp.Enabled = true;
+                        tboxLarg.Enabled = true;
+                        tboxProfMax.Enabled = true;
+                        tboxProfMin.Enabled = true;
+                        if (!String.IsNullOrEmpty(tboxComp.Text) && !String.IsNullOrEmpty(tboxLarg.Text) && !String.IsNullOrEmpty(tboxProfMin.Text) && !String.IsNullOrEmpty(tboxProfMax.Text))
+                        {
+                            double comprimento = Double.Parse(tboxComp.Text);
+                            double largura = Double.Parse(tboxLarg.Text);
 
 
+                            double profMin = Double.Parse(tboxProfMin.Text);
+                            double profMax = Double.Parse(tboxProfMax.Text);
+                            double profMed = (profMin + profMax) / 2;
 
-                    break;
+                            double superficie = comprimento * largura;
 
-                default:
-                    labelRaio.Visible = false;
-                    labelComp.Visible = true;
+                            double volume = comprimento * largura * profMed;
 
-                    tboxComp.Enabled = true;
-                    tboxLarg.Enabled = true;
-                    tboxProfMax.Enabled = true;
-                    tboxProfMin.Enabled = true;
+                            double area = ((comprimento * profMed * 2) + (largura * profMed * 2) + superficie) * 1.1;
 
-                    break;
+                            double perimetro = (comprimento + largura) * 2;
+
+                            tboxSuperf.Text = superficie.ToString();
+                            tboxVol.Text = volume.ToString();
+                            tboxProfMed.Text = profMed.ToString();
+                            tboxArea.Text = area.ToString();
+                            tboxPerim.Text = perimetro.ToString();
+
+                        }
+                        break;
+
+                    //circulo
+                    case 1:
+                        labelRaio.Visible = true;
+                        labelComp.Visible = false;
+
+                        tboxComp.Enabled = true;
+                        tboxLarg.Enabled = false;
+                        tboxProfMax.Enabled = true;
+                        tboxProfMin.Enabled = true;
+
+                        double profMinC = Double.Parse(tboxProfMin.Text);
+                        double profMaxC = Double.Parse(tboxProfMax.Text);
+                        double profMedC = (profMinC + profMaxC) / 2;
+                        double raio = Double.Parse(tboxComp.Text);
+                        double areaC = Math.PI * (raio * raio);
+                        double volC = areaC * profMedC;
+                        double perimetroC = 2 * Math.PI * raio;
+                        double areaCtotal = (2 * Math.PI * raio * (profMedC + raio)) * 1.1;
+
+                        tboxProfMed.Text = Math.Round(profMedC, 2).ToString();
+                        tboxSuperf.Text = Math.Round(areaC, 2).ToString();
+                        tboxVol.Text = Math.Round(volC, 2).ToString();
+                        tboxPerim.Text = Math.Round(perimetroC, 2).ToString();
+                        tboxArea.Text = Math.Round(areaCtotal, 2).ToString();
+
+
+
+                        break;
+
+                    default:
+                        labelRaio.Visible = false;
+                        labelComp.Visible = true;
+
+                        tboxComp.Enabled = true;
+                        tboxLarg.Enabled = true;
+                        tboxProfMax.Enabled = true;
+                        tboxProfMin.Enabled = true;
+
+                        break;
+                }
+
             }
+            catch (Exception excep)
+            {
+
+            }
+
+
 
            
         }
 
+
         #endregion
 
-       
+
     }
 }
