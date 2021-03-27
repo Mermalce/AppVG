@@ -13,7 +13,6 @@ using System.Data.OleDb;
 using System.Threading;
 using Xceed.Words.NET;
 using Xceed.Document.NET;
-using ConvertApiDotNet;
 
 namespace AppVg
 {
@@ -670,7 +669,6 @@ namespace AppVg
                     }
 
                     //DADOS CLIENTE
-                    //doc.InsertParagraph("Cliente: " + tboxNomeCliente.Text);
                     doc.InsertParagraph("Cliente: ").Bold().Append(tboxNomeCliente.Text);
                     doc.InsertParagraph();
                     doc.InsertParagraph("TLM: ").Bold().Append(tboxContactoCliente.Text);
@@ -681,6 +679,7 @@ namespace AppVg
                     doc.InsertParagraph();
                     doc.InsertParagraph();
                     doc.InsertParagraph(tboxTextoAbertura.Text);
+                    doc.InsertParagraph("Vitor Filipe").Font(new Xceed.Document.NET.Font("Freestyle Script")).Color(Color.Blue).Italic().FontSize(20);
 
                     doc.InsertParagraph().InsertPageBreakAfterSelf();
 
@@ -765,7 +764,7 @@ namespace AppVg
 
                     //EQUIPAMENTO
                     doc.InsertParagraph();
-                    doc.InsertParagraph("Fornecimento de Equipamento e Instalação").Bold();
+                    doc.InsertParagraph("Fornecimento de Equipamento e Instalação").FontSize(13);
                     doc.InsertParagraph();
 
                     //TABELAS
@@ -805,7 +804,8 @@ namespace AppVg
 
                     //VALORES
                     doc.InsertParagraph();
-                    doc.InsertParagraph("I- Valores");
+                    doc.InsertParagraph("I- VALORES").FontSize(13);
+                    doc.InsertParagraph();
                     doc.InsertParagraph("Transporte incluído.");
                     doc.InsertParagraph();
 
@@ -837,7 +837,8 @@ namespace AppVg
 
                     //CONDICÕES
                     doc.InsertParagraph();
-                    doc.InsertParagraph("II- Condições");
+                    doc.InsertParagraph("II- CONDIÇÕES").FontSize(13);
+                    doc.InsertParagraph();
                     doc.InsertParagraph("30% Com adjudicação");
                     doc.InsertParagraph("30% Com a entrega do equipamento");
                     doc.InsertParagraph("30% Na conclusão da instalação/revestimento");
@@ -846,7 +847,8 @@ namespace AppVg
                 
                     //GARANTIAS
                     doc.InsertParagraph();
-                    doc.InsertParagraph("III- Garantias*");
+                    doc.InsertParagraph("III- GARANTIAS*").FontSize(13);
+                    doc.InsertParagraph();
 
                     string garantia1 = "Filtros e Bombas..................................................................";
                     string garantia2 = "Equipamento de limpeza robot...........................................";
@@ -865,25 +867,44 @@ namespace AppVg
 
                     //VALIDADE
                     doc.InsertParagraph();
-                    doc.InsertParagraph("IV- Validade");
+                    doc.InsertParagraph("IV- VALIDADE").FontSize(13);
+                    doc.InsertParagraph();
                     doc.InsertParagraph("Esta proposta é válida por 60 dias");
                     doc.InsertParagraph();
 
                     //ADJUDICAÇÃO
                     doc.InsertParagraph();
-                    doc.InsertParagraph("V- Adjudicação");
-                    doc.InsertParagraph("VITORGEST, Lda.");
+                    doc.InsertParagraph("V- ADJUDICAÇÃO").FontSize(13);
+                    doc.InsertParagraph();
+
+                    Table tAdju = doc.AddTable(3, 2);
+                    tAdju.Alignment = Alignment.center;
+                    tAdju.Design = TableDesign.Custom;
+                    tAdju.Rows[0].Cells[0].Paragraphs.First().Append("VITORGEST, Lda.\n\n");
+                    tAdju.Rows[0].Cells[1].Paragraphs.First().Append("Cliente\n\n");
+                    tAdju.Rows[1].Cells[0].Paragraphs.First().Append("Vitor Filipe").Font( new Xceed.Document.NET.Font("Freestyle Script")).Color(Color.Blue).Italic().FontSize(20);
+                    tAdju.Rows[1].Cells[1].Paragraphs.First().Append("_______________________________");
+                    tAdju.Rows[2].Cells[0].Paragraphs.First().Append("(T - 935 809 380)");
+                    tAdju.Rows[2].Cells[1].Paragraphs.First().Append("(concordo com as condições desta proposta)");
+                    doc.InsertTable(tAdju);
+
                     doc.InsertParagraph();
                     doc.InsertParagraph();
-                    doc.InsertParagraph("_____________________________");
+                    doc.InsertParagraph("Lisboa,____de_______________ de _____");
+
+                    doc.InsertParagraph().InsertPageBreakAfterSelf();
                     doc.InsertParagraph();
                     doc.InsertParagraph();
-                    doc.InsertParagraph();
-                    doc.InsertParagraph("Cliente");
-                    doc.InsertParagraph();
-                    doc.InsertParagraph();
-                    doc.InsertParagraph("_____________________________");
-                    doc.InsertParagraph("(concordo com as condições desta proposta)");
+
+                    string[] lastPageText = System.IO.File.ReadAllLines(Path.Combine(System.AppContext.BaseDirectory, "DBs") + "\\lastPage.txt");
+
+                    foreach(string line in lastPageText)
+                    {
+                        doc.InsertParagraph(line).FontSize(10);
+                    }
+
+                    doc.InsertParagraph("Vitor Filipe").Font(new Xceed.Document.NET.Font("Freestyle Script")).Color(Color.Blue).Italic().FontSize(20);
+                    doc.InsertParagraph("(T - 935 809 380)").FontSize(10);
 
                     doc.Save();
 
