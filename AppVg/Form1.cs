@@ -13,6 +13,7 @@ using System.Data.OleDb;
 using System.Threading;
 using Xceed.Words.NET;
 using Xceed.Document.NET;
+using System.Globalization;
 
 namespace AppVg
 {
@@ -32,7 +33,7 @@ namespace AppVg
             InitializeComponent();
             pSubMenuProp.Width = 167;
             pSubMenuProp.Visible = false;
-
+            CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("pt");
         }
 
 
@@ -353,6 +354,7 @@ namespace AppVg
 
             ddMoradaInst.AddItem(tboxMoradaCliente.Text);
             ddMoradaInst.AddItem(tboxMorada2Cliente.Text);
+            ddMoradaInst.AddItem("Outra");
         }
 
         private string imgClientePath = "";
@@ -461,6 +463,11 @@ namespace AppVg
         private void ddFormato_onItemSelected(object sender, EventArgs e)
         {
             changeValues();
+            tboxComp.Text = "0";
+            tboxLarg.Text = "0";
+            tboxProfMax.Text = "0";
+            tboxProfMin.Text = "0";
+            tboxProfMed.Text = "0";
         }
 
         private void tboxComp_TextChanged(object sender, EventArgs e)
@@ -614,6 +621,7 @@ namespace AppVg
                     doc.AddHeaders();
                     doc.AddFooters();
 
+
                     //HEADER
 
                     Table tHeader = doc.AddTable(1, 2);
@@ -628,7 +636,8 @@ namespace AppVg
                     doc.Headers.Odd.InsertTable(tHeader);
 
                     //FOOTER
-                    doc.Footers.Odd.InsertParagraph("Rua dos Aventureiros Lote 19ª – Parque das Nações – 1990-024 Lisboa\nTel. 218 940 990 - Telm. 935 809 381 - Fax. 218 940 992 - Email: info@vitorgest.pt").Alignment = Alignment.center;
+                    doc.Footers.Odd.InsertParagraph("Rua dos Aventureiros Lote 19ª – Parque das Nações – 1990-024 Lisboa\nTel. 218 940 990 - Telm. 935 809 381 - Fax. 218 940 992 - Email: info@vitorgest.pt").FontSize(9).Alignment = Alignment.center;
+                    doc.Footers.Odd.PageNumbers = true;
 
                     //LOGO VG
                     Xceed.Document.NET.Image img = doc.AddImage(path + "\\logoVGscaled.png");
@@ -648,7 +657,7 @@ namespace AppVg
                     tNumData.Alignment = Alignment.center;
                     tNumData.Design = TableDesign.Custom;
 
-                    tNumData.Rows[0].Cells[0].Paragraphs.First().Append("Proposta VG - " + tboxNumProp.Text).Bold().FontSize(12).Alignment = Alignment.left;
+                    tNumData.Rows[0].Cells[0].Paragraphs.First().Append("Proposta VG - " + tboxNumProp.Text).Bold().FontSize(13).Alignment = Alignment.left;
                     tNumData.Rows[0].Cells[1].Paragraphs.First().Append("Data: " + tboxData.Text).Alignment = Alignment.right;
                     tNumData.SetColumnWidth(0, 250);
                     tNumData.SetColumnWidth(1, 250);
@@ -657,7 +666,7 @@ namespace AppVg
 
                     doc.InsertParagraph();
                     doc.InsertParagraph();
-                
+
                     //IMG CLIENTE
                     if (imgClientePath != "")
                     {
@@ -669,16 +678,16 @@ namespace AppVg
                     }
 
                     //DADOS CLIENTE
-                    doc.InsertParagraph("Cliente: ").Bold().Append(tboxNomeCliente.Text);
+                    doc.InsertParagraph("CLIENTE: ").Bold().Append(tboxNomeCliente.Text).FontSize(12);
                     doc.InsertParagraph();
-                    doc.InsertParagraph("TLM: ").Bold().Append(tboxContactoCliente.Text);
+                    doc.InsertParagraph("TLM: ").Bold().Append(tboxContactoCliente.Text).FontSize(12);
                     doc.InsertParagraph();
-                    doc.InsertParagraph("EMAIL: ").Bold().Append(tboxMailCliente.Text);
+                    doc.InsertParagraph("EMAIL: ").Bold().Append(tboxMailCliente.Text).FontSize(12);
                     doc.InsertParagraph();
-                    doc.InsertParagraph("MORADA: ").Bold().Append(tboxMoradaCliente.Text);
+                    doc.InsertParagraph("MORADA: ").Bold().Append(tboxMoradaCliente.Text).FontSize(12);
                     doc.InsertParagraph();
                     doc.InsertParagraph();
-                    doc.InsertParagraph(tboxTextoAbertura.Text);
+                    doc.InsertParagraph(tboxTextoAbertura.Text).FontSize(12);
                     doc.InsertParagraph("Vitor Filipe").Font(new Xceed.Document.NET.Font("Freestyle Script")).Color(Color.Blue).Italic().FontSize(20);
 
                     doc.InsertParagraph().InsertPageBreakAfterSelf();
@@ -690,39 +699,39 @@ namespace AppVg
 
                     Table t = doc.AddTable(2, 8);
                     t.Alignment = Alignment.center;
-                    t.Design = TableDesign.LightListAccent1;
+                    t.Design = TableDesign.TableGrid;
 
-                    t.Rows[0].Cells[0].Paragraphs.First().Append("Designação");
-                    t.Rows[0].Cells[1].Paragraphs.First().Append("Número");
-                    t.Rows[0].Cells[2].Paragraphs.First().Append("Área");
-                    t.Rows[0].Cells[3].Paragraphs.First().Append("Forma");
-                    t.Rows[0].Cells[4].Paragraphs.First().Append("Prof. Máx.");
-                    t.Rows[0].Cells[5].Paragraphs.First().Append("Prof. Min.");
-                    t.Rows[0].Cells[6].Paragraphs.First().Append("Volume");
-                    t.Rows[0].Cells[7].Paragraphs.First().Append("Tipo de Circulação");
+                    t.Rows[0].Cells[0].Paragraphs.First().Append("Designação").Alignment = Alignment.center;
+                    t.Rows[0].Cells[1].Paragraphs.First().Append("Número").Alignment = Alignment.center;
+                    t.Rows[0].Cells[2].Paragraphs.First().Append("Área").Alignment = Alignment.center;
+                    t.Rows[0].Cells[3].Paragraphs.First().Append("Forma").Alignment = Alignment.center;
+                    t.Rows[0].Cells[4].Paragraphs.First().Append("Prof. Máx.").Alignment = Alignment.center;
+                    t.Rows[0].Cells[5].Paragraphs.First().Append("Prof. Min.").Alignment = Alignment.center;
+                    t.Rows[0].Cells[6].Paragraphs.First().Append("Volume").Alignment = Alignment.center;
+                    t.Rows[0].Cells[7].Paragraphs.First().Append("Tipo de Circulação").Alignment = Alignment.center;
 
-                    t.Rows[1].Cells[0].Paragraphs.First().Append("Piscina\n" + tboxComp.Text + "x" + tboxLarg.Text);
-                    t.Rows[1].Cells[1].Paragraphs.First().Append("1");
-                    t.Rows[1].Cells[2].Paragraphs.First().Append(tboxSuperf.Text + "m^2");
+                    t.Rows[1].Cells[0].Paragraphs.First().Append("Piscina\n" + tboxComp.Text + "x" + tboxLarg.Text).Alignment = Alignment.center;
+                    t.Rows[1].Cells[1].Paragraphs.First().Append("1").Alignment = Alignment.center;
+                    t.Rows[1].Cells[2].Paragraphs.First().Append(tboxSuperf.Text + " m\xB2").Alignment = Alignment.center;
                     if (ddFormato.selectedIndex == -1)
                     {
-                        t.Rows[1].Cells[3].Paragraphs.First().Append("Não definido");
+                        t.Rows[1].Cells[3].Paragraphs.First().Append("Não definido").Alignment = Alignment.center;
                     }
                     else
                     {
-                        t.Rows[1].Cells[3].Paragraphs.First().Append(ddFormato.selectedValue);
+                        t.Rows[1].Cells[3].Paragraphs.First().Append(ddFormato.selectedValue).Alignment = Alignment.center;
                     }
-                    t.Rows[1].Cells[4].Paragraphs.First().Append(tboxProfMax.Text + "m");
-                    t.Rows[1].Cells[5].Paragraphs.First().Append(tboxProfMin.Text + "m");
-                    t.Rows[1].Cells[6].Paragraphs.First().Append(tboxVol.Text + "m^3");
+                    t.Rows[1].Cells[4].Paragraphs.First().Append(tboxProfMax.Text + " m").Alignment = Alignment.center;
+                    t.Rows[1].Cells[5].Paragraphs.First().Append(tboxProfMin.Text + " m").Alignment = Alignment.center;
+                    t.Rows[1].Cells[6].Paragraphs.First().Append(tboxVol.Text + " m\xB3").Alignment = Alignment.center;
 
                     if (ddCirculação.selectedIndex == -1)
                     {
-                        t.Rows[1].Cells[7].Paragraphs.First().Append("Não definido");
+                        t.Rows[1].Cells[7].Paragraphs.First().Append("Não definido").Alignment = Alignment.center;
                     }
                     else
                     {
-                        t.Rows[1].Cells[7].Paragraphs.First().Append(ddFormato.selectedValue);
+                        t.Rows[1].Cells[7].Paragraphs.First().Append(ddCirculação.selectedValue).Alignment = Alignment.center;
                     }
 
                     doc.InsertTable(t);
@@ -741,7 +750,8 @@ namespace AppVg
                         doc.InsertParagraph("Localização da Obra: ").Append(ddMoradaInst.selectedValue).FontSize(12);
                     }
                     doc.InsertParagraph();
-
+                    doc.InsertParagraph("Coordenadas: ").Append(tboxCoord.Text).FontSize(12);
+                    doc.InsertParagraph();
                     doc.InsertParagraph("Escavação: ").Append(ddEscavacao.selectedValue).FontSize(12);
                     doc.InsertParagraph();
                     doc.InsertParagraph("Estrutura: ").Append(ddEstrutura.selectedValue).FontSize(12);
@@ -769,54 +779,142 @@ namespace AppVg
 
                     //TABELAS
 
+                    bool opcoesBool = false;
                     string imgDBpath = Path.Combine(System.AppContext.BaseDirectory, "imgDB");
 
                     for (int i = 0; i < dgvProp.Rows.Count; i++)
                     {
-                        Table tEqui = doc.AddTable(1, 2);
-                        tEqui.Design = TableDesign.Custom;
-                        tEqui.Alignment = Alignment.center;
-
-                        doc.InsertParagraph(dgvProp[1, i].Value.ToString()).Bold().Alignment = Alignment.center;
-
-                        Xceed.Document.NET.Image equiImg = doc.AddImage(imgDBpath + "\\" + dgvProp[8, i].Value.ToString() + ".png");
-                        Picture pEqui = equiImg.CreatePicture();
-                        tEqui.Rows[0].Cells[0].Paragraphs.First().AppendPicture(pEqui).Alignment = Alignment.right;
-
-                        string[] equiDesc = dgvProp[2, i].Value.ToString().Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
-
-                        var bulletedList = doc.AddList(equiDesc[0], 0, ListItemType.Bulleted);
-                        for (int j = 1; j < equiDesc.Length; j++)
+                        if (!Convert.ToBoolean(dgvProp[9, i].Value))
                         {
-                            doc.AddListItem(bulletedList, equiDesc[j]);
+                            Table tEqui = doc.AddTable(1, 4);
+                            tEqui.Design = TableDesign.Custom;
+                            tEqui.Alignment = Alignment.center;
+
+                            Xceed.Document.NET.Image equiImg = doc.AddImage(imgDBpath + "\\" + dgvProp[8, i].Value.ToString() + ".png");
+                            Picture pEqui = equiImg.CreatePicture();
+                            tEqui.Rows[0].Cells[0].Paragraphs.First().AppendPicture(pEqui).Alignment = Alignment.right;
+                            tEqui.Rows[0].Cells[2].Paragraphs.First().Append("Qt.\n").Bold().Append(dgvProp[6, i].Value.ToString()).Alignment = Alignment.center;
+                            tEqui.Rows[0].Cells[3].Paragraphs.First().Append("Preço\n").Bold().Append(dgvProp[7, i].Value.ToString() + " €").Alignment = Alignment.center;
+
+                            string[] equiDesc = dgvProp[2, i].Value.ToString().Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
+
+                            var bulletedList = doc.AddList(equiDesc[0], 0, ListItemType.Bulleted);
+                            for (int j = 1; j < equiDesc.Length; j++)
+                            {
+                                doc.AddListItem(bulletedList, equiDesc[j]);
+                            }
+
+                            tEqui.Rows[0].Cells[1].Paragraphs.First().Append(dgvProp[1, i].Value.ToString() + "\n").Bold().InsertListAfterSelf(bulletedList);
+
+                            tEqui.SetColumnWidth(0, 150);
+                            tEqui.SetColumnWidth(1, 200);
+                            tEqui.SetColumnWidth(2, 50);
+                            tEqui.SetColumnWidth(3, 50);
+                            doc.InsertTable(tEqui);
+
+                            doc.InsertParagraph();
+                        }
+                        else
+                        {
+                            opcoesBool = true;
                         }
 
-                        tEqui.Rows[0].Cells[1].Paragraphs.First().InsertListAfterSelf(bulletedList);
 
-                        tEqui.SetColumnWidth(0, 150);
-                        tEqui.SetColumnWidth(1, 250);
-                        doc.InsertTable(tEqui);
-
-                        doc.InsertParagraph();
-                        doc.InsertParagraph();
-                        doc.InsertParagraph();
                     }
 
+                    //OPCOES
+
+                    if (opcoesBool)
+                    {
+                        doc.InsertParagraph("Opções").Bold().FontSize(13).Alignment = Alignment.center;
+                    }
+
+                    for (int i = 0; i < dgvProp.Rows.Count; i++)
+                    {
+                        if (Convert.ToBoolean(dgvProp[9, i].Value))
+                        {
+                            Table tEqui = doc.AddTable(1, 4);
+                            tEqui.Design = TableDesign.Custom;
+                            tEqui.Alignment = Alignment.center;
+
+                            Xceed.Document.NET.Image equiImg = doc.AddImage(imgDBpath + "\\" + dgvProp[8, i].Value.ToString() + ".png");
+                            Picture pEqui = equiImg.CreatePicture();
+                            tEqui.Rows[0].Cells[0].Paragraphs.First().AppendPicture(pEqui).Alignment = Alignment.right;
+                            tEqui.Rows[0].Cells[2].Paragraphs.First().Append("Qt.\n").Bold().Append(dgvProp[6, i].Value.ToString()).Alignment = Alignment.center;
+                            tEqui.Rows[0].Cells[3].Paragraphs.First().Append("Preço\n").Bold().Append(dgvProp[7, i].Value.ToString() + " €").Alignment = Alignment.center;
+
+                            string[] equiDesc = dgvProp[2, i].Value.ToString().Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
+
+                            var bulletedList = doc.AddList(equiDesc[0], 0, ListItemType.Bulleted);
+                            for (int j = 1; j < equiDesc.Length; j++)
+                            {
+                                doc.AddListItem(bulletedList, equiDesc[j]);
+                            }
+
+                            tEqui.Rows[0].Cells[1].Paragraphs.First().Append(dgvProp[1, i].Value.ToString() + "\n").Bold().InsertListAfterSelf(bulletedList);
+
+                            tEqui.SetColumnWidth(0, 150);
+                            tEqui.SetColumnWidth(1, 200);
+                            tEqui.SetColumnWidth(2, 50);
+                            tEqui.SetColumnWidth(3, 50);
+                            doc.InsertTable(tEqui);
+
+                            doc.InsertParagraph();
+                        }
+                    }
+
+                    doc.InsertParagraph().InsertPageBreakAfterSelf();
+
                     //VALORES
-                    doc.InsertParagraph();
                     doc.InsertParagraph("I- VALORES").FontSize(13);
                     doc.InsertParagraph();
                     doc.InsertParagraph("Transporte incluído.");
                     doc.InsertParagraph();
 
-                    Table tValores = doc.AddTable(4, 2);
+                    int opcoes = 0;
+                    double totalOpcoes = 0;
+
+                    for (int i = 0; i < dgvProp.Rows.Count; i++)
+                    {
+                        if (Convert.ToBoolean(dgvProp[9, i].Value))
+                        {
+                            opcoes++;
+                        }
+                    }
+
+                    if (opcoes > 0)
+                    {
+                        opcoes += 2;
+                    }
+
+                    Table tValores = doc.AddTable(4 + opcoes, 2);
                     tValores.Alignment = Alignment.center;
-                    tValores.Design = TableDesign.MediumGrid3Accent5;
+                    tValores.Design = TableDesign.TableGrid;
 
                     tValores.Rows[0].Cells[0].Paragraphs.First().Append("Equipamento");
                     tValores.Rows[1].Cells[0].Paragraphs.First().Append("Revestimento");
                     tValores.Rows[2].Cells[0].Paragraphs.First().Append("Tratamento de Água");
                     tValores.Rows[3].Cells[0].Paragraphs.First().Append("Total");
+
+                    if(opcoes > 0)
+                    {
+                        tValores.Rows[4].Cells[0].Paragraphs.First().Append("Opções").Alignment = Alignment.center;
+
+                        tValores.Rows[4].MergeCells(0, 1);
+                    }
+
+                    for (int i = 0, tRow = 5; i < dgvProp.Rows.Count; i++)
+                    {
+                        if (Convert.ToBoolean(dgvProp[9, i].Value))
+                        {
+                            tValores.Rows[tRow].Cells[0].Paragraphs.First().Append(dgvProp[1, i].Value.ToString());
+                            tValores.Rows[tRow].Cells[1].Paragraphs.First().Append(dgvProp[7, i].Value.ToString() + " €");
+                            totalOpcoes += Convert.ToDouble(dgvProp[7, i].Value);
+                            tRow++;
+                        }
+                    }
+
+
 
                     double valorEquipamento= 0;
                     double valorRevestimento = 0;
@@ -828,10 +926,17 @@ namespace AppVg
 
                     double valorTotal = valorEquipamento + valorRevestimento + valorTratamento;
 
-                    tValores.Rows[0].Cells[1].Paragraphs.First().Append(valorEquipamento.ToString());
-                    tValores.Rows[1].Cells[1].Paragraphs.First().Append(valorRevestimento.ToString());
-                    tValores.Rows[2].Cells[1].Paragraphs.First().Append(valorTratamento.ToString());
-                    tValores.Rows[3].Cells[1].Paragraphs.First().Append(valorTotal.ToString());
+                    tValores.Rows[0].Cells[1].Paragraphs.First().Append(valorEquipamento.ToString() + " €");
+                    tValores.Rows[1].Cells[1].Paragraphs.First().Append(valorRevestimento.ToString() + " €");
+                    tValores.Rows[2].Cells[1].Paragraphs.First().Append(valorTratamento.ToString() + " €");
+                    tValores.Rows[3].Cells[1].Paragraphs.First().Append(valorTotal.ToString() + " €");
+
+                    if (opcoes > 0)
+                    {
+                        tValores.Rows[3 + opcoes].Cells[0].Paragraphs.First().Append("Total com Opções");
+                        tValores.Rows[3 + opcoes].Cells[1].Paragraphs.First().Append((totalOpcoes + valorTotal).ToString() + " €");
+                    }
+
                     doc.InsertTable(tValores);
                     doc.InsertParagraph("A este valor acresce a taxa de IVA em vigor.");
 
@@ -843,7 +948,6 @@ namespace AppVg
                     doc.InsertParagraph("30% Com a entrega do equipamento");
                     doc.InsertParagraph("30% Na conclusão da instalação/revestimento");
                     doc.InsertParagraph("10% No Final");
-                    doc.InsertParagraph();
                 
                     //GARANTIAS
                     doc.InsertParagraph();
@@ -886,6 +990,8 @@ namespace AppVg
                     tAdju.Rows[1].Cells[1].Paragraphs.First().Append("_______________________________");
                     tAdju.Rows[2].Cells[0].Paragraphs.First().Append("(T - 935 809 380)");
                     tAdju.Rows[2].Cells[1].Paragraphs.First().Append("(concordo com as condições desta proposta)");
+                    tAdju.SetColumnWidth(0, 250);
+                    tAdju.SetColumnWidth(1, 250);
                     doc.InsertTable(tAdju);
 
                     doc.InsertParagraph();
@@ -960,23 +1066,35 @@ namespace AppVg
             sda.Fill(data);
             dgvDB.DataSource = data;
 
+
+
             if (dgvProp.Columns.Count < dgvDB.Columns.Count)
             {
                 foreach (DataGridViewColumn c in dgvDB.Columns)
                 {
                     dgvProp.Columns.Add(c.Clone() as DataGridViewColumn);
                 }
+
+                DataGridViewCheckBoxColumn checkColumn = new DataGridViewCheckBoxColumn();
+                checkColumn.Name = "opcao";
+                checkColumn.HeaderText = "Opção";
+                checkColumn.Width = 50;
+                checkColumn.ReadOnly = false;
+                checkColumn.FillWeight = 10;
+                dgvProp.Columns.Insert(9, checkColumn);
+
                 dgvDB.ReadOnly = true;
                 dgvProp.ReadOnly = false;
 
+
                 for (int i = 0; i < dgvProp.Columns.Count; i++)
                 {
-                    if (i != 7)
+                    if (i != 9)
                     {
                         dgvProp.Columns[i].ReadOnly = true;
                     }
                 }
-                
+
                 dgvDB.RowHeadersVisible = false;
                 dgvProp.RowHeadersVisible = false;
 
@@ -990,19 +1108,22 @@ namespace AppVg
                 dgvProp.Columns["Marca"].Visible = false;
                 dgvProp.Columns["Obs"].Visible = false;
                 dgvProp.Columns[8].Visible = false;
+                dgvProp.Columns[5].DefaultCellStyle.Format = "N2";
+                dgvProp.Columns[7].DefaultCellStyle.Format = "N2";
+
 
             }
         }
 
         private void onlyNum(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
                 e.Handled = true;
             }
 
             if (e.KeyChar == '.'
-                && (sender as TextBox).Text.IndexOf('.') > -1)
+                && (sender as TextBox).Text.IndexOf(',') > -1)
             {
                 e.Handled = true;
             }
@@ -1099,10 +1220,72 @@ namespace AppVg
             }
 
 
-
-           
         }
 
+        private void btnNewProp_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja fazer uma proposta nova?", "Nova Proposta", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                tboxNomeProp.Text = "";
+                tboxNumProp.Text = "";
+                tboxData.Text = "";
+                tboxTextoAbertura.Text = "";
+
+                tboxNomeCliente.Text = "";
+                tboxNumCliente.Text = "";
+                tboxContactoCliente.Text = "";
+                tboxMailCliente.Text = "";
+                tboxMoradaCliente.Text = "";
+                tboxMorada2Cliente.Text = "";
+                tboxNif.Text = "";
+
+                ddFormato.selectedIndex = 0;
+                tboxComp.Text = "0";
+                tboxLarg.Text = "0";
+                tboxProfMax.Text = "0";
+                tboxProfMin.Text = "0";
+                tboxProfMed.Text = "0";
+                ddConstrucao.selectedIndex = 0;
+                tboxEscadas.Text = "0";
+                ddEscadas.selectedIndex = 0;
+                ddCirculação.selectedIndex = 0;
+                ddMoradaInst.selectedIndex = 0;
+                tboxMoradaInst.Text = "";
+                tboxCoord.Text = "";
+                ddEscavacao.selectedIndex = 0;
+                ddEstrutura.selectedIndex = 0;
+                ddRevestimento.selectedIndex = 0;
+                ddCMaqui.selectedIndex = 0;
+                ddTComp.selectedIndex = 0;
+                ddLigRed.selectedIndex = 0;
+
+                dgvProp.Rows.Clear();
+                dgvProp.Refresh();
+
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
+
+        }
+
+        private void tboxMorada2Cliente_TextChange(object sender, EventArgs e)
+        {
+            ddMoradaInst.Clear();
+            ddMoradaInst.AddItem(tboxMoradaCliente.Text);
+            ddMoradaInst.AddItem(tboxMorada2Cliente.Text);
+            ddMoradaInst.AddItem("Outra");
+        }
+
+        private void tboxMoradaCliente_TextChange(object sender, EventArgs e)
+        {
+            ddMoradaInst.Clear();
+            ddMoradaInst.AddItem(tboxMoradaCliente.Text);
+            ddMoradaInst.AddItem(tboxMorada2Cliente.Text);
+            ddMoradaInst.AddItem("Outra");
+        }
 
         #endregion
 

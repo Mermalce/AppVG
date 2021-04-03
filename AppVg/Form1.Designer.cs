@@ -168,6 +168,8 @@
             this.pageHome = new System.Windows.Forms.TabPage();
             this.logoHome = new System.Windows.Forms.PictureBox();
             this.pagesDadosProp = new System.Windows.Forms.TabPage();
+            this.bunifuCustomLabel48 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.ddTipoProp = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuCustomLabel39 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel38 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel37 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -251,8 +253,8 @@
             this.tboxMoradaInst = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.ddMoradaInst = new Bunifu.Framework.UI.BunifuDropdown();
             this.ddCirculação = new Bunifu.Framework.UI.BunifuDropdown();
-            this.bunifuDropdown3 = new Bunifu.Framework.UI.BunifuDropdown();
-            this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.ddEscadas = new Bunifu.Framework.UI.BunifuDropdown();
+            this.ddConstrucao = new Bunifu.Framework.UI.BunifuDropdown();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel47 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.ddFormato = new Bunifu.Framework.UI.BunifuDropdown();
@@ -288,8 +290,7 @@
             this.bunifuSeparator6 = new Bunifu.Framework.UI.BunifuSeparator();
             this.elipseDGV = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuCustomLabel48 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.ddTipoProp = new Bunifu.Framework.UI.BunifuDropdown();
+            this.btnNewProp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pSideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -789,10 +790,10 @@
             this.pages.Location = new System.Drawing.Point(140, 32);
             this.pages.Multiline = true;
             this.pages.Name = "pages";
-            this.pages.Page = this.pagesDadosProp;
-            this.pages.PageIndex = 1;
-            this.pages.PageName = "pagesDadosProp";
-            this.pages.PageTitle = "dadosProp";
+            this.pages.Page = this.pagesDadosCliente;
+            this.pages.PageIndex = 2;
+            this.pages.PageName = "pagesDadosCliente";
+            this.pages.PageTitle = "cliente";
             this.pages.SelectedIndex = 0;
             this.pages.Size = new System.Drawing.Size(863, 614);
             this.pages.TabIndex = 3;
@@ -867,14 +868,47 @@
             this.pagesDadosProp.Text = "dadosProp";
             this.pagesDadosProp.UseVisualStyleBackColor = true;
             // 
+            // bunifuCustomLabel48
+            // 
+            this.bunifuCustomLabel48.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel48, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuCustomLabel48.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel48.Location = new System.Drawing.Point(17, 60);
+            this.bunifuCustomLabel48.Name = "bunifuCustomLabel48";
+            this.bunifuCustomLabel48.Size = new System.Drawing.Size(153, 22);
+            this.bunifuCustomLabel48.TabIndex = 115;
+            this.bunifuCustomLabel48.Text = "Tipo de Proposta:";
+            // 
+            // ddTipoProp
+            // 
+            this.ddTipoProp.BackColor = System.Drawing.Color.Transparent;
+            this.ddTipoProp.BorderRadius = 3;
+            this.bunifuTransition1.SetDecoration(this.ddTipoProp, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.ddTipoProp.DisabledColor = System.Drawing.Color.Gray;
+            this.ddTipoProp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddTipoProp.ForeColor = System.Drawing.Color.White;
+            this.ddTipoProp.items = new string[] {
+        "Piscina Completa",
+        "Renovação",
+        "tipo 3",
+        "tipo 4"};
+            this.ddTipoProp.Location = new System.Drawing.Point(176, 55);
+            this.ddTipoProp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ddTipoProp.Name = "ddTipoProp";
+            this.ddTipoProp.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
+            this.ddTipoProp.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
+            this.ddTipoProp.selectedIndex = 0;
+            this.ddTipoProp.Size = new System.Drawing.Size(270, 35);
+            this.ddTipoProp.TabIndex = 114;
+            // 
             // bunifuCustomLabel39
             // 
             this.bunifuCustomLabel39.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel39, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel39.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel39.Location = new System.Drawing.Point(42, 229);
+            this.bunifuCustomLabel39.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel39.Location = new System.Drawing.Point(10, 220);
             this.bunifuCustomLabel39.Name = "bunifuCustomLabel39";
-            this.bunifuCustomLabel39.Size = new System.Drawing.Size(128, 18);
+            this.bunifuCustomLabel39.Size = new System.Drawing.Size(160, 22);
             this.bunifuCustomLabel39.TabIndex = 99;
             this.bunifuCustomLabel39.Text = "Texto de Abertura:";
             // 
@@ -882,10 +916,10 @@
             // 
             this.bunifuCustomLabel38.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel38, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel38.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel38.Location = new System.Drawing.Point(127, 181);
+            this.bunifuCustomLabel38.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel38.Location = new System.Drawing.Point(117, 184);
             this.bunifuCustomLabel38.Name = "bunifuCustomLabel38";
-            this.bunifuCustomLabel38.Size = new System.Drawing.Size(43, 18);
+            this.bunifuCustomLabel38.Size = new System.Drawing.Size(53, 22);
             this.bunifuCustomLabel38.TabIndex = 98;
             this.bunifuCustomLabel38.Text = "Data:";
             // 
@@ -893,10 +927,10 @@
             // 
             this.bunifuCustomLabel37.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel37, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel37.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel37.Location = new System.Drawing.Point(57, 147);
+            this.bunifuCustomLabel37.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel37.Location = new System.Drawing.Point(33, 143);
             this.bunifuCustomLabel37.Name = "bunifuCustomLabel37";
-            this.bunifuCustomLabel37.Size = new System.Drawing.Size(113, 18);
+            this.bunifuCustomLabel37.Size = new System.Drawing.Size(137, 22);
             this.bunifuCustomLabel37.TabIndex = 97;
             this.bunifuCustomLabel37.Text = "Nº da Proposta:";
             // 
@@ -904,10 +938,10 @@
             // 
             this.bunifuCustomLabel36.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel36, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel36.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel36.Location = new System.Drawing.Point(39, 106);
+            this.bunifuCustomLabel36.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel36.Location = new System.Drawing.Point(14, 102);
             this.bunifuCustomLabel36.Name = "bunifuCustomLabel36";
-            this.bunifuCustomLabel36.Size = new System.Drawing.Size(131, 18);
+            this.bunifuCustomLabel36.Size = new System.Drawing.Size(156, 22);
             this.bunifuCustomLabel36.TabIndex = 96;
             this.bunifuCustomLabel36.Text = "Nome do Ficheiro:";
             // 
@@ -1327,10 +1361,10 @@
             // 
             this.bunifuCustomLabel46.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel46, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel46.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel46.Location = new System.Drawing.Point(141, 348);
+            this.bunifuCustomLabel46.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel46.Location = new System.Drawing.Point(133, 350);
             this.bunifuCustomLabel46.Name = "bunifuCustomLabel46";
-            this.bunifuCustomLabel46.Size = new System.Drawing.Size(35, 18);
+            this.bunifuCustomLabel46.Size = new System.Drawing.Size(43, 22);
             this.bunifuCustomLabel46.TabIndex = 105;
             this.bunifuCustomLabel46.Text = "NIF:";
             // 
@@ -1338,21 +1372,21 @@
             // 
             this.bunifuCustomLabel45.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel45, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel45.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel45.Location = new System.Drawing.Point(92, 307);
+            this.bunifuCustomLabel45.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel45.Location = new System.Drawing.Point(69, 309);
             this.bunifuCustomLabel45.Name = "bunifuCustomLabel45";
-            this.bunifuCustomLabel45.Size = new System.Drawing.Size(84, 18);
+            this.bunifuCustomLabel45.Size = new System.Drawing.Size(107, 22);
             this.bunifuCustomLabel45.TabIndex = 104;
-            this.bunifuCustomLabel45.Text = "Morada nº2";
+            this.bunifuCustomLabel45.Text = "Morada nº2:";
             // 
             // bunifuCustomLabel44
             // 
             this.bunifuCustomLabel44.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel44, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel44.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel44.Location = new System.Drawing.Point(113, 266);
+            this.bunifuCustomLabel44.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel44.Location = new System.Drawing.Point(101, 268);
             this.bunifuCustomLabel44.Name = "bunifuCustomLabel44";
-            this.bunifuCustomLabel44.Size = new System.Drawing.Size(63, 18);
+            this.bunifuCustomLabel44.Size = new System.Drawing.Size(75, 22);
             this.bunifuCustomLabel44.TabIndex = 103;
             this.bunifuCustomLabel44.Text = "Morada:";
             // 
@@ -1360,10 +1394,10 @@
             // 
             this.bunifuCustomLabel43.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel43, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel43.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel43.Location = new System.Drawing.Point(122, 225);
+            this.bunifuCustomLabel43.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel43.Location = new System.Drawing.Point(111, 227);
             this.bunifuCustomLabel43.Name = "bunifuCustomLabel43";
-            this.bunifuCustomLabel43.Size = new System.Drawing.Size(54, 18);
+            this.bunifuCustomLabel43.Size = new System.Drawing.Size(65, 22);
             this.bunifuCustomLabel43.TabIndex = 102;
             this.bunifuCustomLabel43.Text = "E-mail:";
             // 
@@ -1371,10 +1405,10 @@
             // 
             this.bunifuCustomLabel42.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel42, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel42.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel42.Location = new System.Drawing.Point(103, 184);
+            this.bunifuCustomLabel42.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel42.Location = new System.Drawing.Point(89, 186);
             this.bunifuCustomLabel42.Name = "bunifuCustomLabel42";
-            this.bunifuCustomLabel42.Size = new System.Drawing.Size(73, 18);
+            this.bunifuCustomLabel42.Size = new System.Drawing.Size(87, 22);
             this.bunifuCustomLabel42.TabIndex = 101;
             this.bunifuCustomLabel42.Text = "Contacto:";
             // 
@@ -1382,10 +1416,10 @@
             // 
             this.bunifuCustomLabel41.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel41, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel41.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel41.Location = new System.Drawing.Point(78, 143);
+            this.bunifuCustomLabel41.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel41.Location = new System.Drawing.Point(55, 145);
             this.bunifuCustomLabel41.Name = "bunifuCustomLabel41";
-            this.bunifuCustomLabel41.Size = new System.Drawing.Size(98, 18);
+            this.bunifuCustomLabel41.Size = new System.Drawing.Size(121, 22);
             this.bunifuCustomLabel41.TabIndex = 100;
             this.bunifuCustomLabel41.Text = "Nº do Cliente:";
             // 
@@ -1393,10 +1427,10 @@
             // 
             this.bunifuCustomLabel40.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel40, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel40.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel40.Location = new System.Drawing.Point(53, 102);
+            this.bunifuCustomLabel40.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel40.Location = new System.Drawing.Point(28, 104);
             this.bunifuCustomLabel40.Name = "bunifuCustomLabel40";
-            this.bunifuCustomLabel40.Size = new System.Drawing.Size(123, 18);
+            this.bunifuCustomLabel40.Size = new System.Drawing.Size(148, 22);
             this.bunifuCustomLabel40.TabIndex = 99;
             this.bunifuCustomLabel40.Text = "Nome do Cliente:";
             // 
@@ -1547,6 +1581,7 @@
             this.tboxMorada2Cliente.TextPlaceholder = "...";
             this.tboxMorada2Cliente.UseSystemPasswordChar = false;
             this.tboxMorada2Cliente.WordWrap = true;
+            this.tboxMorada2Cliente.TextChange += new System.EventHandler(this.tboxMorada2Cliente_TextChange);
             // 
             // tboxMoradaCliente
             // 
@@ -1621,6 +1656,7 @@
             this.tboxMoradaCliente.TextPlaceholder = "...";
             this.tboxMoradaCliente.UseSystemPasswordChar = false;
             this.tboxMoradaCliente.WordWrap = true;
+            this.tboxMoradaCliente.TextChange += new System.EventHandler(this.tboxMoradaCliente_TextChange);
             // 
             // btnSearchImg
             // 
@@ -2235,8 +2271,8 @@
             this.pagesDadosPiscina.Controls.Add(this.tboxMoradaInst);
             this.pagesDadosPiscina.Controls.Add(this.ddMoradaInst);
             this.pagesDadosPiscina.Controls.Add(this.ddCirculação);
-            this.pagesDadosPiscina.Controls.Add(this.bunifuDropdown3);
-            this.pagesDadosPiscina.Controls.Add(this.bunifuDropdown2);
+            this.pagesDadosPiscina.Controls.Add(this.ddEscadas);
+            this.pagesDadosPiscina.Controls.Add(this.ddConstrucao);
             this.pagesDadosPiscina.Controls.Add(this.panel3);
             this.pagesDadosPiscina.Controls.Add(this.tboxPerim);
             this.pagesDadosPiscina.Controls.Add(this.tboxArea);
@@ -2260,10 +2296,10 @@
             // 
             this.labelRaio.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.labelRaio, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.labelRaio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRaio.Location = new System.Drawing.Point(117, 110);
+            this.labelRaio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRaio.Location = new System.Drawing.Point(135, 109);
             this.labelRaio.Name = "labelRaio";
-            this.labelRaio.Size = new System.Drawing.Size(43, 18);
+            this.labelRaio.Size = new System.Drawing.Size(52, 22);
             this.labelRaio.TabIndex = 112;
             this.labelRaio.Text = "Raio:";
             this.labelRaio.Visible = false;
@@ -2272,10 +2308,10 @@
             // 
             this.labelComp.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.labelComp, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.labelComp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelComp.Location = new System.Drawing.Point(57, 110);
+            this.labelComp.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelComp.Location = new System.Drawing.Point(66, 109);
             this.labelComp.Name = "labelComp";
-            this.labelComp.Size = new System.Drawing.Size(103, 18);
+            this.labelComp.Size = new System.Drawing.Size(121, 22);
             this.labelComp.TabIndex = 111;
             this.labelComp.Text = "Comprimento:";
             // 
@@ -2283,10 +2319,10 @@
             // 
             this.bunifuCustomLabel35.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel35, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel35.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel35.Location = new System.Drawing.Point(450, 643);
+            this.bunifuCustomLabel35.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel35.Location = new System.Drawing.Point(482, 645);
             this.bunifuCustomLabel35.Name = "bunifuCustomLabel35";
-            this.bunifuCustomLabel35.Size = new System.Drawing.Size(74, 18);
+            this.bunifuCustomLabel35.Size = new System.Drawing.Size(92, 22);
             this.bunifuCustomLabel35.TabIndex = 110;
             this.bunifuCustomLabel35.Text = "Lig. Rede:";
             // 
@@ -2294,10 +2330,10 @@
             // 
             this.bunifuCustomLabel34.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel34, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel34.Location = new System.Drawing.Point(429, 602);
+            this.bunifuCustomLabel34.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel34.Location = new System.Drawing.Point(459, 604);
             this.bunifuCustomLabel34.Name = "bunifuCustomLabel34";
-            this.bunifuCustomLabel34.Size = new System.Drawing.Size(95, 18);
+            this.bunifuCustomLabel34.Size = new System.Drawing.Size(115, 22);
             this.bunifuCustomLabel34.TabIndex = 109;
             this.bunifuCustomLabel34.Text = "C. Maquinas:";
             // 
@@ -2305,10 +2341,10 @@
             // 
             this.bunifuCustomLabel33.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel33, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel33.Location = new System.Drawing.Point(453, 561);
+            this.bunifuCustomLabel33.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel33.Location = new System.Drawing.Point(487, 561);
             this.bunifuCustomLabel33.Name = "bunifuCustomLabel33";
-            this.bunifuCustomLabel33.Size = new System.Drawing.Size(72, 18);
+            this.bunifuCustomLabel33.Size = new System.Drawing.Size(88, 22);
             this.bunifuCustomLabel33.TabIndex = 108;
             this.bunifuCustomLabel33.Text = "Estrutura:";
             // 
@@ -2316,10 +2352,10 @@
             // 
             this.bunifuCustomLabel32.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel32, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel32.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel32.Location = new System.Drawing.Point(31, 643);
+            this.bunifuCustomLabel32.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel32.Location = new System.Drawing.Point(33, 645);
             this.bunifuCustomLabel32.Name = "bunifuCustomLabel32";
-            this.bunifuCustomLabel32.Size = new System.Drawing.Size(127, 18);
+            this.bunifuCustomLabel32.Size = new System.Drawing.Size(152, 22);
             this.bunifuCustomLabel32.TabIndex = 107;
             this.bunifuCustomLabel32.Text = "T. Compensação:";
             // 
@@ -2327,10 +2363,10 @@
             // 
             this.bunifuCustomLabel31.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel31, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel31.Location = new System.Drawing.Point(56, 602);
+            this.bunifuCustomLabel31.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel31.Location = new System.Drawing.Point(62, 604);
             this.bunifuCustomLabel31.Name = "bunifuCustomLabel31";
-            this.bunifuCustomLabel31.Size = new System.Drawing.Size(103, 18);
+            this.bunifuCustomLabel31.Size = new System.Drawing.Size(124, 22);
             this.bunifuCustomLabel31.TabIndex = 106;
             this.bunifuCustomLabel31.Text = "Revestimento:";
             // 
@@ -2338,10 +2374,10 @@
             // 
             this.bunifuCustomLabel30.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel30, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel30.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel30.Location = new System.Drawing.Point(74, 560);
+            this.bunifuCustomLabel30.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel30.Location = new System.Drawing.Point(84, 561);
             this.bunifuCustomLabel30.Name = "bunifuCustomLabel30";
-            this.bunifuCustomLabel30.Size = new System.Drawing.Size(86, 18);
+            this.bunifuCustomLabel30.Size = new System.Drawing.Size(103, 22);
             this.bunifuCustomLabel30.TabIndex = 105;
             this.bunifuCustomLabel30.Text = "Escavação:";
             // 
@@ -2349,10 +2385,10 @@
             // 
             this.bunifuCustomLabel29.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel29, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel29.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel29.Location = new System.Drawing.Point(102, 520);
+            this.bunifuCustomLabel29.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel29.Location = new System.Drawing.Point(119, 525);
             this.bunifuCustomLabel29.Name = "bunifuCustomLabel29";
-            this.bunifuCustomLabel29.Size = new System.Drawing.Size(58, 18);
+            this.bunifuCustomLabel29.Size = new System.Drawing.Size(69, 22);
             this.bunifuCustomLabel29.TabIndex = 104;
             this.bunifuCustomLabel29.Text = "Coord.:";
             // 
@@ -2360,10 +2396,10 @@
             // 
             this.bunifuCustomLabel28.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel28, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel28.Location = new System.Drawing.Point(6, 438);
+            this.bunifuCustomLabel28.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel28.Location = new System.Drawing.Point(1, 437);
             this.bunifuCustomLabel28.Name = "bunifuCustomLabel28";
-            this.bunifuCustomLabel28.Size = new System.Drawing.Size(154, 18);
+            this.bunifuCustomLabel28.Size = new System.Drawing.Size(186, 22);
             this.bunifuCustomLabel28.TabIndex = 103;
             this.bunifuCustomLabel28.Text = "Morada de Instalação:";
             // 
@@ -2371,10 +2407,10 @@
             // 
             this.bunifuCustomLabel27.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel27, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel27.Location = new System.Drawing.Point(76, 397);
+            this.bunifuCustomLabel27.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel27.Location = new System.Drawing.Point(86, 396);
             this.bunifuCustomLabel27.Name = "bunifuCustomLabel27";
-            this.bunifuCustomLabel27.Size = new System.Drawing.Size(83, 18);
+            this.bunifuCustomLabel27.Size = new System.Drawing.Size(100, 22);
             this.bunifuCustomLabel27.TabIndex = 102;
             this.bunifuCustomLabel27.Text = "Circulação:";
             // 
@@ -2382,10 +2418,10 @@
             // 
             this.bunifuCustomLabel26.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel26, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel26.Location = new System.Drawing.Point(266, 356);
+            this.bunifuCustomLabel26.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel26.Location = new System.Drawing.Point(294, 356);
             this.bunifuCustomLabel26.Name = "bunifuCustomLabel26";
-            this.bunifuCustomLabel26.Size = new System.Drawing.Size(41, 18);
+            this.bunifuCustomLabel26.Size = new System.Drawing.Size(51, 22);
             this.bunifuCustomLabel26.TabIndex = 101;
             this.bunifuCustomLabel26.Text = "Tipo:";
             // 
@@ -2393,10 +2429,10 @@
             // 
             this.bunifuCustomLabel25.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel25.Location = new System.Drawing.Point(89, 356);
+            this.bunifuCustomLabel25.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel25.Location = new System.Drawing.Point(103, 355);
             this.bunifuCustomLabel25.Name = "bunifuCustomLabel25";
-            this.bunifuCustomLabel25.Size = new System.Drawing.Size(70, 18);
+            this.bunifuCustomLabel25.Size = new System.Drawing.Size(84, 22);
             this.bunifuCustomLabel25.TabIndex = 100;
             this.bunifuCustomLabel25.Text = "Escadas:";
             // 
@@ -2404,10 +2440,10 @@
             // 
             this.bunifuCustomLabel24.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel24.Location = new System.Drawing.Point(69, 315);
+            this.bunifuCustomLabel24.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel24.Location = new System.Drawing.Point(80, 314);
             this.bunifuCustomLabel24.Name = "bunifuCustomLabel24";
-            this.bunifuCustomLabel24.Size = new System.Drawing.Size(90, 18);
+            this.bunifuCustomLabel24.Size = new System.Drawing.Size(107, 22);
             this.bunifuCustomLabel24.TabIndex = 99;
             this.bunifuCustomLabel24.Text = "Construção:";
             // 
@@ -2415,10 +2451,10 @@
             // 
             this.bunifuCustomLabel23.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel23, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel23.Location = new System.Drawing.Point(23, 274);
+            this.bunifuCustomLabel23.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel23.Location = new System.Drawing.Point(21, 273);
             this.bunifuCustomLabel23.Name = "bunifuCustomLabel23";
-            this.bunifuCustomLabel23.Size = new System.Drawing.Size(136, 18);
+            this.bunifuCustomLabel23.Size = new System.Drawing.Size(166, 22);
             this.bunifuCustomLabel23.TabIndex = 98;
             this.bunifuCustomLabel23.Text = "Profundidade Med.:";
             // 
@@ -2426,10 +2462,10 @@
             // 
             this.bunifuCustomLabel22.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel22, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel22.Location = new System.Drawing.Point(24, 233);
+            this.bunifuCustomLabel22.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel22.Location = new System.Drawing.Point(22, 231);
             this.bunifuCustomLabel22.Name = "bunifuCustomLabel22";
-            this.bunifuCustomLabel22.Size = new System.Drawing.Size(135, 18);
+            this.bunifuCustomLabel22.Size = new System.Drawing.Size(165, 22);
             this.bunifuCustomLabel22.TabIndex = 97;
             this.bunifuCustomLabel22.Text = "Profundidade Max.:";
             // 
@@ -2437,10 +2473,10 @@
             // 
             this.bunifuCustomLabel21.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel21, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel21.Location = new System.Drawing.Point(28, 194);
+            this.bunifuCustomLabel21.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel21.Location = new System.Drawing.Point(27, 191);
             this.bunifuCustomLabel21.Name = "bunifuCustomLabel21";
-            this.bunifuCustomLabel21.Size = new System.Drawing.Size(131, 18);
+            this.bunifuCustomLabel21.Size = new System.Drawing.Size(160, 22);
             this.bunifuCustomLabel21.TabIndex = 96;
             this.bunifuCustomLabel21.Text = "Profundidade Min.:";
             // 
@@ -2448,10 +2484,10 @@
             // 
             this.bunifuCustomLabel20.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel20.Location = new System.Drawing.Point(97, 151);
+            this.bunifuCustomLabel20.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel20.Location = new System.Drawing.Point(110, 150);
             this.bunifuCustomLabel20.Name = "bunifuCustomLabel20";
-            this.bunifuCustomLabel20.Size = new System.Drawing.Size(62, 18);
+            this.bunifuCustomLabel20.Size = new System.Drawing.Size(77, 22);
             this.bunifuCustomLabel20.TabIndex = 95;
             this.bunifuCustomLabel20.Text = "Largura:";
             // 
@@ -2459,10 +2495,10 @@
             // 
             this.bunifuCustomLabel19.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel19.Location = new System.Drawing.Point(324, 274);
+            this.bunifuCustomLabel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel19.Location = new System.Drawing.Point(352, 273);
             this.bunifuCustomLabel19.Name = "bunifuCustomLabel19";
-            this.bunifuCustomLabel19.Size = new System.Drawing.Size(21, 18);
+            this.bunifuCustomLabel19.Size = new System.Drawing.Size(24, 22);
             this.bunifuCustomLabel19.TabIndex = 94;
             this.bunifuCustomLabel19.Text = "m";
             // 
@@ -2470,10 +2506,10 @@
             // 
             this.bunifuCustomLabel18.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel18.Location = new System.Drawing.Point(324, 233);
+            this.bunifuCustomLabel18.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel18.Location = new System.Drawing.Point(352, 232);
             this.bunifuCustomLabel18.Name = "bunifuCustomLabel18";
-            this.bunifuCustomLabel18.Size = new System.Drawing.Size(21, 18);
+            this.bunifuCustomLabel18.Size = new System.Drawing.Size(24, 22);
             this.bunifuCustomLabel18.TabIndex = 93;
             this.bunifuCustomLabel18.Text = "m";
             // 
@@ -2481,10 +2517,10 @@
             // 
             this.bunifuCustomLabel17.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel17.Location = new System.Drawing.Point(324, 192);
+            this.bunifuCustomLabel17.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel17.Location = new System.Drawing.Point(352, 191);
             this.bunifuCustomLabel17.Name = "bunifuCustomLabel17";
-            this.bunifuCustomLabel17.Size = new System.Drawing.Size(21, 18);
+            this.bunifuCustomLabel17.Size = new System.Drawing.Size(24, 22);
             this.bunifuCustomLabel17.TabIndex = 92;
             this.bunifuCustomLabel17.Text = "m";
             // 
@@ -2492,10 +2528,10 @@
             // 
             this.bunifuCustomLabel16.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel16.Location = new System.Drawing.Point(324, 151);
+            this.bunifuCustomLabel16.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel16.Location = new System.Drawing.Point(352, 150);
             this.bunifuCustomLabel16.Name = "bunifuCustomLabel16";
-            this.bunifuCustomLabel16.Size = new System.Drawing.Size(21, 18);
+            this.bunifuCustomLabel16.Size = new System.Drawing.Size(24, 22);
             this.bunifuCustomLabel16.TabIndex = 91;
             this.bunifuCustomLabel16.Text = "m";
             // 
@@ -2503,10 +2539,10 @@
             // 
             this.bunifuCustomLabel15.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel15.Location = new System.Drawing.Point(324, 110);
+            this.bunifuCustomLabel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel15.Location = new System.Drawing.Point(352, 109);
             this.bunifuCustomLabel15.Name = "bunifuCustomLabel15";
-            this.bunifuCustomLabel15.Size = new System.Drawing.Size(21, 18);
+            this.bunifuCustomLabel15.Size = new System.Drawing.Size(24, 22);
             this.bunifuCustomLabel15.TabIndex = 90;
             this.bunifuCustomLabel15.Text = "m";
             // 
@@ -2514,10 +2550,10 @@
             // 
             this.bunifuCustomLabel14.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel14.Location = new System.Drawing.Point(690, 233);
+            this.bunifuCustomLabel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel14.Location = new System.Drawing.Point(718, 234);
             this.bunifuCustomLabel14.Name = "bunifuCustomLabel14";
-            this.bunifuCustomLabel14.Size = new System.Drawing.Size(21, 18);
+            this.bunifuCustomLabel14.Size = new System.Drawing.Size(24, 22);
             this.bunifuCustomLabel14.TabIndex = 89;
             this.bunifuCustomLabel14.Text = "m";
             // 
@@ -2525,10 +2561,10 @@
             // 
             this.bunifuCustomLabel13.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel13.Location = new System.Drawing.Point(690, 192);
+            this.bunifuCustomLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel13.Location = new System.Drawing.Point(718, 191);
             this.bunifuCustomLabel13.Name = "bunifuCustomLabel13";
-            this.bunifuCustomLabel13.Size = new System.Drawing.Size(36, 18);
+            this.bunifuCustomLabel13.Size = new System.Drawing.Size(42, 22);
             this.bunifuCustomLabel13.TabIndex = 88;
             this.bunifuCustomLabel13.Text = "m^2";
             // 
@@ -2536,10 +2572,10 @@
             // 
             this.bunifuCustomLabel12.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel12.Location = new System.Drawing.Point(690, 151);
+            this.bunifuCustomLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel12.Location = new System.Drawing.Point(718, 152);
             this.bunifuCustomLabel12.Name = "bunifuCustomLabel12";
-            this.bunifuCustomLabel12.Size = new System.Drawing.Size(36, 18);
+            this.bunifuCustomLabel12.Size = new System.Drawing.Size(42, 22);
             this.bunifuCustomLabel12.TabIndex = 87;
             this.bunifuCustomLabel12.Text = "m^3";
             // 
@@ -2547,10 +2583,10 @@
             // 
             this.bunifuCustomLabel11.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel11.Location = new System.Drawing.Point(690, 110);
+            this.bunifuCustomLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel11.Location = new System.Drawing.Point(718, 109);
             this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
-            this.bunifuCustomLabel11.Size = new System.Drawing.Size(36, 18);
+            this.bunifuCustomLabel11.Size = new System.Drawing.Size(42, 22);
             this.bunifuCustomLabel11.TabIndex = 86;
             this.bunifuCustomLabel11.Text = "m^2";
             // 
@@ -2558,10 +2594,10 @@
             // 
             this.bunifuCustomLabel10.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(448, 233);
+            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(461, 231);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(77, 18);
+            this.bunifuCustomLabel10.Size = new System.Drawing.Size(92, 22);
             this.bunifuCustomLabel10.TabIndex = 85;
             this.bunifuCustomLabel10.Text = "Perímetro:";
             // 
@@ -2569,10 +2605,10 @@
             // 
             this.bunifuCustomLabel9.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel9, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(483, 192);
+            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(500, 186);
             this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
-            this.bunifuCustomLabel9.Size = new System.Drawing.Size(42, 18);
+            this.bunifuCustomLabel9.Size = new System.Drawing.Size(53, 22);
             this.bunifuCustomLabel9.TabIndex = 84;
             this.bunifuCustomLabel9.Text = "Área:";
             // 
@@ -2580,10 +2616,10 @@
             // 
             this.bunifuCustomLabel8.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(463, 151);
+            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(478, 145);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(62, 18);
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(75, 22);
             this.bunifuCustomLabel8.TabIndex = 83;
             this.bunifuCustomLabel8.Text = "Volume:";
             // 
@@ -2591,10 +2627,10 @@
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(448, 110);
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(458, 109);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(77, 18);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(95, 22);
             this.bunifuCustomLabel1.TabIndex = 82;
             this.bunifuCustomLabel1.Text = "Superfície:";
             // 
@@ -2610,7 +2646,7 @@
         "A cargo do CLIENTE",
         "A cargo da VG",
         "Não está previsto"};
-            this.ddLigRed.Location = new System.Drawing.Point(530, 635);
+            this.ddLigRed.Location = new System.Drawing.Point(581, 637);
             this.ddLigRed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ddLigRed.Name = "ddLigRed";
             this.ddLigRed.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
@@ -2631,7 +2667,7 @@
         "A cargo do CLIENTE",
         "A cargo da VG",
         "Não está previsto"};
-            this.ddTComp.Location = new System.Drawing.Point(164, 635);
+            this.ddTComp.Location = new System.Drawing.Point(192, 637);
             this.ddTComp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ddTComp.Name = "ddTComp";
             this.ddTComp.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
@@ -2652,7 +2688,7 @@
         "A cargo do CLIENTE",
         "A cargo da VG",
         "Não está previsto"};
-            this.ddCMaqui.Location = new System.Drawing.Point(530, 594);
+            this.ddCMaqui.Location = new System.Drawing.Point(581, 596);
             this.ddCMaqui.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ddCMaqui.Name = "ddCMaqui";
             this.ddCMaqui.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
@@ -2688,7 +2724,7 @@
         "A cargo do CLIENTE",
         "A cargo da VG",
         "Não está previsto"};
-            this.ddRevestimento.Location = new System.Drawing.Point(165, 594);
+            this.ddRevestimento.Location = new System.Drawing.Point(193, 596);
             this.ddRevestimento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ddRevestimento.Name = "ddRevestimento";
             this.ddRevestimento.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
@@ -2709,7 +2745,7 @@
         "A cargo do CLIENTE",
         "A cargo da VG",
         "Não está previsto"};
-            this.ddEstrutura.Location = new System.Drawing.Point(531, 553);
+            this.ddEstrutura.Location = new System.Drawing.Point(582, 553);
             this.ddEstrutura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ddEstrutura.Name = "ddEstrutura";
             this.ddEstrutura.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
@@ -2730,7 +2766,7 @@
         "A cargo do CLIENTE",
         "A cargo da VG",
         "Não está previsto"};
-            this.ddEscavacao.Location = new System.Drawing.Point(166, 553);
+            this.ddEscavacao.Location = new System.Drawing.Point(194, 553);
             this.ddEscavacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ddEscavacao.Name = "ddEscavacao";
             this.ddEscavacao.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
@@ -2767,7 +2803,7 @@
             this.tboxCoord.IconRight = null;
             this.tboxCoord.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tboxCoord.Lines = new string[0];
-            this.tboxCoord.Location = new System.Drawing.Point(166, 512);
+            this.tboxCoord.Location = new System.Drawing.Point(194, 512);
             this.tboxCoord.MaxLength = 32767;
             this.tboxCoord.MinimumSize = new System.Drawing.Size(100, 35);
             this.tboxCoord.Modified = false;
@@ -2842,7 +2878,7 @@
             this.tboxMoradaInst.IconRight = null;
             this.tboxMoradaInst.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tboxMoradaInst.Lines = new string[0];
-            this.tboxMoradaInst.Location = new System.Drawing.Point(165, 471);
+            this.tboxMoradaInst.Location = new System.Drawing.Point(193, 471);
             this.tboxMoradaInst.MaxLength = 32767;
             this.tboxMoradaInst.MinimumSize = new System.Drawing.Size(100, 35);
             this.tboxMoradaInst.Modified = false;
@@ -2898,7 +2934,7 @@
             this.ddMoradaInst.ForeColor = System.Drawing.Color.White;
             this.ddMoradaInst.items = new string[] {
         "Outra"};
-            this.ddMoradaInst.Location = new System.Drawing.Point(166, 430);
+            this.ddMoradaInst.Location = new System.Drawing.Point(194, 430);
             this.ddMoradaInst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ddMoradaInst.Name = "ddMoradaInst";
             this.ddMoradaInst.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
@@ -2920,7 +2956,7 @@
         "Tipo de circulação 1",
         "Tipo de circulação 2",
         "Tipo de circulação 3"};
-            this.ddCirculação.Location = new System.Drawing.Point(165, 389);
+            this.ddCirculação.Location = new System.Drawing.Point(193, 389);
             this.ddCirculação.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ddCirculação.Name = "ddCirculação";
             this.ddCirculação.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
@@ -2929,47 +2965,47 @@
             this.ddCirculação.Size = new System.Drawing.Size(322, 35);
             this.ddCirculação.TabIndex = 47;
             // 
-            // bunifuDropdown3
+            // ddEscadas
             // 
-            this.bunifuDropdown3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown3.BorderRadius = 3;
-            this.bunifuTransition1.SetDecoration(this.bunifuDropdown3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuDropdown3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuDropdown3.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown3.items = new string[] {
+            this.ddEscadas.BackColor = System.Drawing.Color.Transparent;
+            this.ddEscadas.BorderRadius = 3;
+            this.bunifuTransition1.SetDecoration(this.ddEscadas, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.ddEscadas.DisabledColor = System.Drawing.Color.Gray;
+            this.ddEscadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddEscadas.ForeColor = System.Drawing.Color.White;
+            this.ddEscadas.items = new string[] {
         "Tipo de escadas 1",
         "Tipo de escadas 2",
         "Tipo de escadas 3"};
-            this.bunifuDropdown3.Location = new System.Drawing.Point(313, 348);
-            this.bunifuDropdown3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuDropdown3.Name = "bunifuDropdown3";
-            this.bunifuDropdown3.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
-            this.bunifuDropdown3.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
-            this.bunifuDropdown3.selectedIndex = -1;
-            this.bunifuDropdown3.Size = new System.Drawing.Size(289, 35);
-            this.bunifuDropdown3.TabIndex = 45;
+            this.ddEscadas.Location = new System.Drawing.Point(352, 348);
+            this.ddEscadas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ddEscadas.Name = "ddEscadas";
+            this.ddEscadas.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
+            this.ddEscadas.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
+            this.ddEscadas.selectedIndex = -1;
+            this.ddEscadas.Size = new System.Drawing.Size(289, 35);
+            this.ddEscadas.TabIndex = 45;
             // 
-            // bunifuDropdown2
+            // ddConstrucao
             // 
-            this.bunifuDropdown2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown2.BorderRadius = 3;
-            this.bunifuTransition1.SetDecoration(this.bunifuDropdown2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuDropdown2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuDropdown2.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown2.items = new string[] {
+            this.ddConstrucao.BackColor = System.Drawing.Color.Transparent;
+            this.ddConstrucao.BorderRadius = 3;
+            this.bunifuTransition1.SetDecoration(this.ddConstrucao, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.ddConstrucao.DisabledColor = System.Drawing.Color.Gray;
+            this.ddConstrucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddConstrucao.ForeColor = System.Drawing.Color.White;
+            this.ddConstrucao.items = new string[] {
         "Tipo de construção 1",
         "Tipo de construção 2",
         "Tipo de construção 3"};
-            this.bunifuDropdown2.Location = new System.Drawing.Point(166, 307);
-            this.bunifuDropdown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuDropdown2.Name = "bunifuDropdown2";
-            this.bunifuDropdown2.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
-            this.bunifuDropdown2.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
-            this.bunifuDropdown2.selectedIndex = -1;
-            this.bunifuDropdown2.Size = new System.Drawing.Size(321, 35);
-            this.bunifuDropdown2.TabIndex = 20;
+            this.ddConstrucao.Location = new System.Drawing.Point(194, 307);
+            this.ddConstrucao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ddConstrucao.Name = "ddConstrucao";
+            this.ddConstrucao.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
+            this.ddConstrucao.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
+            this.ddConstrucao.selectedIndex = -1;
+            this.ddConstrucao.Size = new System.Drawing.Size(321, 35);
+            this.ddConstrucao.TabIndex = 20;
             // 
             // panel3
             // 
@@ -2988,10 +3024,10 @@
             // 
             this.bunifuCustomLabel47.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel47, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel47.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel47.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel47.Location = new System.Drawing.Point(19, 56);
             this.bunifuCustomLabel47.Name = "bunifuCustomLabel47";
-            this.bunifuCustomLabel47.Size = new System.Drawing.Size(141, 18);
+            this.bunifuCustomLabel47.Size = new System.Drawing.Size(169, 22);
             this.bunifuCustomLabel47.TabIndex = 113;
             this.bunifuCustomLabel47.Text = "Formato da Piscina:";
             // 
@@ -3007,7 +3043,7 @@
         "Rectangular",
         "Circular",
         "Forma Livre"};
-            this.ddFormato.Location = new System.Drawing.Point(166, 50);
+            this.ddFormato.Location = new System.Drawing.Point(195, 51);
             this.ddFormato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ddFormato.Name = "ddFormato";
             this.ddFormato.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
@@ -3071,7 +3107,7 @@
             this.tboxPerim.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tboxPerim.Lines = new string[] {
         "0"};
-            this.tboxPerim.Location = new System.Drawing.Point(531, 225);
+            this.tboxPerim.Location = new System.Drawing.Point(559, 225);
             this.tboxPerim.MaxLength = 32767;
             this.tboxPerim.MinimumSize = new System.Drawing.Size(100, 35);
             this.tboxPerim.Modified = false;
@@ -3148,7 +3184,7 @@
             this.tboxArea.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tboxArea.Lines = new string[] {
         "0"};
-            this.tboxArea.Location = new System.Drawing.Point(531, 184);
+            this.tboxArea.Location = new System.Drawing.Point(559, 184);
             this.tboxArea.MaxLength = 32767;
             this.tboxArea.MinimumSize = new System.Drawing.Size(100, 35);
             this.tboxArea.Modified = false;
@@ -3225,7 +3261,7 @@
             this.tboxVol.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tboxVol.Lines = new string[] {
         "0"};
-            this.tboxVol.Location = new System.Drawing.Point(531, 143);
+            this.tboxVol.Location = new System.Drawing.Point(559, 143);
             this.tboxVol.MaxLength = 32767;
             this.tboxVol.MinimumSize = new System.Drawing.Size(100, 35);
             this.tboxVol.Modified = false;
@@ -3302,7 +3338,7 @@
             this.tboxSuperf.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tboxSuperf.Lines = new string[] {
         "0"};
-            this.tboxSuperf.Location = new System.Drawing.Point(531, 102);
+            this.tboxSuperf.Location = new System.Drawing.Point(559, 102);
             this.tboxSuperf.MaxLength = 32767;
             this.tboxSuperf.MinimumSize = new System.Drawing.Size(100, 35);
             this.tboxSuperf.Modified = false;
@@ -3378,7 +3414,7 @@
             this.tboxEscadas.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tboxEscadas.Lines = new string[] {
         "0"};
-            this.tboxEscadas.Location = new System.Drawing.Point(165, 348);
+            this.tboxEscadas.Location = new System.Drawing.Point(193, 348);
             this.tboxEscadas.MaxLength = 32767;
             this.tboxEscadas.MinimumSize = new System.Drawing.Size(100, 35);
             this.tboxEscadas.Modified = false;
@@ -3455,7 +3491,7 @@
             this.tboxProfMed.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tboxProfMed.Lines = new string[] {
         "0"};
-            this.tboxProfMed.Location = new System.Drawing.Point(165, 266);
+            this.tboxProfMed.Location = new System.Drawing.Point(193, 266);
             this.tboxProfMed.MaxLength = 32767;
             this.tboxProfMed.MinimumSize = new System.Drawing.Size(100, 35);
             this.tboxProfMed.Modified = false;
@@ -3532,7 +3568,7 @@
             this.tboxProfMax.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tboxProfMax.Lines = new string[] {
         "0"};
-            this.tboxProfMax.Location = new System.Drawing.Point(165, 225);
+            this.tboxProfMax.Location = new System.Drawing.Point(193, 225);
             this.tboxProfMax.MaxLength = 32767;
             this.tboxProfMax.MinimumSize = new System.Drawing.Size(100, 35);
             this.tboxProfMax.Modified = false;
@@ -3610,7 +3646,7 @@
             this.tboxProfMin.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tboxProfMin.Lines = new string[] {
         "0"};
-            this.tboxProfMin.Location = new System.Drawing.Point(165, 184);
+            this.tboxProfMin.Location = new System.Drawing.Point(193, 184);
             this.tboxProfMin.MaxLength = 32767;
             this.tboxProfMin.MinimumSize = new System.Drawing.Size(100, 35);
             this.tboxProfMin.Modified = false;
@@ -3688,7 +3724,7 @@
             this.tboxLarg.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tboxLarg.Lines = new string[] {
         "0"};
-            this.tboxLarg.Location = new System.Drawing.Point(165, 143);
+            this.tboxLarg.Location = new System.Drawing.Point(193, 143);
             this.tboxLarg.MaxLength = 32767;
             this.tboxLarg.MinimumSize = new System.Drawing.Size(100, 35);
             this.tboxLarg.Modified = false;
@@ -3766,7 +3802,7 @@
             this.tboxComp.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tboxComp.Lines = new string[] {
         "0"};
-            this.tboxComp.Location = new System.Drawing.Point(165, 102);
+            this.tboxComp.Location = new System.Drawing.Point(193, 102);
             this.tboxComp.MaxLength = 32767;
             this.tboxComp.MinimumSize = new System.Drawing.Size(100, 35);
             this.tboxComp.Modified = false;
@@ -4147,6 +4183,7 @@
             // 
             // pExportControls
             // 
+            this.pExportControls.Controls.Add(this.btnNewProp);
             this.pExportControls.Controls.Add(this.btnExportProp);
             this.bunifuTransition1.SetDecoration(this.pExportControls, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pExportControls.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -4238,38 +4275,43 @@
             this.elipseForm.ElipseRadius = 25;
             this.elipseForm.TargetControl = this;
             // 
-            // bunifuCustomLabel48
+            // btnNewProp
             // 
-            this.bunifuCustomLabel48.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.bunifuCustomLabel48, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuCustomLabel48.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel48.Location = new System.Drawing.Point(44, 62);
-            this.bunifuCustomLabel48.Name = "bunifuCustomLabel48";
-            this.bunifuCustomLabel48.Size = new System.Drawing.Size(126, 18);
-            this.bunifuCustomLabel48.TabIndex = 115;
-            this.bunifuCustomLabel48.Text = "Tipo de Proposta:";
-            // 
-            // ddTipoProp
-            // 
-            this.ddTipoProp.BackColor = System.Drawing.Color.Transparent;
-            this.ddTipoProp.BorderRadius = 3;
-            this.bunifuTransition1.SetDecoration(this.ddTipoProp, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.ddTipoProp.DisabledColor = System.Drawing.Color.Gray;
-            this.ddTipoProp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ddTipoProp.ForeColor = System.Drawing.Color.White;
-            this.ddTipoProp.items = new string[] {
-        "Piscina Completa",
-        "Renovação",
-        "tipo 3",
-        "tipo 4"};
-            this.ddTipoProp.Location = new System.Drawing.Point(176, 55);
-            this.ddTipoProp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ddTipoProp.Name = "ddTipoProp";
-            this.ddTipoProp.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
-            this.ddTipoProp.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
-            this.ddTipoProp.selectedIndex = 0;
-            this.ddTipoProp.Size = new System.Drawing.Size(270, 35);
-            this.ddTipoProp.TabIndex = 114;
+            this.btnNewProp.Active = false;
+            this.btnNewProp.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
+            this.btnNewProp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNewProp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
+            this.btnNewProp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNewProp.BorderRadius = 0;
+            this.btnNewProp.ButtonText = "Nova Proposta";
+            this.btnNewProp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.btnNewProp, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnNewProp.DisabledColor = System.Drawing.Color.Gray;
+            this.btnNewProp.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnNewProp.Iconimage = global::AppVg.Properties.Resources.print_26px;
+            this.btnNewProp.Iconimage_right = null;
+            this.btnNewProp.Iconimage_right_Selected = null;
+            this.btnNewProp.Iconimage_Selected = null;
+            this.btnNewProp.IconMarginLeft = 0;
+            this.btnNewProp.IconMarginRight = 0;
+            this.btnNewProp.IconRightVisible = false;
+            this.btnNewProp.IconRightZoom = 0D;
+            this.btnNewProp.IconVisible = false;
+            this.btnNewProp.IconZoom = 45D;
+            this.btnNewProp.IsTab = false;
+            this.btnNewProp.Location = new System.Drawing.Point(18, 6);
+            this.btnNewProp.Name = "btnNewProp";
+            this.btnNewProp.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(158)))));
+            this.btnNewProp.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(203)))));
+            this.btnNewProp.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnNewProp.selected = false;
+            this.btnNewProp.Size = new System.Drawing.Size(170, 48);
+            this.btnNewProp.TabIndex = 1;
+            this.btnNewProp.Text = "Nova Proposta";
+            this.btnNewProp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNewProp.Textcolor = System.Drawing.Color.White;
+            this.btnNewProp.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewProp.Click += new System.EventHandler(this.btnNewProp_Click);
             // 
             // Form1
             // 
@@ -4389,9 +4431,9 @@
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tboxLarg;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tboxComp;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tboxProfMed;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown2;
+        private Bunifu.Framework.UI.BunifuDropdown ddConstrucao;
         private Bunifu.Framework.UI.BunifuDropdown ddCirculação;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown3;
+        private Bunifu.Framework.UI.BunifuDropdown ddEscadas;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tboxEscadas;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tboxPerim;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox tboxArea;
@@ -4478,6 +4520,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel47;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel48;
         private Bunifu.Framework.UI.BunifuDropdown ddTipoProp;
+        private Bunifu.Framework.UI.BunifuFlatButton btnNewProp;
     }
 }
 
